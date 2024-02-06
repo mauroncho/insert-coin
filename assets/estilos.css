@@ -1,18 +1,31 @@
+:root{
+   --bg-color: rgba(0, 0, 0, 0.911);
+   --text-color: white;
+   --pixel-font: 'VT323', monospace;
+   --w-light: 200;
+   --w-normal: 400;
+   --w-bold: 700;
+}
+
+
 body {
    margin: 0;
    padding: 0;
    font-family: 'Raleway', sans-serif;
    font-weight: 400;
    background-color: rgba(0, 0, 0, 0.911);
-   color: white;
+   color: var(--text-color);
 }
 
 .pixel-font {
-   font-family: 'VT323', monospace;
+   font-family: var(--pixel-font);
+}
+
+.nav-size{
    font-size: 1.9em;
 }
 
-.nav-size {
+.nav-dropdown {
    font-size: 0.9em;
 }
 
@@ -58,8 +71,8 @@ body {
 
 .title-hero {
    font-family: 'VT323', monospace;
-   font-size: 5.5em;
-   text-shadow: 0 0 10px black;
+   font-size: 6em;
+   text-shadow: 0 0 8px black;
    margin: 0;
    padding: 0;
    line-height: 1;
@@ -67,7 +80,8 @@ body {
 
 .subtext-hero{
    font-size: 1.5em;
-   text-shadow: 0 0 10px black;
-   margin: 0;
-   padding-left: 7px;
+   text-shadow: 0 0 12px black;
+   margin-top: -7px;
+   font-weight: var(--w-light);
+   padding-left: 8px;
 }
