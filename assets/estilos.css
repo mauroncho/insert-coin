@@ -1,0 +1,73 @@
+body {
+   margin: 0;
+   padding: 0;
+   font-family: 'Raleway', sans-serif;
+   font-weight: 400;
+   background-color: rgba(0, 0, 0, 0.911);
+   color: white;
+}
+
+.pixel-font {
+   font-family: 'VT323', monospace;
+   font-size: 1.9em;
+}
+
+.nav-size {
+   font-size: 0.9em;
+}
+
+.offcanvas-size {
+   font-size: 1.1em;
+}
+
+.img-nav {
+   height: 54px;
+}
+
+.dropdown-item:hover {
+   text-decoration: underline;
+}
+
+.navbar {
+   line-height: normal;
+}
+
+.header-hero {
+   position: relative;
+   margin: 0;
+   padding: 0;
+}
+
+.video-hero {
+   box-sizing: border-box;
+   position: relative;
+   z-index: 10;
+   /* top: 0; */
+   /* bottom: 0; */
+   overflow: hidden;
+   height: 90vh;
+}
+
+.text-hero {
+   position: absolute;
+   z-index: 20;
+   top: 0;
+   margin-top: 128px;
+   padding-left: 80px;
+}
+
+.title-hero {
+   font-family: 'VT323', monospace;
+   font-size: 5.5em;
+   text-shadow: 0 0 10px black;
+   margin: 0;
+   padding: 0;
+   line-height: 1;
+}
+
+.subtext-hero{
+   font-size: 1.5em;
+   text-shadow: 0 0 10px black;
+   margin: 0;
+   padding-left: 7px;
+}
