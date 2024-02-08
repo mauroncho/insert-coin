@@ -23,63 +23,7 @@
 </head>
 
 <body>
-   <!-- <nav class="navbar navbar-expand-lg bg-body-tertiary pixel-font">
-      <div class="container-fluid">
-         <a class="navbar-brand" href="#">Navbar</a>
-         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
-            aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-         </button>
-         <div class="collapse navbar-collapse" id="navbarNavDropdown">
-            <ul class="navbar-nav d-flex gap-2">
-               <li class="nav-item">
-                  <a class="nav-link active" aria-current="page" href="index.html">Home</a>
-               </li>
-               <li class="nav-item">
-                  <a class="nav-link" href="#">Historia</a>
-               </li>
-               <li class="nav-item dropdown">
-                  <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                     aria-expanded="false">
-                     Galería
-                  </a>
-                  <ul class="dropdown-menu nav-size">
-                     <li><a class="dropdown-item" href="#">Tipos de fichines</a></li>
-                     <li><a class="dropdown-item" href="#">Series y videos</a></li>
-                  </ul>
-               </li>
-               <li class="nav-item">
-                  <a class="nav-link" href="#">Clásicos</a>
-               </li>
-               <li class="nav-item dropdown">
-                  <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                     aria-expanded="false">
-                     Donde jugar?
-                  </a>
-                  <ul class="dropdown-menu nav-size">
-                     <li><a class="dropdown-item" href="#">En CABA</a></li>
-                     <li><a class="dropdown-item" href="#">En la costa</a></li>
-                     <li><a class="dropdown-item" href="#">Grandes cadenas</a></li>
-                  </ul>
-               </li>
-               <li class="nav-item">
-                  <a class="nav-link" href="#">Space Invaders</a>
-               </li>
-               <li class="nav-item dropdown">
-                  <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                     aria-expanded="false">
-                     Sobre mí
-                  </a>
-                  <ul class="dropdown-menu nav-size">
-                     <li><a class="dropdown-item" href="#">Contacto</a></li>
-                     <li><a class="dropdown-item" href="#">Desarrollador</a></li>
-                  </ul>
-               </li>
-
-            </ul>
-         </div>
-      </div>
-   </nav> -->
+   <!-- nav -->
    <nav class="navbar navbar-expand-lg bg-body-tertiary pixel-font nav-size">
       <div class="container-fluid">
          <a class="navbar-brand" href="#">
@@ -114,7 +58,7 @@
                   </a>
                   <ul class="dropdown-menu nav-dropdown">
                      <li><a class="dropdown-item" href="#">Tipos de fichines</a></li>
-                     <li><a class="dropdown-item" href="#">Series y videos</a></li>
+                     <li><a class="dropdown-item" href="#">Contenido multimedia</a></li>
                   </ul>
                </li>
                <li class="nav-item">
@@ -125,7 +69,7 @@
                      aria-expanded="false">
                      Donde jugar?
                   </a>
-                  <ul class="dropdown-menu nav-size">
+                  <ul class="dropdown-menu nav-dropdown">
                      <li><a class="dropdown-item" href="#">En CABA</a></li>
                      <li><a class="dropdown-item" href="#">En la costa</a></li>
                      <li><a class="dropdown-item" href="#">Grandes cadenas</a></li>
@@ -139,7 +83,7 @@
                      aria-expanded="false">
                      Sobre mí
                   </a>
-                  <ul class="dropdown-menu nav-size">
+                  <ul class="dropdown-menu nav-dropdown">
                      <li><a class="dropdown-item" href="#">Contacto</a></li>
                      <li><a class="dropdown-item" href="#">Desarrollador</a></li>
                   </ul>
@@ -148,6 +92,7 @@
          </div>
       </div>
    </nav>
+   <!-- hero -->
    <header class="container-fluid header-hero">
       <div class="video-hero">
          <video src="src/video-hero.mp4" autoplay loop></video>
@@ -157,6 +102,64 @@
          <p class="subtext-hero">Data sobre fichines</p>
       </div>
    </header>
+   <!-- seccion galeria -->
+   <section class="container my-3 p-3">
+      <header class="my-3 p-2">
+         <h2 class="pixel-font index-galeria-title">Galeria</h2>
+         <p class="index-galeria-article text-center mx-auto">
+            Te gustan las máquinas de fichines? En esta sección vas a ver sus diferentes modelos. También encontrarás contenidos multimedia acerca de este universo.
+         </p>
+         <p class="index-galeria-article text-center mx-auto">
+
+         </p>
+      </header>
+      <article class="row my-3 d-flex justify-content-center">
+         <div class="col-12 col-md-6 d-flex flex-column align-items-center m-2 p-2 index-galeria-card">
+            <h3 class="pixel-font index-galeria-subtitle">Tipos de fichines</h3>
+            <div class="index-galeria-img rounded">
+               <img src="src/retro3.jpg" alt="Pinball">
+            </div>
+         </div>
+         <div class="col-12 col-md-6 d-flex flex-column align-items-center m-2 p-2 index-galeria-card">
+            <h3 class="pixel-font index-galeria-subtitle">Contenido multimedia</h3>
+            <div class="index-galeria-img d-flex justify-content-center rounded">
+               <img class="img-cover" src="src/vector-texto-estilo-letreros-neon-arcade_118419-3710.avif" alt="Pinball">
+            </div>
+         </div>
+      </article>
+   </section>
+   <!-- seccion historia-clasicos -->
+   <section class="container-fluid my-3">
+      <div class="row my-2">
+         <div class="col-6 img-clasicos d-flex justify-content-start rounded">
+            <img src="src/nes.webp" alt="">
+         </div>
+         <div class="col-6 d-flex flex-column justify-content-center">
+            <h2 class="pixel-font index-galeria-title text-center">Historia</h2>
+            <p class="index-clasicos-text mx-auto text-center">
+               De la NES a la realidad virtual, un repaso por las épocas doradas de los fichines.
+            </p>
+            <div class="text-center">
+               <button type="button" class="btn btn-light btn-width">Ver más</button>
+            </div>
+         </div>
+      </div>
+      <div class="row my-2">
+         <div class="col-6 d-flex flex-column justify-content-center">
+            <h2 class="pixel-font index-galeria-title text-center">Clásicos</h2>
+            <p class="index-clasicos-text mx-auto text-center">
+               Una selección totalmente subjetiva de juegos clásicos. Repasamos sus lores, músicas y gameplays.
+            </p>
+            <div class="text-center">
+               <button type="button" class="btn btn-light btn-width">Ver más</button>
+            </div>
+         </div>
+         <div class="col-6 img-clasicos d-flex justify-content-end rounded">
+            <img src="src/Arcade-Archives-Bubble-Bobble.png" alt="">
+         </div>
+      </div>
+ 
+   </section>
 </body>
 
 </html>
