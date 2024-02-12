@@ -95,7 +95,7 @@
    <!-- hero -->
    <header class="container-fluid header-hero">
       <div class="video-hero">
-         <video src="src/inicio/video-hero.mp4" autoplay loop></video>
+         <video src="src/inicio/video-hero.mp4" autoplay loop muted></video>
       </div>
       <div class="text-hero">
          <h1 class="title-hero">INSERT COIN</h1>
@@ -122,7 +122,7 @@
          </div>
          <div class="col-12 col-md-6 d-flex flex-column align-items-center m-2 p-2 index-galeria-card">
             <h3 class="pixel-font index-galeria-subtitle">Contenido multimedia</h3>
-            <div class="index-galeria-img d-flex justify-content-center rounded">
+            <div class="index-galeria-img d-flex justify-content-center rounded my-2">
                <img class="img-cover" src="src/inicio/vector-texto-estilo-letreros-neon-arcade_118419-3710.avif" alt="Pinball">
             </div>
          </div>
@@ -131,7 +131,7 @@
    <!-- seccion historia-clasicos -->
    <section class="container-fluid my-3">
       <div class="row my-2">
-         <div class="col-12 col-md-6 img-clasicos d-flex justify-content-start rounded">
+         <div class="col-12 col-md-6 img-clasicos d-flex justify-content-start rounded my-2">
             <img src="src/inicio/nes.webp" alt="">
          </div>
          <div class="col-12 col-md-6 d-flex flex-column justify-content-center">
@@ -160,29 +160,69 @@
       </div>
    </section>
    <!-- seccion donde jugar -->
-   <section class="container my-3">
-      <h2 class="pixel-font index-galeria-title">Donde jugar?</h2>
+   <section class="container my-5">
+      <h2 class="pixel-font index-galeria-title">Donde jugar</h2>
       <p class="text-center mb-5">Ya estás manija, no? <br> Acá podes pegarte una viciada para bajar un toque.</p>
-      <div class="row my-3 p-2">
-         <div class="col12 col-md-4">
-            <div class="index-jugar-img">
+      <div class="row my-5 p-2 d-flex gap-2 flex-nowrap">
+         <div class="col-12 col-md-4 index-jugar-img p-0 rounded">
+            <div class="index-jugar-div">
+               <img src="src/inicio/mdq-index2.jpg" alt="Bar El Destello">
+            </div>
+            <div class="index-jugar-degradado"></div>
+            <div class="index-jugar-text">
+               <h4>En la costa</h4>
+            </div>
+         </div>
+         <div class="col-12 col-md-4 index-jugar-img p-0 rounded">
+            <div class="index-jugar-div">
                <img src="src/inicio/destello-bar.jpg" alt="Bar El Destello">
             </div>
+            <div class="index-jugar-degradado"></div>
             <div class="index-jugar-text">
-               <h4 >En CABA</h4>
-               <p>Bares</p>
+               <h4>En CABA</h4>
             </div>
          </div>
-         <div class="col12 col-md-4">
-            <h4>En la costa</h4>
-            <p>Bares</p>
+         <div class="col-12 col-md-4 index-jugar-img p-0 rounded">
+            <div class="index-jugar-div">
+               <img src="src/inicio/SACOA-2.jpg" alt="Bar El Destello">
+            </div>
+            <div class="index-jugar-degradado"></div>
+            <div class="index-jugar-text">
+               <h4>Grandes cadenas</h4>
+            </div>
          </div>
-         <div class="col12 col-md-4">
-            <h4>Grandes cadenas</h4>
-            <p>Bares</p>
+
+      </div>
+   </section>
+   <!-- earth invaders -->
+   <section class="container-fluid my-4">
+      <div class="index-jugar-img">
+         <div>
+            <img src="src/inicio/space-invaders.png" alt="Maquina para jugar Space Invaders">
+         </div>
+         <div class="index-invaders-degradado"></div>
+         <div class="index-invaders-text">
+            <h4>Jugá online a nuestro homenaje de Space Invaders</h4>
          </div>
       </div>
    </section>
+   <!-- footer -->
+   <footer class="bg-body-tertiary container-fluid py-3 d-flex justify-content-center align-items-center">
+      <div>
+         <img src="src/inicio/2016-mm-marca-verde.png" alt="">
+      </div>
+      <div>
+         <p>
+            TP Final 2023 - Universidad Nacional de las Artes - Cátedra Drelichmann
+         </p>
+         <p>
+            <a href="">Desarrollador - Mauro Giachero</a>
+         </p>
+         <p>
+            <a href="">Contacto</a>
+         </p>
+      </div>
+   </footer>
 </body>
 
 </html>
