@@ -4,7 +4,11 @@
       <meta charset="UTF-8" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <title>Insert Coin - Inicio</title>
-      <link rel="icon" type="image/x-icon" href="src/inicio/icon-coin.png" />
+      <link
+         rel="icon"
+         type="image/x-icon"
+         href="../../src/inicio/icon-coin.png"
+      />
       <link rel="preconnect" href="https://fonts.googleapis.com" />
       <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
       <link
@@ -29,7 +33,7 @@
          integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
          crossorigin="anonymous"
       ></script>
-      <link rel="stylesheet" href="assets/estilos.css" />
+      <link rel="stylesheet" href="../../assets/estilos.css" />
    </head>
 
    <body>
@@ -39,7 +43,7 @@
             <a class="navbar-brand" href="#">
                <img
                   class="img-nav"
-                  src="src/inicio/icon-coin.png"
+                  src="../../src/inicio/icon-coin.png"
                   alt="Icono Insert Coin"
                />
             </a>
@@ -67,7 +71,7 @@
                      <span>
                         <img
                            class="img-nav"
-                           src="src/inicio/icon-coin.png"
+                           src="../../src/inicio/icon-coin.png"
                            alt="Icono Insert Coin"
                         />
                      </span>
@@ -82,26 +86,25 @@
                </div>
                <ul class="navbar-nav d-flex gap-3">
                   <li class="nav-item">
-                     <a class="nav-link" aria-current="page" href="index.html">
+                     <a
+                        class="nav-link"
+                        aria-current="page"
+                        href="../../index.html"
+                     >
                         Home
                      </a>
                   </li>
                   <li class="nav-item">
-                     <a class="nav-link" href="pages/historia.html">Historia</a>
+                     <a class="nav-link" href="../historia.html">Historia</a>
                   </li>
                   <li class="nav-item">
-                     <a class="nav-link" href="pages/galeria/galeria.html">
-                        Galería
-                     </a>
+                     <a class="nav-link" href="#">Galería</a>
                   </li>
                   <li class="nav-item">
                      <a class="nav-link" href="#">Clásicos</a>
                   </li>
                   <li class="nav-item">
-                     <a
-                        class="nav-link"
-                        href="pages/donde-jugar/donde-jugar.html"
-                     >
+                     <a class="nav-link" href="../donde-jugar/donde-jugar.html">
                         ¿Donde jugar?
                      </a>
                   </li>
@@ -115,17 +118,7 @@
             </div>
          </div>
       </nav>
-      <!-- hero -->
-      <header class="container-fluid header-hero">
-         <div class="video-hero">
-            <video src="src/inicio/video-hero.mp4" autoplay loop muted></video>
-         </div>
-         <div class="text-hero">
-            <h1 class="title-hero">INSERT COIN</h1>
-            <p class="subtext-hero">Data sobre fichines</p>
-         </div>
-      </header>
-      <!-- seccion galeria -->
+      <!-- galeria -->
       <section class="container my-5">
          <header class="my-3 p-2">
             <h2 class="pixel-font index-galeria-title">Galería</h2>
@@ -138,7 +131,7 @@
          </header>
          <article class="row my-3 d-flex justify-content-center">
             <div
-               class="col-12 col-md-6 d-flex flex-column align-items-center m-2 p-2 index-galeria-card"
+               class="col-12 col-md-6 d-flex flex-column align-items-center m-2 p-1 index-galeria-card"
             >
                <h3 class="pixel-font index-galeria-subtitle">
                   Tipos de fichines
@@ -152,14 +145,16 @@
                         Ver galería
                      </a>
                   </div>
-                  <img
-                     src="src/inicio/tipos-finchin-index.webp"
-                     alt="Fila de máquinas Pinball"
-                  />
+                  <div>
+                     <img
+                        src="../../src/inicio/tipos-finchin-index.webp"
+                        alt="Fila de máquinas Pinball"
+                     />
+                  </div>
                </div>
             </div>
             <div
-               class="col-12 col-md-6 d-flex flex-column align-items-center m-2 p-2 index-galeria-card"
+               class="col-12 col-md-6 d-flex flex-column align-items-center m-2 p-1 index-galeria-card"
             >
                <h3 class="pixel-font index-galeria-subtitle">
                   Contenido multimedia
@@ -177,136 +172,18 @@
                   </div>
                   <img
                      class="img-cover"
-                     src="src/inicio/multimedia-index.avif"
+                     src="../../src/inicio/multimedia-index.avif"
                      alt="Arcade de neón"
                   />
                </div>
             </div>
          </article>
       </section>
-      <!-- seccion historia-clasicos -->
-      <section class="container-fluid my-5">
-         <div class="row my-2">
-            <div
-               class="col-12 col-md-6 img-clasicos d-flex justify-content-start rounded my-2"
-            >
-               <img
-                  src="src/inicio/nes-index.webp"
-                  alt="Consola Nintendo Enterteinment System"
-               />
-            </div>
-            <div
-               class="col-12 col-md-6 d-flex flex-column justify-content-center"
-            >
-               <h2 class="pixel-font index-galeria-title text-center">
-                  Historia
-               </h2>
-               <p class="index-clasicos-text mx-auto text-center">
-                  De la NES a la realidad virtual, un repaso por las épocas
-                  doradas de los fichines.
-               </p>
-               <div class="text-center">
-                  <button type="button" class="btn btn-light btn-width">
-                     Ver más
-                  </button>
-               </div>
-            </div>
-         </div>
-         <div class="row my-2">
-            <div
-               class="col-12 col-md-6 d-flex flex-column justify-content-center"
-            >
-               <h2 class="pixel-font index-galeria-title text-center">
-                  Clásicos
-               </h2>
-               <p class="index-clasicos-text mx-auto text-center">
-                  Una selección totalmente subjetiva de juegos clásicos.
-                  Repasamos sus lores, músicas y gameplays.
-               </p>
-               <div class="text-center">
-                  <button type="button" class="btn btn-light btn-width">
-                     Ver más
-                  </button>
-               </div>
-            </div>
-            <div
-               class="col-12 col-md-6 img-clasicos d-flex justify-content-center align-items-center rounded img-clasicos-bb"
-            >
-               <img
-                  src="src/inicio/bubble-b-index.webp"
-                  alt="Captura del juego Bubble Bobble"
-               />
-            </div>
-         </div>
-      </section>
-      <!-- seccion donde jugar -->
-      <section class="container my-5">
-         <h2 class="pixel-font index-galeria-title">Donde jugar</h2>
-         <p class="text-center mb-5">
-            Ya estás manija, no?
-            <br />
-            Acá podes pegarte una viciada para bajar un toque.
-         </p>
-         <div class="row my-5 p-2 d-flex gap-2 justify-content-center">
-            <div class="col-12 col-md-3 index-jugar-img p-0 rounded">
-               <div class="index-jugar-div">
-                  <img
-                     src="src/inicio/mdq-index2.jpg"
-                     alt="Estatua de Lobo marino en Mar del Plata"
-                  />
-               </div>
-               <div class="index-jugar-degradado"></div>
-               <div class="index-jugar-text">
-                  <h4>En la costa</h4>
-               </div>
-            </div>
-            <div class="col-12 col-md-3 index-jugar-img p-0 rounded">
-               <div class="index-jugar-div">
-                  <img
-                     src="src/inicio/destello-bar.webp"
-                     alt="Bar El Destello"
-                  />
-               </div>
-               <div class="index-jugar-degradado"></div>
-               <div class="index-jugar-text">
-                  <h4>En CABA</h4>
-               </div>
-            </div>
-            <div class="col-12 col-md-3 index-jugar-img p-0 rounded">
-               <div class="index-jugar-div">
-                  <img
-                     src="src/inicio/sacoa-index.webp"
-                     alt="Cartel de Sacoa"
-                  />
-               </div>
-               <div class="index-jugar-degradado"></div>
-               <div class="index-jugar-text">
-                  <h4>Grandes cadenas</h4>
-               </div>
-            </div>
-         </div>
-      </section>
-      <!-- earth invaders -->
-      <section class="container-fluid my-5">
-         <div class="index-jugar-img">
-            <div>
-               <img
-                  src="src/inicio/space-invaders.webp"
-                  alt="Maquina para jugar Space Invaders"
-               />
-            </div>
-            <div class="index-invaders-degradado"></div>
-            <div class="index-invaders-text">
-               <h4>Jugá online a nuestro homenaje de Space Invaders</h4>
-            </div>
-         </div>
-      </section>
-      <!-- footer -->
       <footer
          class="bg-body-tertiary container-fluid py-3 d-flex flex-column flex-md-row gap-5 justify-content-center align-items-center"
       >
          <div>
-            <img src="src/inicio/logo-una.png" alt="Logo de la UNA" />
+            <img src="../../src/inicio/logo-una.png" alt="Logo de la UNA" />
          </div>
          <div>
             <p>Informática general - Cátedra Drelichmann</p>

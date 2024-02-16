@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="es">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Insert Coin - Inicio</title>
+      <link rel="icon" type="image/x-icon" href="../src/inicio/icon-coin.png" />
+      <link rel="preconnect" href="https://fonts.googleapis.com" />
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+      <link
+         href="https://fonts.googleapis.com/css2?family=VT323&display=swap"
+         rel="stylesheet"
+      />
+      <link
+         href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,200;0,400;0,700;1,200;1,400;1,700&display=swap"
+         rel="stylesheet"
+      />
+      <link
+         rel="stylesheet"
+         href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      />
+      <script
+         src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+         integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+         crossorigin="anonymous"
+      ></script>
+      <script
+         src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+         integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+         crossorigin="anonymous"
+      ></script>
+      <link rel="stylesheet" href="../assets/estilos.css" />
+   </head>
+
+   <body>
+      <!-- nav -->
+      <nav class="navbar navbar-expand-lg bg-body-tertiary pixel-font nav-size">
+         <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+               <img
+                  class="img-nav"
+                  src="../src/inicio/icon-coin.png"
+                  alt="Icono Insert Coin"
+               />
+            </a>
+            <button
+               class="navbar-toggler"
+               type="button"
+               data-bs-toggle="offcanvas"
+               data-bs-target="#offcanvasNavbar"
+               aria-controls="offcanvasNavbar"
+               aria-label="Toggle navigation"
+            >
+               <span class="navbar-toggler-icon"></span>
+            </button>
+            <div
+               class="offcanvas offcanvas-end px-2"
+               tabindex="-1"
+               id="offcanvasNavbar"
+               aria-labelledby="offcanvasNavbarLabel"
+            >
+               <div class="offcanvas-header">
+                  <h5
+                     class="offcanvas-title offcanvas-size pixel-font"
+                     id="offcanvasNavbarLabel"
+                  >
+                     <span>
+                        <img
+                           class="img-nav"
+                           src="../src/inicio/icon-coin.png"
+                           alt="Icono Insert Coin"
+                        />
+                     </span>
+                     INSERT COIN
+                  </h5>
+                  <button
+                     type="button"
+                     class="btn-close"
+                     data-bs-dismiss="offcanvas"
+                     aria-label="Close"
+                  ></button>
+               </div>
+               <ul class="navbar-nav d-flex gap-3">
+                  <li class="nav-item">
+                     <a class="nav-link" aria-current="page" href="../index.html">
+                        Home
+                     </a>
+                  </li>
+                  <li class="nav-item">
+                     <a class="nav-link" href="#">Historia</a>
+                  </li>
+                  <li class="nav-item">
+                     <a class="nav-link" href="galeria/galeria.html">
+                        Galería
+                     </a>
+                  </li>
+                  <li class="nav-item">
+                     <a class="nav-link" href="#">Clásicos</a>
+                  </li>
+                  <li class="nav-item">
+                     <a
+                        class="nav-link"
+                        href="donde-jugar/donde-jugar.html"
+                     >
+                        ¿Donde jugar?
+                     </a>
+                  </li>
+                  <li class="nav-item">
+                     <a class="nav-link" href="#">Space Invaders</a>
+                  </li>
+                  <li class="nav-item">
+                     <a class="nav-link" href="#">Sobre mí</a>
+                  </li>
+               </ul>
+            </div>
+         </div>
+      </nav>
+      <article class="p-2 my-3 container-fluid">
+         <div class="row">
+            <!-- <header class="my-4">
+               <h2 class="my-3 pixel-font index-galeria-title text-center">
+                  Historia
+               </h2>
+               <p class="index-galeria-article text-center mx-auto">
+                  Desde Pong y las TTL hasta el renacimiento actual con la
+                  vuelta de lo retro en conversación con la realidad virtual.
+               </p>
+            </header> -->
+         <ul class="nav nav-tabs d-flex justify-content-center" id="myTab" role="tablist">
+            <li class="nav-item" role="presentation">
+               <button
+                  class="nav-link active historia-link"
+                  id="home-tab"
+                  data-bs-toggle="tab"
+                  data-bs-target="#home-tab-pane"
+                  type="button"
+                  role="tab"
+                  aria-controls="home-tab-pane"
+                  aria-selected="true"
+               >
+                  Años 70: la era TTL
+               </button>
+            </li>
+            <li class="nav-item" role="presentation">
+               <button
+                  class="nav-link historia-link"
+                  id="profile-tab"
+                  data-bs-toggle="tab"
+                  data-bs-target="#profile-tab-pane"
+                  type="button"
+                  role="tab"
+                  aria-controls="profile-tab-pane"
+                  aria-selected="false"
+               >
+                  Profile
+               </button>
+            </li>
+            <li class="nav-item" role="presentation">
+               <button
+                  class="nav-link historia-link"
+                  id="contact-tab"
+                  data-bs-toggle="tab"
+                  data-bs-target="#contact-tab-pane"
+                  type="button"
+                  role="tab"
+                  aria-controls="contact-tab-pane"
+                  aria-selected="false"
+               >
+                  Contact
+               </button>
+            </li>
+            <li class="nav-item" role="presentation">
+               <button
+                  class="nav-link historia-link"
+                  id="disabled-tab"
+                  data-bs-toggle="tab"
+                  data-bs-target="#disabled-tab-pane"
+                  type="button"
+                  role="tab"
+                  aria-controls="disabled-tab-pane"
+                  aria-selected="false"
+               >
+                  Disabled
+               </button>
+            </li>
+         </ul>
+         <div class="tab-content" id="myTabContent">
+            <div
+               class="tab-pane fade show active"
+               id="home-tab-pane"
+               role="tabpanel"
+               aria-labelledby="home-tab"
+               tabindex="0"
+            >
+               <section class="my-3 p-2">
+                  <h4 class="my-3 text-center">Los 70's: las TTL, Pong y sus sucesores</h4>
+                  <p class="historia-p mx-auto my-4">
+                     Damos comienzo a esta historia con Pong: el primer juego
+                     que fue fichin. Tuvo una maquina propia denominada TTL
+                     gracias a al gran boom que produjo en la industria. Podés
+                     <a href="#" class="historia-link">ver más sobre Pong</a>
+                     en nuestra sección de clásicos. Este juego también tiene
+                     una historia previa que, si sos manija, podés leer
+                     <a
+                        href="https://pressover.news/articulos/historia-incompleta-de-los-videojuegos-2-magnavox/"
+                        target="_blank"
+                        class="historia-link"
+                     >
+                        en este artículo de Press Over.
+                     </a>
+                  </p>
+                  <p class="historia-p mx-auto my-4">
+                     Pero... ¿Qué significa TTL? TTL es “transistor-transistor
+                     logic”, y sirve para describir estos aparatos que no eran
+                     una computadora completa (como si lo serían arcades
+                     posteriores), sino que su hardware estaba diseñado
+                     exclusivamente para un título específico.
+                  </p>
+                  <div
+                     class="d-flex justify-content-center align-items-center gap-3 historia-img"
+                  >
+                     <div>
+                        <img
+                           src="../src/historia/Pong.jpg"
+                           alt=""
+                           class="control-img"
+                        />
+                     </div>
+                     <div>
+                        <img
+                           src="../src/historia/pong-pantalla.jpg"
+                           alt=""
+                           class="control-img"
+                        />
+                     </div>
+                  </div>
+                  <p class="historia-p mx-auto my-4">
+                     Empresas como Midway o Chicago Coin en EEUU y Taito o Sega
+                     en Japón, hasta entonces fabricantes de pinballs y juegos
+                     electromecánicos, no tardaron en sacar sus propias
+                     versiones de Pong para capitalizar en el éxito de Atari.
+                     Durante varios años muchos de los más populares estuvieron
+                     basados en el diseño de este clásico, algunos directamente
+                     clonando la placa completa. Pero algunos fichines
+                     intentaron de a poco introducir innovaciones...
+                  </p>
+                  <p class="historia-p mx-auto my-4">
+                     Gotcha fue un lanzamiento de Atari en 1973. Aparentemente
+                     el origen está en un glitch que se producía en algunas
+                     unidades de Pong cuando fallaba uno de sus circuitos
+                     integrados. En vez de mostrar el campo de juego de Pong,
+                     aparecía una especie de laberinto en movimiento. Gotcha
+                     consiste en una persecución a través de ese laberinto: un
+                     jugador se escapa y el otro persigue.
+                  </p>
+                  <p class="historia-p mx-auto my-4">
+                     ¿Y por qué es polémico? Bueno, sus gráficas publicitarias
+                     mostraban a un chico atrapando a una chica. Y de fondo se
+                     ve el diseño original de los joysticks CON FORMA DE TETA.
+                     Saquen sus propias conclusiones.
+                  </p>
+                  <div
+                  class="d-flex justify-content-center align-items-center gap-3 historia-img"
+                  >
+                     <div>
+                        <img
+                           src="../src/historia/gotcha-poster.jpg"
+                           alt=""
+                           class="control-img"
+                        />
+                     </div>
+                     <div>
+                        <img
+                           src="../src/historia/ttl-gotcha.jpg"
+                           alt=""
+                           class="control-img"
+                        />
+                     </div>
+                  </div>
+                  <p class="historia-p mx-auto my-4">
+                     Breakout de Atari (en 1976), que tiene su <a href="" class="historia-link">sección dedicada en nuestra página de clásicos</a>, fue tal vez el último juego TTL de gran
+                     relevancia. Hacia fines de los 70s los microprocesadores
+                     habían bajado de costo significativamente, haciéndose
+                     viable utilizarlos para videojuegos. El nuevo hardware
+                     permitió bajar costos de desarrollo y también abrió nuevas
+                     posibilidades creativas, permitiendo crear opciones mucho
+                     más complejas que los viejos arcades de componentes
+                     discretos. Terminaba así el primer boom de la industria… y
+                     aún así, no era nada al lado de lo que se avecinaba.
+                  </p>
+                  <div
+                  class="d-flex justify-content-center align-items-center gap-3 historia-img"
+                  >
+                     <div>
+                        <img
+                           src="../src/historia/ttl-breakout.webp"
+                           alt=""
+                           class="control-img"
+                        />
+                     </div>
+                     <div>
+                        <img
+                           src="../src/historia/breakout-gp.webp"
+                           alt=""
+                           class="control-img"
+                        />
+                     </div>
+                  </div>
+                  <p>
+
+                  </p>
+               </section>
+            </div>
+            <div
+               class="tab-pane fade"
+               id="profile-tab-pane"
+               role="tabpanel"
+               aria-labelledby="profile-tab"
+               tabindex="0"
+            >
+               ...
+            </div>
+            <div
+               class="tab-pane fade"
+               id="contact-tab-pane"
+               role="tabpanel"
+               aria-labelledby="contact-tab"
+               tabindex="0"
+            >
+               ...
+            </div>
+            <div
+               class="tab-pane fade"
+               id="disabled-tab-pane"
+               role="tabpanel"
+               aria-labelledby="disabled-tab"
+               tabindex="0"
+            >
+               ...
+            </div>
+         </div>
+      </article>
+      <footer
+         class="bg-body-tertiary container-fluid py-3 d-flex flex-column flex-md-row gap-5 justify-content-center align-items-center"
+      >
+         <div>
+            <img src="../src/inicio/logo-una.png" alt="Logo de la UNA" />
+         </div>
+         <div>
+            <p>Informática general - Cátedra Drelichmann</p>
+            <p>
+               <a href="">Desarrollador - Mauro Giachero</a>
+            </p>
+            <p>
+               <a href="">Contacto</a>
+            </p>
+         </div>
+      </footer>
+   </body>
+</html>
