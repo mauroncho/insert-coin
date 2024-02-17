@@ -345,18 +345,19 @@ footer div p a {
 }
 
 footer div p a:hover {
-   color: white;
+   color: var(--text-color);
    background-color: black;
 }
 
 /* HISTORIA */
 
-.historia-link {
+.historia-link,
+.historia-link:hover {
    color: #9ac6ff;
 }
 
 .historia-p {
-   max-width: 800px;
+   max-width: 750px;
    text-wrap: wrap;
 }
 
