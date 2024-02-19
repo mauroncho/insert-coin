@@ -1,0 +1,608 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Insert Coin - Inicio</title>
+    <link rel="icon" type="image/x-icon" href="../../img/icon-coin.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=VT323&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,200;0,400;0,700;1,200;1,400;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+      integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+      integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="../../assets/estilos.css" />
+  </head>
+
+  <body>
+    <!-- nav -->
+    <nav class="navbar navbar-expand-lg bg-body-tertiary pixel-font nav-size">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">
+          <img
+            class="img-nav"
+            src="../../img/icon-coin.png"
+            alt="Icono Insert Coin"
+          />
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="offcanvas"
+          data-bs-target="#offcanvasNavbar"
+          aria-controls="offcanvasNavbar"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div
+          class="offcanvas offcanvas-end px-2"
+          tabindex="-1"
+          id="offcanvasNavbar"
+          aria-labelledby="offcanvasNavbarLabel"
+        >
+          <div class="offcanvas-header">
+            <h5
+              class="offcanvas-title offcanvas-size pixel-font"
+              id="offcanvasNavbarLabel"
+            >
+              <span>
+                <img
+                  class="img-nav"
+                  src="../../img/icon-coin.png"
+                  alt="Icono Insert Coin"
+                />
+              </span>
+              INSERT COIN
+            </h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="offcanvas"
+              aria-label="Close"
+            ></button>
+          </div>
+          <ul class="navbar-nav d-flex gap-3">
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="../../index.html">
+                Home
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">
+                Historia
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../galeria/index.html">Galería</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Clásicos</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../donde-jugar/index.html">
+                ¿Dónde jugar?
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Space Invaders</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Sobre mí</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <article class="p-2 my-3 container">
+      <!-- <header class="my-4">
+               <h2 class="my-3 pixel-font index-galeria-title text-center">
+                  Historia
+               </h2>
+               <p class="index-galeria-article text-center mx-auto">
+                  Desde Pong y las TTL hasta el renacimiento actual con la
+                  vuelta de lo retro en conversación con la realidad virtual.
+               </p>
+            </header> -->
+      <!-- TODO ARREGLAR SCROLL HORIZONTAL // CORREGIDO CON CONTAINER EN EL ARTICLE Y BBOORANDO UN DIV SIN CERRAR QUE TENIA LA CLASE ROW   -->
+      <ul
+        class="nav nav-tabs d-flex justify-content-center"
+        id="myTab"
+        role="tablist"
+      >
+        <li class="nav-item" role="presentation">
+          <button
+            class="nav-link active historia-link"
+            id="años70-tab"
+            data-bs-toggle="tab"
+            data-bs-target="#años70-pane"
+            type="button"
+            role="tab"
+            aria-controls="años70"
+            aria-selected="true"
+          >
+            Años 70: la era TTL
+          </button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button
+            class="nav-link historia-link"
+            id="años80-tab"
+            data-bs-toggle="tab"
+            data-bs-target="#años80-pane"
+            type="button"
+            role="tab"
+            aria-controls="años80"
+            aria-selected="false"
+          >
+            80's: la época dorada
+          </button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button
+            class="nav-link historia-link"
+            id="años00-tab"
+            data-bs-toggle="tab"
+            data-bs-target="#años00-pane"
+            type="button"
+            role="tab"
+            aria-controls="años00"
+            aria-selected="false"
+          >
+            Del 2000 hasta acá: declive y resistencia
+          </button>
+        </li>
+      </ul>
+      <div class="tab-content" id="myTabContent">
+        <div
+          class="tab-pane fade show active"
+          id="años70-pane"
+          role="tabpanel"
+          aria-labelledby="años70"
+          tabindex="0"
+        >
+          <!-- AÑOS 70 -->
+          <section class="my-3 p-2">
+            <h4 class="my-3 text-center">
+              Los 70's: las TTL, Pong y sus sucesores
+            </h4>
+            <p class="historia-p mx-auto my-4">
+              Damos comienzo a esta historia con Pong: el primer juego que fue
+              fichin. Tuvo una maquina propia denominada TTL gracias a al gran
+              boom que produjo en la industria. Podés
+              <a href="#" class="historia-link">ver más sobre Pong</a>
+              en nuestra sección de clásicos. Este juego también tiene una
+              historia previa que, si sos manija, podés leer
+              <a
+                href="https://pressover.news/articulos/historia-incompleta-de-los-videojuegos-2-magnavox/"
+                target="_blank"
+                class="historia-link"
+              >
+                en este artículo de Press Over.
+              </a>
+            </p>
+            <p class="historia-p mx-auto my-4">
+              Pero... ¿Qué significa TTL? TTL es “transistor-transistor logic”,
+              y sirve para describir estos aparatos que no eran una computadora
+              completa (como si lo serían arcades posteriores), sino que su
+              hardware estaba diseñado exclusivamente para un título específico.
+            </p>
+            <div
+              class="d-flex justify-content-center align-items-center gap-3 historia-img"
+            >
+              <div>
+                <img
+                  src="img/Pong.jpg"
+                  alt="Pantalla del videojuego Pong, un juego de tenis"
+                  class="control-img"
+                />
+              </div>
+              <div>
+                <img
+                  src="img/pong-pantalla.jpg"
+                  alt="Máquina TTL de Pong"
+                  class="control-img"
+                />
+              </div>
+            </div>
+            <p class="historia-p mx-auto my-4">
+              Empresas como Midway o Chicago Coin en EEUU y Taito o Sega en
+              Japón, hasta entonces fabricantes de pinballs y juegos
+              electromecánicos, no tardaron en sacar sus propias versiones de
+              Pong para capitalizar en el éxito de Atari. Durante varios años
+              muchos de los más populares estuvieron basados en el diseño de
+              este clásico, algunos directamente clonando la placa completa.
+              Pero algunos fichines intentaron de a poco introducir
+              innovaciones...
+            </p>
+            <p class="historia-p mx-auto my-4">
+              Gotcha fue un lanzamiento de Atari en 1973. Aparentemente el
+              origen está en un glitch que se producía en algunas unidades de
+              Pong cuando fallaba uno de sus circuitos integrados. En vez de
+              mostrar el campo de juego de Pong, aparecía una especie de
+              laberinto en movimiento. Gotcha consiste en una persecución a
+              través de ese laberinto: un jugador se escapa y el otro persigue.
+            </p>
+            <p class="historia-p mx-auto my-4">
+              ¿Y por qué es polémico? Bueno, sus gráficas publicitarias
+              mostraban a un chico atrapando a una chica. Y de fondo se ve el
+              diseño original de los joysticks CON FORMA DE TETA. Saquen sus
+              propias conclusiones.
+            </p>
+            <div
+              class="d-flex justify-content-center align-items-center gap-3 historia-img"
+            >
+              <div>
+                <img
+                  src="img/gotcha-poster.jpg"
+                  alt="Poster del juego Gotcha donde se ve un hombre persiguiendo una mujer."
+                  class="control-img"
+                />
+              </div>
+              <div>
+                <img
+                  src="img/ttl-gotcha.jpg"
+                  alt="Máquina TTL de Gotcha"
+                  class="control-img"
+                />
+              </div>
+            </div>
+            <p class="historia-p mx-auto my-4">
+              Breakout de Atari (en 1976), que tiene su
+              <a href="" class="historia-link">
+                sección dedicada en nuestra página de clásicos
+              </a>
+              , fue tal vez el último juego TTL de gran relevancia. Hacia fines
+              de los 70s los microprocesadores habían bajado de costo
+              significativamente, haciéndose viable utilizarlos para
+              videojuegos. El nuevo hardware permitió bajar costos de desarrollo
+              y también abrió nuevas posibilidades creativas, permitiendo crear
+              opciones mucho más complejas que los viejos arcades de componentes
+              discretos. Terminaba así el primer boom de la industria… y aún
+              así, no era nada al lado de lo que se avecinaba.
+            </p>
+            <div
+              class="d-flex justify-content-center align-items-center gap-3 historia-img"
+            >
+              <div>
+                <img
+                  src="img/ttl-breakout.webp"
+                  alt="Máquina TTL de Break Out"
+                  class="control-img"
+                />
+              </div>
+              <div>
+                <img
+                  src="img/breakout-gp.webp"
+                  alt="Pantalla del juego Break Out donde hay que destruir todos los ladrillos con un proyectil"
+                  class="control-img"
+                />
+              </div>
+            </div>
+            <footer>
+              <h5 class="text-center">Bibliografía y sitios de interés</h5>
+              <ul class="historia-p mx-auto my-3">
+                <li>
+                  <a
+                    class="historia-link"
+                    href="https://pressover.news/articulos/historia-incompleta-de-los-videojuegos-2-magnavox/"
+                  >
+                    Historia incompleta de los videojuegos 2: Magnavox
+                  </a>
+                </li>
+                <li>
+                  <a
+                    class="historia-link"
+                    href="https://pressover.news/articulos/historia-incompleta-de-los-videojuegos-3-fichines-setentosos-1973-1976/"
+                  >
+                    Historia incompleta de los videojuegos 3: Fichines
+                    setentosos
+                  </a>
+                </li>
+                <li>
+                  Recomendamos leer la serie completa de artículos de "La
+                  historia incompleta de los videojuegos" en
+                  <a class="historia-link" href="https://pressover.news/">
+                    Press Over.
+                  </a>
+                </li>
+              </ul>
+            </footer>
+          </section>
+        </div>
+        <div
+          class="tab-pane fade"
+          id="años80-pane"
+          role="tabpanel"
+          aria-labelledby="años80"
+          tabindex="0"
+        >
+          <!-- AÑOS 80 -->
+          <section class="my-3 p-2">
+            <h4 class="my-3 text-center">
+              De los 80' a los 90'
+              <br />
+              La época dorada y el florecimiento de la industria
+            </h4>
+            <p class="historia-p mx-auto my-4">
+              Bienvenido al auge masivo de los juegos de arcade. Durante esta
+              década vemos como se establecen los diversos géneros clásicos
+              dentro de este mundo: luchas, carreras, disparos, plataformas. A
+              su vez, la tecnología se especializa para dar a la experiencia de
+              juego una mayor capacidad de inmersión, mejor rendimiento y
+              facilidades a los compradores de las máquinas.
+            </p>
+            <p class="historia-p mx-auto my-4">
+              Nacen controles específicos como volantes para los juegos de
+              carreras o pistolas con sensores para juegos de disparos. También
+              procesadores más potentes que permitieron una mejoría gráfica,
+              sumado a la integración del sonido a través de parlantes estéreo.
+              Si querés chusmear las distintas máquinas que se disfrutaron a lo
+              largo de la historia podes pasar por la sección
+              <a class="historia-link" href="">"Tipos de fichines"</a>
+              en nuestra galería.
+            </p>
+            <p class="historia-p mx-auto my-4">
+              En este video podés ver una fábrica de ensamblaje de fichines de
+              la empresa Midway en el año 1980:
+            </p>
+            <div class="d-flex justify-content-center my-5">
+              <iframe
+                width="560"
+                height="315"
+                src="https://www.youtube.com/embed/IvHGn2ddb1c?si=lB73oey3F16AtXy8"
+                title="YouTube video player"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen
+              ></iframe>
+            </div>
+            <p class="historia-p mx-auto my-4">
+              Un fenómeno del cual no iba a salvarse esta época dorada es la
+              piratería. Uno suele tenerla asociada casi exclusivamente a la
+              época digital de los videojuegos, pero no es así. Te invitamos a
+              leer
+              <a
+                class="historia-link"
+                href="https://arcadeblogger.com/2018/12/15/golden-age-arcade-games-bootlegs-lawsuits-litigation/"
+              >
+                este artículo de The Arcade Blogger
+              </a>
+              si querés saber más.
+            </p>
+            <p class="historia-p mx-auto my-4">
+              Otro punto interesante son las campañas de marketing (también hay
+              un artículo en The Arcade Blogger,
+              <a
+                class="historia-link"
+                href="https://arcadeblogger.com/2017/09/29/atari-coin-op-classic-arcade-marketing/"
+              >
+                clickeá acá para verlo
+              </a>
+              ) que no solo promocionaban bondades tanto del juego como de la
+              empresa, sino que también incluían indicaciones para el operador
+              de la máquina, mostraba lo fáciles de manejar que son los
+              gabinetes y lo rentable que sería el juego. Aquí una publicidad de
+              Centipede, un juego de Atari:
+            </p>
+            <div class="d-flex justify-content-center my-5">
+              <iframe
+                width="560"
+                height="315"
+                src="https://www.youtube.com/embed/RtCkpNliguo?si=DYdZXFvbIy1PKvkj"
+                title="YouTube video player"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen
+              ></iframe>
+            </div>
+            <p class="historia-p mx-auto my-4">
+              Estos tiempos nos dejarán títulos legendarios como PacMan, Donkey
+              Kong y Space Invaders, a este último le hicimos un homenaje en
+              este sitio
+              <a class="historia-link" href="">probalo.</a>
+            </p>
+            <div
+              class="d-flex justify-content-center align-items-center gap-3 historia-img"
+            >
+              <div>
+                <img
+                  src="img/pacman.png"
+                  alt="Imagen de la pantalla del juego Pac Man"
+                  class="control-img"
+                />
+              </div>
+              <div>
+                <img
+                  src="img/donkey-kong2.jpg"
+                  alt="Imagen de una pantalla del juego Donkey Kong"
+                  class="control-img"
+                />
+              </div>
+            </div>
+            <p class="historia-p mx-auto my-4">
+              Entrados los años 90 entre los juegos más memorables están los
+              juegos de lucha Mortal Kombat y Street Fighter II. Estas dos sagas
+              sumadas a las tres nombradas anteriormente las investigamos en
+              profundidad en nuestra
+              <a class="historia-link" href="">sección de Clásicos.</a>
+            </p>
+            <div
+              class="d-flex justify-content-center align-items-center gap-3 historia-img"
+            >
+              <div>
+                <img
+                  src="img/mk.png"
+                  alt="Pantalla de selección de personaje en el Mortal Kombat"
+                  class="control-img"
+                />
+              </div>
+              <div>
+                <img
+                  src="img/sf2.jpg"
+                  alt="Batalla entre Ryu y Ken en Stree Fighter 2"
+                  class="control-img"
+                />
+              </div>
+            </div>
+            <footer>
+              <h5 class="text-center">Bibliografía y sitios de interés</h5>
+              <ul class="historia-p mx-auto my-3">
+                <li>
+                  Recomendamos pasar por la sección
+                  <a
+                    class="historia-link"
+                    href="https://arcadeblogger.com/tag/Arcade-History/?order=dec"
+                  >
+                    Arcade history
+                  </a>
+                  en The Arcade Blogger. Está llena de artículos interesantes.
+                </li>
+                <li>
+                  <a
+                    class="historia-link"
+                    href="https://arcadeblogger.com/2018/03/30/footage-from-the-arcade-factory-floors/"
+                  >
+                    Acá el link
+                  </a>
+                  para ver el artículo sobre la producción de máquinas de
+                  fichines en fábricas.
+                </li>
+              </ul>
+            </footer>
+          </section>
+        </div>
+        <div
+          class="tab-pane fade"
+          id="años00-pane"
+          role="tabpanel"
+          aria-labelledby="años00"
+          tabindex="0"
+        >
+          <!-- DEL 2000 A LA FECHA  -->
+          <section class="my-3 p-2">
+            <h4 class="text-center">
+              Consolas, solapamiento y resurgimiento de lo retro
+            </h4>
+            <p class="historia-p mx-auto my-4">
+              Durante la década del 90 el mundo de los videojuegos ingresa
+              definitivamente en la era 3D con títulos como DOOM. Y, mientras la
+              proliferación de los fichines se expandía con la aparición de
+              salones de juegos y grandes cadenas como Sacoa, empezaban a surgir
+              nuevos dispositivos para entretenimiento en los hogares a los
+              cuales la gente podía acceder.
+            </p>
+            <div
+              class="d-flex justify-content-center align-items-center gap-3 historia-img"
+            >
+              <div>
+                <img src="img/doom-1.png" alt="" class="control-img" />
+              </div>
+              <div>
+                <img src="img/sacoa-viejo.avif" alt="" class="control-img" />
+              </div>
+            </div>
+            <p class="historia-p mx-auto my-4">
+              En 1986 se lanza en Europa la Nintendo Enterteinment System (NES)
+              la cual abría la puerta al declive del fichin. Otros grandes
+              exponentes de las consolas como SEGA Génesis (1989) y PlayStation
+              (1994) saldrían a la venta más adelante trayendo nuevos clásicos a
+              este universo.
+            </p>
+            <div
+              class="d-flex justify-content-center align-items-center gap-3 historia-img"
+            >
+              <div>
+                <img src="img/nes-index.webp" alt="" class="control-img" />
+              </div>
+              <div>
+                <img src="img/sega-genesis.jpeg" alt="" class="control-img" />
+              </div>
+            </div>
+            <p class="historia-p mx-auto my-4">
+              Al temita de las consolas le podemos sumar la llegada a los
+              hogares de las computadoras personales que también hicieron de los
+              salones de fichines un lugar olvidado. Pero existe un rincón de la
+              Argentina que se ofrece como bastión de la resistencia... la costa
+              atlántica.
+            </p>
+            <p class="historia-p mx-auto my-4">
+              Es bastante fascinante el vínculo que une a este espacio
+              geográfico con la historia argentina de los fichines generando una
+              especie de cápsula temporal a la cual siempre podemos recurrir y,
+              más allá de que le hicimos una
+              <a class="historia-link" href="">sección entera</a>
+              en nuestro apartado ¿Donde jugar? para que vayas a conocerla y
+              pegarte una viciada, se recomienda mirar el
+              <a
+                class="historia-link"
+                href="https://www.flixxo.com/es/series/9c4f2651-0b76-4675-9a3a-6f1837268ea8/1"
+              >
+                documental Fichines
+              </a>
+              donde le dedican un capítulo entero a este fenómeno.
+            </p>
+            <div
+              class="d-flex justify-content-center align-items-center gap-3 historia-img"
+            >
+              <div>
+                <img src="img/santa-teresita2.jpg" alt="" class="control-img" />
+              </div>
+              <div>
+                <img
+                  src="img/crazy-park-santa-teresita.jpg"
+                  alt=""
+                  class="control-img"
+                />
+              </div>
+            </div>
+            <p class="historia-p mx-auto my-4">
+              En este humilde recorrido viajamos por una pequeña porción de la
+              historia de los fichines. Mirate nuestra galería
+              <a
+                class="historia-link"
+                href="../galeria/tipos-fichin/index.html"
+              >
+                "Tipos de fichines"
+              </a>
+              para ver fotos de los distintos tipos de máquinas que fueron
+              sucediéndose en el tiempo.
+            </p>
+          </section>
+        </div>
+      </div>
+    </article>
+    <footer
+      class="bg-body-tertiary container-fluid py-3 d-flex flex-column flex-md-row gap-5 justify-content-center align-items-center"
+    >
+      <div>
+        <img src="../../img/logo-una.png" alt="Logo de la UNA" />
+      </div>
+      <div>
+        <p>Informática general - Cátedra Drelichmann</p>
+        <p>
+          <a href="">Desarrollador - Mauro Giachero</a>
+        </p>
+        <p>
+          <a href="">Contacto</a>
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>
