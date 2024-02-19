@@ -1,0 +1,670 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Insert Coin - Inicio</title>
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="../../../src/inicio/icon-coin.png"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=VT323&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,200;0,400;0,700;1,200;1,400;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+      integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+      integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="../../../assets/estilos.css" />
+  </head>
+
+  <body>
+    <!-- nav -->
+    <nav class="navbar navbar-expand-lg bg-body-tertiary pixel-font nav-size">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">
+          <img
+            class="img-nav"
+            src="../../../src/inicio/icon-coin.png"
+            alt="Icono Insert Coin"
+          />
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="offcanvas"
+          data-bs-target="#offcanvasNavbar"
+          aria-controls="offcanvasNavbar"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div
+          class="offcanvas offcanvas-end px-2"
+          tabindex="-1"
+          id="offcanvasNavbar"
+          aria-labelledby="offcanvasNavbarLabel"
+        >
+          <div class="offcanvas-header">
+            <h5
+              class="offcanvas-title offcanvas-size pixel-font"
+              id="offcanvasNavbarLabel"
+            >
+              <span>
+                <img
+                  class="img-nav"
+                  src="../src/inicio/icon-coin.png"
+                  alt="Icono Insert Coin"
+                />
+              </span>
+              INSERT COIN
+            </h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="offcanvas"
+              aria-label="Close"
+            ></button>
+          </div>
+          <ul class="navbar-nav d-flex gap-3">
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="../index.html">
+                Home
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Historia</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="galeria/galeria.html">Galería</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Clásicos</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="donde-jugar/donde-jugar.html">
+                ¿Dónde jugar?
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Space Invaders</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Sobre mí</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- bartop -->
+    <section class="container my-4">
+      <header class="my-4">
+        <h4 class="pixel-font text-center title-size my-1">Bartop</h4>
+        <p class="copete-size text-center mb-4">
+          Creadas para poder apoyarse sobre una mesa. Ideal para tener en casa.
+        </p>
+      </header>
+      <div
+        class="row row-cols-1 row-cols-md-3 p-1 d-flex justify-content-center align-items-center"
+      >
+        <div class="col tiposf-img my-2">
+          <a href="#" data-bs-toggle="modal" data-bs-target="#bartop1">
+            <img
+              class="control-img"
+              src="/pages/galeria/tipos-fichin/img/bartop1.webp"
+              alt=""
+            />
+          </a>
+        </div>
+        <!-- modal -->
+        <div
+          class="modal fade"
+          id="bartop1"
+          aria-labelledby="exampleModalLabel"
+          aria-hidden="true"
+        >
+          <div class="modal-dialog modal-dialog-centered modal-md">
+            <img
+              src="/pages/galeria/tipos-fichin/img/bartop1.webp"
+              class="card-img-top rouded"
+              alt="..."
+            />
+          </div>
+          <!-- botones -->
+          <button
+            id="boton-next-galeria"
+            class="carousel-control-next btn"
+            type="button"
+            data-bs-target="#bartop2"
+            data-bs-toggle="modal"
+          >
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+        <!-- 2da imagen -->
+        <div class="col tiposf-img my-2">
+          <a href="#" data-bs-toggle="modal" data-bs-target="#bartop2">
+            <img
+              class="control-img"
+              src="/pages/galeria/tipos-fichin/img/bartop2.webp"
+              alt=""
+            />
+          </a>
+        </div>
+        <!-- modal -->
+        <div
+          class="modal fade"
+          id="bartop2"
+          aria-labelledby="exampleModalLabel"
+          aria-hidden="true"
+        >
+          <div class="modal-dialog modal-dialog-centered modal-md">
+            <img
+              src="/pages/galeria/tipos-fichin/img/bartop2.webp"
+              class="card-img-top rouded"
+              alt="..."
+            />
+          </div>
+          <!-- botones -->
+          <button
+            id="boton-prev-galeria"
+            class="carousel-control-prev btn"
+            type="button"
+            data-bs-target="#bartop1"
+            data-bs-toggle="modal"
+          >
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button
+            id="boton-next-galeria"
+            class="carousel-control-next btn"
+            type="button"
+            data-bs-target="#bartop3"
+            data-bs-toggle="modal"
+          >
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+        <!-- 3ra img -->
+        <div class="col tiposf-img my-2">
+          <a href="#" data-bs-toggle="modal" data-bs-target="#bartop3">
+            <img
+              class="control-img"
+              src="/pages/galeria/tipos-fichin/img/bartop3.jpg"
+              alt=""
+            />
+          </a>
+        </div>
+        <!-- modal -->
+        <div
+          class="modal fade"
+          id="bartop3"
+          aria-labelledby="exampleModalLabel"
+          aria-hidden="true"
+        >
+          <div class="modal-dialog modal-dialog-centered modal-md">
+            <img
+              src="/pages/galeria/tipos-fichin/img/bartop3.jpg"
+              class="card-img-top rouded"
+              alt="..."
+            />
+          </div>
+          <!-- botones -->
+          <button
+            id="boton-prev-galeria"
+            class="carousel-control-prev btn"
+            type="button"
+            data-bs-target="#bartop2"
+            data-bs-toggle="modal"
+          >
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button
+            id="boton-next-galeria"
+            class="carousel-control-next btn"
+            type="button"
+            data-bs-target="#bartop4"
+            data-bs-toggle="modal"
+          >
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+        <!-- 4ta img -->
+        <div class="col tiposf-img my-2">
+          <a href="#" data-bs-toggle="modal" data-bs-target="#bartop4">
+            <img
+              class="control-img"
+              src="/pages/galeria/tipos-fichin/img/bartop4.avif"
+              alt=""
+            />
+          </a>
+        </div>
+        <!-- modal -->
+        <div
+          class="modal fade"
+          id="bartop4"
+          aria-labelledby="exampleModalLabel"
+          aria-hidden="true"
+        >
+          <div class="modal-dialog modal-dialog-centered modal-md">
+            <img
+              src="/pages/galeria/tipos-fichin/img/bartop4.avif"
+              class="card-img-top rouded"
+              alt="..."
+            />
+          </div>
+          <!-- botones -->
+          <button
+            id="boton-prev-galeria"
+            class="carousel-control-prev btn"
+            type="button"
+            data-bs-target="#bartop3"
+            data-bs-toggle="modal"
+          >
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button
+            id="boton-next-galeria"
+            class="carousel-control-next btn"
+            type="button"
+            data-bs-target="#bartop5"
+            data-bs-toggle="modal"
+          >
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+        <!-- 5ta img -->
+        <div class="col tiposf-img my-2">
+          <a href="#" data-bs-toggle="modal" data-bs-target="#bartop5">
+            <img
+              class="control-img"
+              src="/pages/galeria/tipos-fichin/img/bartop5.webp"
+              alt=""
+            />
+          </a>
+        </div>
+        <!-- modal -->
+        <div
+          class="modal fade"
+          id="bartop5"
+          aria-labelledby="exampleModalLabel"
+          aria-hidden="true"
+        >
+          <div class="modal-dialog modal-dialog-centered modal-md">
+            <img
+              src="/pages/galeria/tipos-fichin/img/bartop5.webp"
+              class="card-img-top rouded"
+              alt="..."
+            />
+          </div>
+          <!-- botones -->
+          <button
+            id="boton-prev-galeria"
+            class="carousel-control-prev btn"
+            type="button"
+            data-bs-target="#bartop4"
+            data-bs-toggle="modal"
+          >
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button
+            id="boton-next-galeria"
+            class="carousel-control-next btn"
+            type="button"
+            data-bs-target="#bartop6"
+            data-bs-toggle="modal"
+          >
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+        <!-- 6ta img -->
+        <div class="col tiposf-img my-2">
+          <a href="#" data-bs-toggle="modal" data-bs-target="#bartop6">
+            <img
+              class="control-img"
+              src="/pages/galeria/tipos-fichin/img/bartop6.jpg"
+              alt=""
+            />
+          </a>
+        </div>
+        <!-- modal -->
+        <div
+          class="modal fade"
+          id="bartop6"
+          aria-labelledby="exampleModalLabel"
+          aria-hidden="true"
+        >
+          <div class="modal-dialog modal-dialog-centered modal-md">
+            <img
+              src="/pages/galeria/tipos-fichin/img/bartop6.jpg"
+              class="card-img-top rouded"
+              alt="..."
+            />
+          </div>
+          <!-- botones -->
+          <button
+            id="boton-prev-galeria"
+            class="carousel-control-prev btn"
+            type="button"
+            data-bs-target="#bartop5"
+            data-bs-toggle="modal"
+          >
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+        </div>
+      </div>
+    </section>
+    <!-- bartop -->
+    <section class="container my-4">
+      <header class="my-4">
+        <h4 class="pixel-font text-center title-size my-1">Bartop</h4>
+        <p class="copete-size text-center mb-4">
+          Creadas para poder apoyarse sobre una mesa. Ideal para tener en casa.
+        </p>
+      </header>
+      <div
+        class="row row-cols-1 row-cols-md-3 p-1 d-flex justify-content-center align-items-center"
+      >
+        <div class="col tiposf-img my-2">
+          <a href="#" data-bs-toggle="modal" data-bs-target="#bartop1">
+            <img
+              class="control-img"
+              src="/pages/galeria/tipos-fichin/img/bartop1.webp"
+              alt=""
+            />
+          </a>
+        </div>
+        <!-- modal -->
+        <div
+          class="modal fade"
+          id="bartop1"
+          aria-labelledby="exampleModalLabel"
+          aria-hidden="true"
+        >
+          <div class="modal-dialog modal-dialog-centered modal-md">
+            <img
+              src="/pages/galeria/tipos-fichin/img/bartop1.webp"
+              class="card-img-top rouded"
+              alt="..."
+            />
+          </div>
+          <!-- botones -->
+          <button
+            id="boton-next-galeria"
+            class="carousel-control-next btn"
+            type="button"
+            data-bs-target="#bartop2"
+            data-bs-toggle="modal"
+          >
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+        <!-- 2da imagen -->
+        <div class="col tiposf-img my-2">
+          <a href="#" data-bs-toggle="modal" data-bs-target="#bartop2">
+            <img
+              class="control-img"
+              src="/pages/galeria/tipos-fichin/img/bartop2.webp"
+              alt=""
+            />
+          </a>
+        </div>
+        <!-- modal -->
+        <div
+          class="modal fade"
+          id="bartop2"
+          aria-labelledby="exampleModalLabel"
+          aria-hidden="true"
+        >
+          <div class="modal-dialog modal-dialog-centered modal-md">
+            <img
+              src="/pages/galeria/tipos-fichin/img/bartop2.webp"
+              class="card-img-top rouded"
+              alt="..."
+            />
+          </div>
+          <!-- botones -->
+          <button
+            id="boton-prev-galeria"
+            class="carousel-control-prev btn"
+            type="button"
+            data-bs-target="#bartop1"
+            data-bs-toggle="modal"
+          >
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button
+            id="boton-next-galeria"
+            class="carousel-control-next btn"
+            type="button"
+            data-bs-target="#bartop3"
+            data-bs-toggle="modal"
+          >
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+        <!-- 3ra img -->
+        <div class="col tiposf-img my-2">
+          <a href="#" data-bs-toggle="modal" data-bs-target="#bartop3">
+            <img
+              class="control-img"
+              src="/pages/galeria/tipos-fichin/img/bartop3.jpg"
+              alt=""
+            />
+          </a>
+        </div>
+        <!-- modal -->
+        <div
+          class="modal fade"
+          id="bartop3"
+          aria-labelledby="exampleModalLabel"
+          aria-hidden="true"
+        >
+          <div class="modal-dialog modal-dialog-centered modal-md">
+            <img
+              src="/pages/galeria/tipos-fichin/img/bartop3.jpg"
+              class="card-img-top rouded"
+              alt="..."
+            />
+          </div>
+          <!-- botones -->
+          <button
+            id="boton-prev-galeria"
+            class="carousel-control-prev btn"
+            type="button"
+            data-bs-target="#bartop2"
+            data-bs-toggle="modal"
+          >
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button
+            id="boton-next-galeria"
+            class="carousel-control-next btn"
+            type="button"
+            data-bs-target="#bartop4"
+            data-bs-toggle="modal"
+          >
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+        <!-- 4ta img -->
+        <div class="col tiposf-img my-2">
+          <a href="#" data-bs-toggle="modal" data-bs-target="#bartop4">
+            <img
+              class="control-img"
+              src="/pages/galeria/tipos-fichin/img/bartop4.avif"
+              alt=""
+            />
+          </a>
+        </div>
+        <!-- modal -->
+        <div
+          class="modal fade"
+          id="bartop4"
+          aria-labelledby="exampleModalLabel"
+          aria-hidden="true"
+        >
+          <div class="modal-dialog modal-dialog-centered modal-md">
+            <img
+              src="/pages/galeria/tipos-fichin/img/bartop4.avif"
+              class="card-img-top rouded"
+              alt="..."
+            />
+          </div>
+          <!-- botones -->
+          <button
+            id="boton-prev-galeria"
+            class="carousel-control-prev btn"
+            type="button"
+            data-bs-target="#bartop3"
+            data-bs-toggle="modal"
+          >
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button
+            id="boton-next-galeria"
+            class="carousel-control-next btn"
+            type="button"
+            data-bs-target="#bartop5"
+            data-bs-toggle="modal"
+          >
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+        <!-- 5ta img -->
+        <div class="col tiposf-img my-2">
+          <a href="#" data-bs-toggle="modal" data-bs-target="#bartop5">
+            <img
+              class="control-img"
+              src="/pages/galeria/tipos-fichin/img/bartop5.webp"
+              alt=""
+            />
+          </a>
+        </div>
+        <!-- modal -->
+        <div
+          class="modal fade"
+          id="bartop5"
+          aria-labelledby="exampleModalLabel"
+          aria-hidden="true"
+        >
+          <div class="modal-dialog modal-dialog-centered modal-md">
+            <img
+              src="/pages/galeria/tipos-fichin/img/bartop5.webp"
+              class="card-img-top rouded"
+              alt="..."
+            />
+          </div>
+          <!-- botones -->
+          <button
+            id="boton-prev-galeria"
+            class="carousel-control-prev btn"
+            type="button"
+            data-bs-target="#bartop4"
+            data-bs-toggle="modal"
+          >
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button
+            id="boton-next-galeria"
+            class="carousel-control-next btn"
+            type="button"
+            data-bs-target="#bartop6"
+            data-bs-toggle="modal"
+          >
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+        <!-- 6ta img -->
+        <div class="col tiposf-img my-2">
+          <a href="#" data-bs-toggle="modal" data-bs-target="#bartop6">
+            <img
+              class="control-img"
+              src="/pages/galeria/tipos-fichin/img/bartop6.jpg"
+              alt=""
+            />
+          </a>
+        </div>
+        <!-- modal -->
+        <div
+          class="modal fade"
+          id="bartop6"
+          aria-labelledby="exampleModalLabel"
+          aria-hidden="true"
+        >
+          <div class="modal-dialog modal-dialog-centered modal-md">
+            <img
+              src="/pages/galeria/tipos-fichin/img/bartop6.jpg"
+              class="card-img-top rouded"
+              alt="..."
+            />
+          </div>
+          <!-- botones -->
+          <button
+            id="boton-prev-galeria"
+            class="carousel-control-prev btn"
+            type="button"
+            data-bs-target="#bartop5"
+            data-bs-toggle="modal"
+          >
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+        </div>
+      </div>
+    </section>
+    <footer
+      class="bg-body-tertiary container-fluid py-3 d-flex flex-column flex-md-row gap-5 justify-content-center align-items-center"
+    >
+      <div>
+        <img src="../../../src/inicio/logo-una.png" alt="Logo de la UNA" />
+      </div>
+      <div>
+        <p>Informática general - Cátedra Drelichmann</p>
+        <p>
+          <a href="">Desarrollador - Mauro Giachero</a>
+        </p>
+        <p>
+          <a href="">Contacto</a>
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>
