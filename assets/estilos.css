@@ -214,6 +214,10 @@ body {
   .index-jugar-img .index-invaders-text h4 {
     font-size: 2.5em;
   }
+
+  .multimedia-iframe {
+    max-width: 345px;
+  }
 }
 
 .img-clasicos img {
@@ -381,3 +385,16 @@ footer div p a:hover {
 .title-size {
   font-size: 4.5em;
 }
+
+/* multimedia */
+.multimedia-p {
+  max-width: 500px;
+  text-wrap: balance;
+}
+
+.multimedia-img {
+  max-width: 560px;
+  max-height: 315px;
+}
+
+@media;
