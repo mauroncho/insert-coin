@@ -82,7 +82,9 @@
           </div>
           <ul class="navbar-nav d-flex gap-3">
             <li class="nav-item">
-              <a class="nav-link" href="../../index.html">Home</a>
+              <a class="nav-link" aria-current="page" href="../../index.html">
+                Inicio
+              </a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="../historia/index.html">Historia</a>
@@ -93,7 +95,7 @@
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Clásicos</a>
+              <a class="nav-link" href="../clasicos/index.html">Clásicos</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="../donde-jugar/index.html">
@@ -101,63 +103,1286 @@
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Space Invaders</a>
+              <a class="nav-link" href="../space-invaders/index.html">
+                Space Invaders
+              </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Sobre mí</a>
+              <a class="nav-link" href="../extras/index.html">Extras</a>
             </li>
           </ul>
         </div>
       </div>
     </nav>
-    <!-- galeria -->
-    <section class="container my-5">
-      <header class="my-3 p-2">
-        <h2 class="pixel-font index-galeria-title">Galería</h2>
-        <p class="index-galeria-article text-center mx-auto">
-          Te gustan las máquinas de fichines? En esta sección vas a ver sus
-          diferentes modelos. También encontrarás contenidos multimedia acerca
-          de este universo.
+    <!-- upright -->
+    <section class="container my-4">
+      <header class="my-4">
+        <h4 class="pixel-font text-center title-size my-1">
+          Upright y Cabaret
+        </h4>
+        <p class="copete-size text-center mb-4">
+          Las máquinas más clásicas, te dejamos un mix entre ambas.
+          <br />
+          En estas jugás parado y su construcción es de madera.
         </p>
-        <p class="index-galeria-article text-center mx-auto"></p>
       </header>
-      <article class="row my-3 d-flex justify-content-center">
-        <div
-          class="col-12 col-md-6 d-flex flex-column align-items-center m-2 p-1 index-galeria-card"
-        >
-          <h3 class="pixel-font index-galeria-subtitle">Tipos de fichines</h3>
-          <div class="index-galeria-img rounded">
-            <div class="meli-kpa">
-              <a href="tipos-fichin/index.html">Ver galería</a>
-            </div>
-            <div>
-              <img
-                src="img/tipos-finchin-index.webp"
-                alt="Fila de máquinas Pinball"
-              />
-            </div>
-          </div>
-        </div>
-        <div
-          class="col-12 col-md-6 d-flex flex-column align-items-center m-2 p-1 index-galeria-card"
-        >
-          <h3 class="pixel-font index-galeria-subtitle">
-            Contenido multimedia
-          </h3>
-          <div
-            class="index-galeria-img d-flex justify-content-center rounded my-2"
-          >
-            <div class="meli-kpa">
-              <a href="multimedia/index.html">Ver galería</a>
-            </div>
+      <div
+        class="row row-cols-1 row-cols-md-3 p-1 d-flex justify-content-center align-items-center"
+      >
+        <div class="col tiposf-img my-2">
+          <a href="#" data-bs-toggle="modal" data-bs-target="#upright1">
             <img
-              class="img-cover"
-              src="img/multimedia-index.avif"
-              alt="Arcade de neón"
+              class="galeria-control-img"
+              src="img/upright-pacman.webp"
+              alt=""
+            />
+          </a>
+        </div>
+        <!-- modal -->
+        <div
+          class="modal fade"
+          id="upright1"
+          aria-labelledby="exampleModalLabel"
+          aria-hidden="true"
+        >
+          <div class="modal-dialog modal-dialog-centered">
+            <img
+              src="img/upright-pacman.webp"
+              class="card-img-top rouded"
+              alt="..."
             />
           </div>
+          <!-- botones -->
+          <button
+            id="boton-next-galeria"
+            class="carousel-control-next btn"
+            type="button"
+            data-bs-target="#upright2"
+            data-bs-toggle="modal"
+          >
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
         </div>
-      </article>
+        <!-- 2da imagen -->
+        <div class="col tiposf-img my-2">
+          <a href="#" data-bs-toggle="modal" data-bs-target="#upright2">
+            <img class="galeria-control-img" src="img/upright-si.webp" alt="" />
+          </a>
+        </div>
+        <!-- modal -->
+        <div
+          class="modal fade"
+          id="upright2"
+          aria-labelledby="exampleModalLabel"
+          aria-hidden="true"
+        >
+          <div class="modal-dialog modal-dialog-centered modal-md">
+            <img
+              src="img/upright-si.webp"
+              class="card-img-top rouded"
+              alt="..."
+            />
+          </div>
+          <!-- botones -->
+          <button
+            id="boton-prev-galeria"
+            class="carousel-control-prev btn"
+            type="button"
+            data-bs-target="#upright1"
+            data-bs-toggle="modal"
+          >
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button
+            id="boton-next-galeria"
+            class="carousel-control-next btn"
+            type="button"
+            data-bs-target="#upright3"
+            data-bs-toggle="modal"
+          >
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+        <!-- 3ra img -->
+        <div class="col tiposf-img my-2">
+          <a href="#" data-bs-toggle="modal" data-bs-target="#upright3">
+            <img
+              class="galeria-control-img"
+              src="img/upright-spider.webp"
+              alt=""
+            />
+          </a>
+        </div>
+        <!-- modal -->
+        <div
+          class="modal fade"
+          id="upright3"
+          aria-labelledby="exampleModalLabel"
+          aria-hidden="true"
+        >
+          <div class="modal-dialog modal-dialog-centered modal-md">
+            <img
+              src="img/upright-spider.webp"
+              class="card-img-top rouded"
+              alt="..."
+            />
+          </div>
+          <!-- botones -->
+          <button
+            id="boton-prev-galeria"
+            class="carousel-control-prev btn"
+            type="button"
+            data-bs-target="#upright2"
+            data-bs-toggle="modal"
+          >
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button
+            id="boton-next-galeria"
+            class="carousel-control-next btn"
+            type="button"
+            data-bs-target="#upright4"
+            data-bs-toggle="modal"
+          >
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+        <!-- 4ta img -->
+        <div class="col tiposf-img my-2">
+          <a href="#" data-bs-toggle="modal" data-bs-target="#upright4">
+            <img
+              class="galeria-control-img"
+              src="img/upright-varios.webp"
+              alt=""
+            />
+          </a>
+        </div>
+        <!-- modal -->
+        <div
+          class="modal fade"
+          id="upright4"
+          aria-labelledby="exampleModalLabel"
+          aria-hidden="true"
+        >
+          <div class="modal-dialog modal-dialog-centered modal-md">
+            <img
+              src="img/upright-varios.webp"
+              class="card-img-top rouded"
+              alt="..."
+            />
+          </div>
+          <!-- botones -->
+          <button
+            id="boton-prev-galeria"
+            class="carousel-control-prev btn"
+            type="button"
+            data-bs-target="#upright3"
+            data-bs-toggle="modal"
+          >
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button
+            id="boton-next-galeria"
+            class="carousel-control-next btn"
+            type="button"
+            data-bs-target="#upright5"
+            data-bs-toggle="modal"
+          >
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+        <!-- 5ta img -->
+        <div class="col tiposf-img my-2">
+          <a href="#" data-bs-toggle="modal" data-bs-target="#upright5">
+            <img class="galeria-control-img" src="img/uprtight-si.jpg" alt="" />
+          </a>
+        </div>
+        <!-- modal -->
+        <div
+          class="modal fade"
+          id="upright5"
+          aria-labelledby="exampleModalLabel"
+          aria-hidden="true"
+        >
+          <div class="modal-dialog modal-dialog-centered modal-md">
+            <img
+              src="img/uprtight-si.jpg"
+              class="card-img-top rouded"
+              alt="..."
+            />
+          </div>
+          <!-- botones -->
+          <button
+            id="boton-prev-galeria"
+            class="carousel-control-prev btn"
+            type="button"
+            data-bs-target="#upright4"
+            data-bs-toggle="modal"
+          >
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button
+            id="boton-next-galeria"
+            class="carousel-control-next btn"
+            type="button"
+            data-bs-target="#upright6"
+            data-bs-toggle="modal"
+          >
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+        <!-- 6ta img -->
+        <div class="col tiposf-img my-2">
+          <a href="#" data-bs-toggle="modal" data-bs-target="#upright6">
+            <img
+              class="galeria-control-img"
+              src="img/cabaret-varios.png"
+              alt=""
+            />
+          </a>
+        </div>
+        <!-- modal -->
+        <div
+          class="modal fade"
+          id="upright6"
+          aria-labelledby="exampleModalLabel"
+          aria-hidden="true"
+        >
+          <div class="modal-dialog modal-dialog-centered modal-md">
+            <img
+              src="img/cabaret-varios.png"
+              class="card-img-top rouded"
+              alt="..."
+            />
+          </div>
+          <!-- botones -->
+          <button
+            id="boton-prev-galeria"
+            class="carousel-control-prev btn"
+            type="button"
+            data-bs-target="#upright5"
+            data-bs-toggle="modal"
+          >
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+        </div>
+      </div>
+    </section>
+    <!-- cockpit -->
+    <section class="container my-4">
+      <header class="my-4">
+        <h4 class="pixel-font text-center title-size my-1">Cockpit</h4>
+        <p class="copete-size text-center mb-4">
+          Especialmente creadas para juegos de carreras.
+          <br />
+          Más adelante las adoptaran otros géneros.
+        </p>
+      </header>
+      <div
+        class="row row-cols-1 row-cols-md-3 p-1 d-flex justify-content-center align-items-center"
+      >
+        <div class="col tiposf-img my-2">
+          <a href="#" data-bs-toggle="modal" data-bs-target="#cockpit1">
+            <img
+              class="galeria-control-img"
+              src="img/cock-daytona.jpg"
+              alt=""
+            />
+          </a>
+        </div>
+        <!-- modal -->
+        <div
+          class="modal fade"
+          id="cockpit1"
+          aria-labelledby="exampleModalLabel"
+          aria-hidden="true"
+        >
+          <div class="modal-dialog modal-dialog-centered modal-md">
+            <img
+              src="img/cock-daytona.jpg"
+              class="card-img-top rouded"
+              alt="..."
+            />
+          </div>
+          <!-- botones -->
+          <button
+            id="boton-next-galeria"
+            class="carousel-control-next btn"
+            type="button"
+            data-bs-target="#cockpit2"
+            data-bs-toggle="modal"
+          >
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+        <!-- 2da imagen -->
+        <div class="col tiposf-img my-2">
+          <a href="#" data-bs-toggle="modal" data-bs-target="#cockpit2">
+            <img class="galeria-control-img" src="img/cock-motogp.jpg" alt="" />
+          </a>
+        </div>
+        <!-- modal -->
+        <div
+          class="modal fade"
+          id="cockpit2"
+          aria-labelledby="exampleModalLabel"
+          aria-hidden="true"
+        >
+          <div class="modal-dialog modal-dialog-centered modal-md">
+            <img
+              src="img/cock-motogp.jpg"
+              class="card-img-top rouded"
+              alt="..."
+            />
+          </div>
+          <!-- botones -->
+          <button
+            id="boton-prev-galeria"
+            class="carousel-control-prev btn"
+            type="button"
+            data-bs-target="#cockpit1"
+            data-bs-toggle="modal"
+          >
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button
+            id="boton-next-galeria"
+            class="carousel-control-next btn"
+            type="button"
+            data-bs-target="#cockpit3"
+            data-bs-toggle="modal"
+          >
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+        <!-- 3ra img -->
+        <div class="col tiposf-img my-2">
+          <a href="#" data-bs-toggle="modal" data-bs-target="#cockpit3">
+            <img
+              class="galeria-control-img"
+              src="img/cock-outrun.webp"
+              alt=""
+            />
+          </a>
+        </div>
+        <!-- modal -->
+        <div
+          class="modal fade"
+          id="cockpit3"
+          aria-labelledby="exampleModalLabel"
+          aria-hidden="true"
+        >
+          <div class="modal-dialog modal-dialog-centered modal-md">
+            <img
+              src="img/cock-outrun.webp"
+              class="card-img-top rouded"
+              alt="..."
+            />
+          </div>
+          <!-- botones -->
+          <button
+            id="boton-prev-galeria"
+            class="carousel-control-prev btn"
+            type="button"
+            data-bs-target="#cockpit2"
+            data-bs-toggle="modal"
+          >
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button
+            id="boton-next-galeria"
+            class="carousel-control-next btn"
+            type="button"
+            data-bs-target="#cockpit4"
+            data-bs-toggle="modal"
+          >
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+        <!-- 4ta img -->
+        <div class="col tiposf-img my-2">
+          <a href="#" data-bs-toggle="modal" data-bs-target="#cockpit4">
+            <img class="galeria-control-img" src="img/cock-pole.webp" alt="" />
+          </a>
+        </div>
+        <!-- modal -->
+        <div
+          class="modal fade"
+          id="cockpit4"
+          aria-labelledby="exampleModalLabel"
+          aria-hidden="true"
+        >
+          <div class="modal-dialog modal-dialog-centered modal-md">
+            <img
+              src="img/cock-pole.webp"
+              class="card-img-top rouded"
+              alt="..."
+            />
+          </div>
+          <!-- botones -->
+          <button
+            id="boton-prev-galeria"
+            class="carousel-control-prev btn"
+            type="button"
+            data-bs-target="#cockpit3"
+            data-bs-toggle="modal"
+          >
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button
+            id="boton-next-galeria"
+            class="carousel-control-next btn"
+            type="button"
+            data-bs-target="#cockpit5"
+            data-bs-toggle="modal"
+          >
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+        <!-- 5ta img -->
+        <div class="col tiposf-img my-2">
+          <a href="#" data-bs-toggle="modal" data-bs-target="#cockpit5">
+            <img
+              class="galeria-control-img"
+              src="img/cock-roadblasters.jpg"
+              alt=""
+            />
+          </a>
+        </div>
+        <!-- modal -->
+        <div
+          class="modal fade"
+          id="cockpit5"
+          aria-labelledby="exampleModalLabel"
+          aria-hidden="true"
+        >
+          <div class="modal-dialog modal-dialog-centered modal-md">
+            <img
+              src="img/cock-roadblasters.jpg"
+              class="card-img-top rouded"
+              alt="..."
+            />
+          </div>
+          <!-- botones -->
+          <button
+            id="boton-prev-galeria"
+            class="carousel-control-prev btn"
+            type="button"
+            data-bs-target="#cockpit4"
+            data-bs-toggle="modal"
+          >
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button
+            id="boton-next-galeria"
+            class="carousel-control-next btn"
+            type="button"
+            data-bs-target="#cockpit6"
+            data-bs-toggle="modal"
+          >
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+        <!-- 6ta img -->
+        <div class="col tiposf-img my-2">
+          <a href="#" data-bs-toggle="modal" data-bs-target="#cockpit6">
+            <img
+              class="galeria-control-img"
+              src="img/cock-starwars.webp"
+              alt=""
+            />
+          </a>
+        </div>
+        <!-- modal -->
+        <div
+          class="modal fade"
+          id="cockpit6"
+          aria-labelledby="exampleModalLabel"
+          aria-hidden="true"
+        >
+          <div class="modal-dialog modal-dialog-centered modal-md">
+            <img
+              src="img/cock-starwars.webp"
+              class="card-img-top rouded"
+              alt="..."
+            />
+          </div>
+          <!-- botones -->
+          <button
+            id="boton-prev-galeria"
+            class="carousel-control-prev btn"
+            type="button"
+            data-bs-target="#cockpit5"
+            data-bs-toggle="modal"
+          >
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+        </div>
+      </div>
+    </section>
+    <!-- candy -->
+    <section class="container my-4">
+      <header class="my-4">
+        <h4 class="pixel-font text-center title-size my-1">Candy</h4>
+        <p class="copete-size text-center mb-4">
+          En estas máquinas se juega sentado.
+          <br />
+          Se popularizaron en Japón y su construcción es de plástico.
+        </p>
+      </header>
+      <div
+        class="row row-cols-1 row-cols-md-3 p-1 d-flex justify-content-center align-items-center"
+      >
+        <div class="col tiposf-img my-2">
+          <a href="#" data-bs-toggle="modal" data-bs-target="#candy1">
+            <img class="galeria-control-img" src="img/cande-sf.jpg" alt="" />
+          </a>
+        </div>
+        <!-- modal -->
+        <div
+          class="modal fade"
+          id="candy1"
+          aria-labelledby="exampleModalLabel"
+          aria-hidden="true"
+        >
+          <div class="modal-dialog modal-dialog-centered modal-md">
+            <img src="img/cande-sf.jpg" class="card-img-top rouded" alt="..." />
+          </div>
+          <!-- botones -->
+          <button
+            id="boton-next-galeria"
+            class="carousel-control-next btn"
+            type="button"
+            data-bs-target="#candy2"
+            data-bs-toggle="modal"
+          >
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+        <!-- 2da imagen -->
+        <div class="col tiposf-img my-2">
+          <a href="#" data-bs-toggle="modal" data-bs-target="#candy2">
+            <img class="galeria-control-img" src="img/candy-fila.jpg" alt="" />
+          </a>
+        </div>
+        <!-- modal -->
+        <div
+          class="modal fade"
+          id="candy2"
+          aria-labelledby="exampleModalLabel"
+          aria-hidden="true"
+        >
+          <div class="modal-dialog modal-dialog-centered modal-md">
+            <img
+              src="img/candy-fila.jpg"
+              class="card-img-top rouded"
+              alt="..."
+            />
+          </div>
+          <!-- botones -->
+          <button
+            id="boton-prev-galeria"
+            class="carousel-control-prev btn"
+            type="button"
+            data-bs-target="#candy1"
+            data-bs-toggle="modal"
+          >
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button
+            id="boton-next-galeria"
+            class="carousel-control-next btn"
+            type="button"
+            data-bs-target="#candy3"
+            data-bs-toggle="modal"
+          >
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+        <!-- 3ra img -->
+        <div class="col tiposf-img my-2">
+          <a href="#" data-bs-toggle="modal" data-bs-target="#candy3">
+            <img
+              class="galeria-control-img"
+              src="img/candy-machine.jpg"
+              alt=""
+            />
+          </a>
+        </div>
+        <!-- modal -->
+        <div
+          class="modal fade"
+          id="candy3"
+          aria-labelledby="exampleModalLabel"
+          aria-hidden="true"
+        >
+          <div class="modal-dialog modal-dialog-centered modal-md">
+            <img
+              src="img/candy-machine.jpg"
+              class="card-img-top rouded"
+              alt="..."
+            />
+          </div>
+          <!-- botones -->
+          <button
+            id="boton-prev-galeria"
+            class="carousel-control-prev btn"
+            type="button"
+            data-bs-target="#candy2"
+            data-bs-toggle="modal"
+          >
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button
+            id="boton-next-galeria"
+            class="carousel-control-next btn"
+            type="button"
+            data-bs-target="#candy4"
+            data-bs-toggle="modal"
+          >
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+        <!-- 4ta img -->
+        <div class="col tiposf-img my-2">
+          <a href="#" data-bs-toggle="modal" data-bs-target="#candy4">
+            <img
+              class="galeria-control-img"
+              src="img/candy-japon1.webp"
+              alt=""
+            />
+          </a>
+        </div>
+        <!-- modal -->
+        <div
+          class="modal fade"
+          id="candy4"
+          aria-labelledby="exampleModalLabel"
+          aria-hidden="true"
+        >
+          <div class="modal-dialog modal-dialog-centered modal-md">
+            <img
+              src="img/candy-japon1.webp"
+              class="card-img-top rouded"
+              alt="..."
+            />
+          </div>
+          <!-- botones -->
+          <button
+            id="boton-prev-galeria"
+            class="carousel-control-prev btn"
+            type="button"
+            data-bs-target="#candy3"
+            data-bs-toggle="modal"
+          >
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button
+            id="boton-next-galeria"
+            class="carousel-control-next btn"
+            type="button"
+            data-bs-target="#candy5"
+            data-bs-toggle="modal"
+          >
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+        <!-- 5ta img -->
+        <div class="col tiposf-img my-2">
+          <a href="#" data-bs-toggle="modal" data-bs-target="#candy5">
+            <img class="galeria-control-img" src="img/candy-sf2.webp" alt="" />
+          </a>
+        </div>
+        <!-- modal -->
+        <div
+          class="modal fade"
+          id="candy5"
+          aria-labelledby="exampleModalLabel"
+          aria-hidden="true"
+        >
+          <div class="modal-dialog modal-dialog-centered modal-md">
+            <img
+              src="img/candy-sf2.webp"
+              class="card-img-top rouded"
+              alt="..."
+            />
+          </div>
+          <!-- botones -->
+          <button
+            id="boton-prev-galeria"
+            class="carousel-control-prev btn"
+            type="button"
+            data-bs-target="#candy4"
+            data-bs-toggle="modal"
+          >
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button
+            id="boton-next-galeria"
+            class="carousel-control-next btn"
+            type="button"
+            data-bs-target="#candy6"
+            data-bs-toggle="modal"
+          >
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+        <!-- 6ta img -->
+        <div class="col tiposf-img my-2">
+          <a href="#" data-bs-toggle="modal" data-bs-target="#candy6">
+            <img
+              class="galeria-control-img"
+              src="img/candy-japon2.webp"
+              alt=""
+            />
+          </a>
+        </div>
+        <!-- modal -->
+        <div
+          class="modal fade"
+          id="candy6"
+          aria-labelledby="exampleModalLabel"
+          aria-hidden="true"
+        >
+          <div class="modal-dialog modal-dialog-centered modal-md">
+            <img
+              src="img/candy-japon2.webp"
+              class="card-img-top rouded"
+              alt="..."
+            />
+          </div>
+          <!-- botones -->
+          <button
+            id="boton-prev-galeria"
+            class="carousel-control-prev btn"
+            type="button"
+            data-bs-target="#candy5"
+            data-bs-toggle="modal"
+          >
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+        </div>
+      </div>
+    </section>
+    <!-- pinball -->
+    <section class="container my-4">
+      <header class="my-4">
+        <h4 class="pixel-font text-center title-size my-1">Pinball</h4>
+        <p class="copete-size text-center mb-4">
+          Las que no necesitan presentacion.
+        </p>
+      </header>
+      <div
+        class="row row-cols-1 row-cols-md-3 p-1 d-flex justify-content-center align-items-center"
+      >
+        <div class="col tiposf-img my-2">
+          <a href="#" data-bs-toggle="modal" data-bs-target="#pinball1">
+            <img
+              class="galeria-control-img"
+              src="img/pinball-score.webp"
+              alt=""
+            />
+          </a>
+        </div>
+        <!-- modal -->
+        <div
+          class="modal fade"
+          id="pinball1"
+          aria-labelledby="exampleModalLabel"
+          aria-hidden="true"
+        >
+          <div class="modal-dialog modal-dialog-centered modal-md">
+            <img
+              src="img/pinball-score.webp"
+              class="card-img-top rouded"
+              alt="..."
+            />
+          </div>
+          <!-- botones -->
+          <button
+            id="boton-next-galeria"
+            class="carousel-control-next btn"
+            type="button"
+            data-bs-target="#pinball2"
+            data-bs-toggle="modal"
+          >
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+        <!-- 2da imagen -->
+        <div class="col tiposf-img my-2">
+          <a href="#" data-bs-toggle="modal" data-bs-target="#pinball2">
+            <img
+              class="galeria-control-img"
+              src="img/pinball-meteor.jpg"
+              alt=""
+            />
+          </a>
+        </div>
+        <!-- modal -->
+        <div
+          class="modal fade"
+          id="pinball2"
+          aria-labelledby="exampleModalLabel"
+          aria-hidden="true"
+        >
+          <div class="modal-dialog modal-dialog-centered modal-md">
+            <img
+              src="img/pinball-meteor.jpg"
+              class="card-img-top rouded"
+              alt="..."
+            />
+          </div>
+          <!-- botones -->
+          <button
+            id="boton-prev-galeria"
+            class="carousel-control-prev btn"
+            type="button"
+            data-bs-target="#pinball1"
+            data-bs-toggle="modal"
+          >
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button
+            id="boton-next-galeria"
+            class="carousel-control-next btn"
+            type="button"
+            data-bs-target="#pinball3"
+            data-bs-toggle="modal"
+          >
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+        <!-- 3ra img -->
+        <div class="col tiposf-img my-2">
+          <a href="#" data-bs-toggle="modal" data-bs-target="#pinball3">
+            <img
+              class="galeria-control-img"
+              src="img/pinball-simpson.avif"
+              alt=""
+            />
+          </a>
+        </div>
+        <!-- modal -->
+        <div
+          class="modal fade"
+          id="pinball3"
+          aria-labelledby="exampleModalLabel"
+          aria-hidden="true"
+        >
+          <div class="modal-dialog modal-dialog-centered modal-md">
+            <img
+              src="img/pinball-simpson.avif"
+              class="card-img-top rouded"
+              alt="..."
+            />
+          </div>
+          <!-- botones -->
+          <button
+            id="boton-prev-galeria"
+            class="carousel-control-prev btn"
+            type="button"
+            data-bs-target="#pinball2"
+            data-bs-toggle="modal"
+          >
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button
+            id="boton-next-galeria"
+            class="carousel-control-next btn"
+            type="button"
+            data-bs-target="#pinball4"
+            data-bs-toggle="modal"
+          >
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+        <!-- 4ta img -->
+        <div class="col tiposf-img my-2">
+          <a href="#" data-bs-toggle="modal" data-bs-target="#pinball4">
+            <img
+              class="galeria-control-img"
+              src="img/pinball-terminator.jpg"
+              alt=""
+            />
+          </a>
+        </div>
+        <!-- modal -->
+        <div
+          class="modal fade"
+          id="pinball4"
+          aria-labelledby="exampleModalLabel"
+          aria-hidden="true"
+        >
+          <div class="modal-dialog modal-dialog-centered modal-md">
+            <img
+              src="img/pinball-terminator.jpg"
+              class="card-img-top rouded"
+              alt="..."
+            />
+          </div>
+          <!-- botones -->
+          <button
+            id="boton-prev-galeria"
+            class="carousel-control-prev btn"
+            type="button"
+            data-bs-target="#pinball3"
+            data-bs-toggle="modal"
+          >
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button
+            id="boton-next-galeria"
+            class="carousel-control-next btn"
+            type="button"
+            data-bs-target="#pinball5"
+            data-bs-toggle="modal"
+          >
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+        <!-- 5ta img -->
+        <div class="col tiposf-img my-2">
+          <a href="#" data-bs-toggle="modal" data-bs-target="#pinball5">
+            <img
+              class="galeria-control-img"
+              src="img/pinball-millonaire.jpg"
+              alt=""
+            />
+          </a>
+        </div>
+        <!-- modal -->
+        <div
+          class="modal fade"
+          id="pinball5"
+          aria-labelledby="exampleModalLabel"
+          aria-hidden="true"
+        >
+          <div class="modal-dialog modal-dialog-centered modal-md">
+            <img
+              src="img/pinball-millonaire.jpg"
+              class="card-img-top rouded"
+              alt="..."
+            />
+          </div>
+          <!-- botones -->
+          <button
+            id="boton-prev-galeria"
+            class="carousel-control-prev btn"
+            type="button"
+            data-bs-target="#pinball4"
+            data-bs-toggle="modal"
+          >
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button
+            id="boton-next-galeria"
+            class="carousel-control-next btn"
+            type="button"
+            data-bs-target="#pinball6"
+            data-bs-toggle="modal"
+          >
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+        <!-- 6ta img -->
+        <div class="col tiposf-img my-2">
+          <a href="#" data-bs-toggle="modal" data-bs-target="#pinball6">
+            <img
+              class="galeria-control-img"
+              src="img/pinball-zepellin.jpg"
+              alt=""
+            />
+          </a>
+        </div>
+        <!-- modal -->
+        <div
+          class="modal fade"
+          id="pinball6"
+          aria-labelledby="exampleModalLabel"
+          aria-hidden="true"
+        >
+          <div class="modal-dialog modal-dialog-centered modal-md">
+            <img
+              src="img/pinball-zepellin.jpg"
+              class="card-img-top rouded"
+              alt="..."
+            />
+          </div>
+          <!-- botones -->
+          <button
+            id="boton-prev-galeria"
+            class="carousel-control-prev btn"
+            type="button"
+            data-bs-target="#pinball5"
+            data-bs-toggle="modal"
+          >
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+        </div>
+      </div>
+    </section>
+    <!-- bartop -->
+    <section class="container my-4">
+      <header class="my-4">
+        <h4 class="pixel-font text-center title-size my-1">Bartop</h4>
+        <p class="copete-size text-center mb-4">
+          Más modernas. Creadas para poder apoyarse sobre una mesa.
+          <br />
+          Ideal para tener en casa.
+        </p>
+      </header>
+      <div
+        class="row row-cols-1 row-cols-md-3 p-1 d-flex justify-content-center align-items-center"
+      >
+        <div class="col tiposf-img my-2">
+          <a href="#" data-bs-toggle="modal" data-bs-target="#bartop1">
+            <img class="galeria-control-img" src="img/bartop1.webp" alt="" />
+          </a>
+        </div>
+        <!-- modal -->
+        <div
+          class="modal fade"
+          id="bartop1"
+          aria-labelledby="exampleModalLabel"
+          aria-hidden="true"
+        >
+          <div class="modal-dialog modal-dialog-centered modal-md">
+            <img src="img/bartop1.webp" class="card-img-top rouded" alt="..." />
+          </div>
+          <!-- botones -->
+          <button
+            id="boton-next-galeria"
+            class="carousel-control-next btn"
+            type="button"
+            data-bs-target="#bartop2"
+            data-bs-toggle="modal"
+          >
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+        <!-- 2da imagen -->
+        <div class="col tiposf-img my-2">
+          <a href="#" data-bs-toggle="modal" data-bs-target="#bartop2">
+            <img class="galeria-control-img" src="img/bartop2.webp" alt="" />
+          </a>
+        </div>
+        <!-- modal -->
+        <div
+          class="modal fade"
+          id="bartop2"
+          aria-labelledby="exampleModalLabel"
+          aria-hidden="true"
+        >
+          <div class="modal-dialog modal-dialog-centered modal-md">
+            <img src="img/bartop2.webp" class="card-img-top rouded" alt="..." />
+          </div>
+          <!-- botones -->
+          <button
+            id="boton-prev-galeria"
+            class="carousel-control-prev btn"
+            type="button"
+            data-bs-target="#bartop1"
+            data-bs-toggle="modal"
+          >
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button
+            id="boton-next-galeria"
+            class="carousel-control-next btn"
+            type="button"
+            data-bs-target="#bartop3"
+            data-bs-toggle="modal"
+          >
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+        <!-- 3ra img -->
+        <div class="col tiposf-img my-2">
+          <a href="#" data-bs-toggle="modal" data-bs-target="#bartop3">
+            <img class="galeria-control-img" src="img/bartop3.jpg" alt="" />
+          </a>
+        </div>
+        <!-- modal -->
+        <div
+          class="modal fade"
+          id="bartop3"
+          aria-labelledby="exampleModalLabel"
+          aria-hidden="true"
+        >
+          <div class="modal-dialog modal-dialog-centered modal-md">
+            <img src="img/bartop3.jpg" class="card-img-top rouded" alt="..." />
+          </div>
+          <!-- botones -->
+          <button
+            id="boton-prev-galeria"
+            class="carousel-control-prev btn"
+            type="button"
+            data-bs-target="#bartop2"
+            data-bs-toggle="modal"
+          >
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button
+            id="boton-next-galeria"
+            class="carousel-control-next btn"
+            type="button"
+            data-bs-target="#bartop4"
+            data-bs-toggle="modal"
+          >
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+        <!-- 4ta img -->
+        <div class="col tiposf-img my-2">
+          <a href="#" data-bs-toggle="modal" data-bs-target="#bartop4">
+            <img class="galeria-control-img" src="img/bartop4.avif" alt="" />
+          </a>
+        </div>
+        <!-- modal -->
+        <div
+          class="modal fade"
+          id="bartop4"
+          aria-labelledby="exampleModalLabel"
+          aria-hidden="true"
+        >
+          <div class="modal-dialog modal-dialog-centered modal-md">
+            <img src="img/bartop4.avif" class="card-img-top rouded" alt="..." />
+          </div>
+          <!-- botones -->
+          <button
+            id="boton-prev-galeria"
+            class="carousel-control-prev btn"
+            type="button"
+            data-bs-target="#bartop3"
+            data-bs-toggle="modal"
+          >
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button
+            id="boton-next-galeria"
+            class="carousel-control-next btn"
+            type="button"
+            data-bs-target="#bartop5"
+            data-bs-toggle="modal"
+          >
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+        <!-- 5ta img -->
+        <div class="col tiposf-img my-2">
+          <a href="#" data-bs-toggle="modal" data-bs-target="#bartop5">
+            <img class="galeria-control-img" src="img/bartop5.webp" alt="" />
+          </a>
+        </div>
+        <!-- modal -->
+        <div
+          class="modal fade"
+          id="bartop5"
+          aria-labelledby="exampleModalLabel"
+          aria-hidden="true"
+        >
+          <div class="modal-dialog modal-dialog-centered modal-md">
+            <img src="img/bartop5.webp" class="card-img-top rouded" alt="..." />
+          </div>
+          <!-- botones -->
+          <button
+            id="boton-prev-galeria"
+            class="carousel-control-prev btn"
+            type="button"
+            data-bs-target="#bartop4"
+            data-bs-toggle="modal"
+          >
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button
+            id="boton-next-galeria"
+            class="carousel-control-next btn"
+            type="button"
+            data-bs-target="#bartop6"
+            data-bs-toggle="modal"
+          >
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+        <!-- 6ta img -->
+        <div class="col tiposf-img my-2">
+          <a href="#" data-bs-toggle="modal" data-bs-target="#bartop6">
+            <img class="galeria-control-img" src="img/bartop6.jpg" alt="" />
+          </a>
+        </div>
+        <!-- modal -->
+        <div
+          class="modal fade"
+          id="bartop6"
+          aria-labelledby="exampleModalLabel"
+          aria-hidden="true"
+        >
+          <div class="modal-dialog modal-dialog-centered modal-md">
+            <img src="img/bartop6.jpg" class="card-img-top rouded" alt="..." />
+          </div>
+          <!-- botones -->
+          <button
+            id="boton-prev-galeria"
+            class="carousel-control-prev btn"
+            type="button"
+            data-bs-target="#bartop5"
+            data-bs-toggle="modal"
+          >
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+        </div>
+      </div>
     </section>
     <footer
       class="bg-body-tertiary container-fluid py-3 d-flex flex-column flex-md-row gap-5 justify-content-center align-items-center"
@@ -168,10 +1393,10 @@
       <div>
         <p>Informática general - Cátedra Drelichmann</p>
         <p>
-          <a href="">Desarrollador - Mauro Giachero</a>
+          <a href="../alumno/index.html">Desarrollador - Mauro Giachero</a>
         </p>
         <p>
-          <a href="">Contacto</a>
+          <a href="../contacto/index.html">Contacto</a>
         </p>
       </div>
     </footer>
