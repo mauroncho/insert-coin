@@ -360,3 +360,7 @@ footer div p a:hover {
   transform: translateX(-50%);
   z-index: 20;
 }
+
+.jugar-nav {
+  font-weight: 500;
+}
