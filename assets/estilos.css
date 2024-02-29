@@ -215,18 +215,6 @@ ul {
   }
 }
 
-.img-clasicos img {
-  object-fit: cover;
-  width: 100%;
-  height: 100%;
-}
-
-.index-clasicos-text {
-  max-width: 450px;
-  margin-top: -10px;
-  margin-bottom: 40px;
-}
-
 .btn-width {
   width: 30%;
   font-weight: 550;
@@ -363,6 +351,22 @@ footer div p a:hover {
 
 .jugar-nav {
   font-weight: 500;
+}
+
+/* CLASICOS */
+/* TODO prueba de color y bordes */
+.clasicos-card-color {
+  background-color: #f8d300;
+}
+
+.clasicos-card-title {
+  margin: 0;
+  font-size: 1.3em;
+  font-weight: 600;
+}
+
+.clasicos-lista-borde {
+  border-bottom: #00000030 solid 1px;
 }
 
 /* EXTRAS */

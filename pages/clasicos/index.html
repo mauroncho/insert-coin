@@ -112,7 +112,81 @@
         </div>
       </div>
     </nav>
-    <main>CLASICOS</main>
+    <header class="p-2 my-3 text-center">
+      <h2 class="pixel-font title-size">Clásicos</h2>
+      <p>
+        Una colección totalmente arbitraria de juegos que pasaron por máquinas
+        de fichines.
+      </p>
+    </header>
+    <main class="container p-2 my-3">
+      <div>
+        <!-- pacman -->
+        <div class="card text-bg-warning" style="width: 18rem">
+          <img src="img/pacman.jpg" class="card-img-top" alt="..." />
+          <div class="card-body">
+            <h5 class="clasicos-card-title">Pac-Man</h5>
+            <!-- <p class="card-text">
+              Some quick example text to build on the card title and make up the
+              bulk of the card's content.
+            </p> -->
+          </div>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item text-bg-warning clasicos-lista-borde">
+              Género: plataforma
+            </li>
+            <li class="list-group-item text-bg-warning clasicos-lista-borde">
+              Desarrollador: Namco
+            </li>
+            <li class="list-group-item text-bg-warning">Lanzamiento: 1980</li>
+          </ul>
+          <div class="card-body">
+            <button
+              type="button"
+              class="btn btn-dark"
+              data-bs-toggle="modal"
+              data-bs-target="#pacman"
+            >
+              Ver más
+            </button>
+          </div>
+        </div>
+        <!-- modal -->
+        <div
+          class="modal fade"
+          id="pacman"
+          tabindex="-1"
+          aria-labelledby="pacman-info"
+          aria-hidden="true"
+        >
+          <div
+            class="modal-dialog modal-dialog-centered modal-dialog-scrollable"
+          >
+            <div class="modal-content bg-secondary">
+              <div class="modal-header">
+                <h1 class="modal-title fs-5" id="pacman-info">Pac-Man</h1>
+                <button
+                  type="button"
+                  class="btn-close"
+                  data-bs-dismiss="modal"
+                  aria-label="Close"
+                ></button>
+              </div>
+              <div class="modal-body">...</div>
+              <div class="modal-footer">
+                <button
+                  type="button"
+                  class="btn btn-dark"
+                  data-bs-dismiss="modal"
+                >
+                  Cerrar
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
     <!-- footer -->
     <footer
       class="bg-body-tertiary container-fluid py-3 d-flex flex-column flex-md-row gap-5 justify-content-center align-items-center"
