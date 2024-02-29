@@ -156,7 +156,7 @@ ul {
   height: 100%;
 }
 
-.meli-kpa {
+.navigation-card {
   background-color: #8a750049;
   border-radius: 5px;
   color: white;
@@ -170,7 +170,7 @@ ul {
   transition-duration: 300ms;
 }
 
-.meli-kpa a {
+.navigation-card a {
   background-color: #f8d300;
   padding: 10px;
   border-radius: 5px;
@@ -180,12 +180,12 @@ ul {
   transition-duration: 300ms;
 }
 
-.meli-kpa a:hover {
+.navigation-card a:hover {
   text-decoration: underline;
   background-color: #d1b200;
 }
 
-.index-galeria-card:hover .meli-kpa {
+.index-galeria-card:hover .navigation-card {
   opacity: 1;
 }
 
@@ -363,4 +363,9 @@ footer div p a:hover {
 
 .jugar-nav {
   font-weight: 500;
+}
+
+/* EXTRAS */
+.extras-img {
+  max-width: 400px;
 }
