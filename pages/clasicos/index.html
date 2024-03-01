@@ -112,76 +112,879 @@
         </div>
       </div>
     </nav>
-    <header class="p-2 my-3 text-center">
+    <header class="p-3 my-3 text-center">
       <h2 class="pixel-font title-size">Clásicos</h2>
       <p>
         Una colección totalmente arbitraria de juegos que pasaron por máquinas
         de fichines.
       </p>
     </header>
-    <main class="container p-2 my-3">
-      <div>
-        <!-- pacman -->
-        <div class="card text-bg-warning" style="width: 18rem">
-          <img src="img/pacman.jpg" class="card-img-top" alt="..." />
-          <div class="card-body">
-            <h5 class="clasicos-card-title">Pac-Man</h5>
-            <!-- <p class="card-text">
-              Some quick example text to build on the card title and make up the
-              bulk of the card's content.
-            </p> -->
-          </div>
-          <ul class="list-group list-group-flush">
-            <li class="list-group-item text-bg-warning clasicos-lista-borde">
-              Género: plataforma
-            </li>
-            <li class="list-group-item text-bg-warning clasicos-lista-borde">
-              Desarrollador: Namco
-            </li>
-            <li class="list-group-item text-bg-warning">Lanzamiento: 1980</li>
-          </ul>
-          <div class="card-body">
-            <button
-              type="button"
-              class="btn btn-dark"
-              data-bs-toggle="modal"
-              data-bs-target="#pacman"
-            >
-              Ver más
-            </button>
+    <main class="container p-2 my-3 clasicos-grid">
+      <!-- pacman -->
+      <div class="card text-bg-warning clasicos-card">
+        <img
+          src="img/pacman.jpg"
+          class="card-img-top"
+          alt="Se ve el título de Pac-Man y sus personajes, Pac-Man y los cuatro fantasmas"
+        />
+        <div class="card-body">
+          <h5 class="clasicos-card-title">Pac-Man</h5>
+        </div>
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item text-bg-warning clasicos-lista-borde">
+            Género: plataforma
+          </li>
+          <li class="list-group-item text-bg-warning clasicos-lista-borde">
+            Desarrollador: Namco
+          </li>
+          <li class="list-group-item text-bg-warning">Lanzamiento: 1980</li>
+        </ul>
+        <div class="card-body">
+          <button
+            type="button"
+            class="btn btn-dark"
+            data-bs-toggle="modal"
+            data-bs-target="#pacman"
+          >
+            Ver más
+          </button>
+        </div>
+      </div>
+      <!-- modal -->
+      <div
+        class="modal fade"
+        id="pacman"
+        tabindex="-1"
+        aria-labelledby="pacman-info"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+          <div class="modal-content bg-secondary">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5" id="pacman-info">Pac-Man</h1>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="modal-body">
+              <article>
+                <section class="mb-3">
+                  <h5 class="text-center pixel-font clasicos-modal-title">
+                    Gameplay
+                  </h5>
+                  <div>
+                    <iframe
+                      class="clasicos-iframe"
+                      width="450"
+                      height="315"
+                      src="https://www.youtube.com/embed/dScq4P5gn4A?si=nZ1O1RZ4NGEHhL0_"
+                      title="YouTube video player"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                      allowfullscreen
+                    ></iframe>
+                  </div>
+                </section>
+                <section class="mb-3">
+                  <h5 class="text-center pixel-font clasicos-modal-title">
+                    Serie
+                  </h5>
+                  <ul>
+                    <li>Pac-Man (1980)</li>
+                    <li>Ms. Pac-Man (1981)</li>
+                    <li>Kick (1981)</li>
+                    <li>Super Pac-Man (1982)</li>
+                    <li>Baby Pac-Man (1982)</li>
+                    <li>Pac-Man Plus (1982)</li>
+                    <li>Jr. Pac-Man (1983)</li>
+                    <li>Pac & Pal (1983)</li>
+                    <li>Professor Pac-Man (1983)</li>
+                    <li>Pac-Land (1984)</li>
+                    <li>Pac-Mania (1987)</li>
+                    <li>Pac-Attack (1993)</li>
+                    <li>Pac-In-Time (1994)</li>
+                    <li>Pac-Man 2 - The New Adventures (1994)</li>
+                    <li>Pac-Man VR (1996)</li>
+                    <li>Pac-Man Arrangement (1996)</li>
+                    <li>Pac-Man World (1999)</li>
+                    <li>
+                      Namco Museum 64 (recopilatorio de videojuegos) (1999)
+                    </li>
+                    <li>Pac-Man - Adventures in Time (2000)</li>
+                    <li>Ms. Pac-Man Maze Madness (2000)</li>
+                    <li>Ms. Pac-Man - Quest for the Golden Maze (2001)</li>
+                    <li>
+                      Galaga: Class of 1981 (recopilatorio de videojuegos)
+                      (2001)
+                    </li>
+                    <li>
+                      Pac-Man Collection (recopilatorio de videojuegos) (2001)
+                    </li>
+                    <li>
+                      Pac-Man All-Stars (recopilatorio de videojuegos) (2002)
+                    </li>
+                    <li>Pac-Man Fever (2002)</li>
+                    <li>Pac-Man World 2 (2002)</li>
+                    <li>Pac-Man vs. (2003)</li>
+                    <li>Pac-Pix (2005)</li>
+                    <li>Mario Kart Arcade GP (personaje invitado) (2005)</li>
+                    <li>Pac-Man World 3 (2005)</li>
+                    <li>Pac-Man Pinball Advance (2005)</li>
+                    <li>Pac 'n Roll (2005)</li>
+                    <li>Pac-Man: 25th Anniversary Arcade Machine (2005)</li>
+                    <li>
+                      Namco Museum: 50th Anniversary (recopilatorio de
+                      videojuegos) (2005)
+                    </li>
+                    <li>Pac-Man World Rally (2006)</li>
+                    <li>Pac-Man Championship Edition (2007)</li>
+                    <li>
+                      Namco Museum Remix (recopilatorio de videojuegos) (2007)
+                    </li>
+                    <li>
+                      Namco Museum DS (recopilatorio de videojuegos) (2007)
+                    </li>
+                    <li>Mario Kart Arcade GP 2 (personaje invitado) (2007)</li>
+                    <li>
+                      Namco Museum Virtual Arcade (recopilatorio de videojuegos)
+                      (2008)
+                    </li>
+                    <li>
+                      Namco All-Stars: Pac-Man and Dig Dug (recopilatorio de
+                      videojuegos) (2009)
+                    </li>
+                    <li>Pac-Man Remix (2009)</li>
+                    <li>Pac-Man Championship Edition DX (2010)</li>
+                    <li>Pac-Man Party (2010)</li>
+                    <li>Pac-Match Party (2010)</li>
+                    <li>Pac-Chain (2010)</li>
+                    <li>Pac-Man & Galaga Dimensions (2011)</li>
+                  </ul>
+                </section>
+              </article>
+            </div>
+            <div class="modal-footer">
+              <button
+                type="button"
+                class="btn btn-dark"
+                data-bs-dismiss="modal"
+              >
+                Cerrar
+              </button>
+            </div>
           </div>
         </div>
-        <!-- modal -->
-        <div
-          class="modal fade"
-          id="pacman"
-          tabindex="-1"
-          aria-labelledby="pacman-info"
-          aria-hidden="true"
-        >
-          <div
-            class="modal-dialog modal-dialog-centered modal-dialog-scrollable"
+      </div>
+      <!-- donkey kong -->
+      <div class="card text-bg-warning clasicos-card">
+        <img
+          src="img/donkey-kong.jpg"
+          class="card-img-top"
+          alt="Donkey Kong y Mario luchando"
+        />
+        <div class="card-body">
+          <h5 class="clasicos-card-title">Donkey Kong</h5>
+        </div>
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item text-bg-warning clasicos-lista-borde">
+            Género: plataforma
+          </li>
+          <li class="list-group-item text-bg-warning clasicos-lista-borde">
+            Desarrollador: Nintendo
+          </li>
+          <li class="list-group-item text-bg-warning">Lanzamiento: 1981</li>
+        </ul>
+        <div class="card-body">
+          <button
+            type="button"
+            class="btn btn-dark"
+            data-bs-toggle="modal"
+            data-bs-target="#donkey-kong"
           >
-            <div class="modal-content bg-secondary">
-              <div class="modal-header">
-                <h1 class="modal-title fs-5" id="pacman-info">Pac-Man</h1>
-                <button
-                  type="button"
-                  class="btn-close"
-                  data-bs-dismiss="modal"
-                  aria-label="Close"
-                ></button>
-              </div>
-              <div class="modal-body">...</div>
-              <div class="modal-footer">
-                <button
-                  type="button"
-                  class="btn btn-dark"
-                  data-bs-dismiss="modal"
-                >
-                  Cerrar
-                </button>
-              </div>
+            Ver más
+          </button>
+        </div>
+      </div>
+      <!-- modal -->
+      <div
+        class="modal fade"
+        id="donkey-kong"
+        tabindex="-1"
+        aria-labelledby="donkey-kong-info"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+          <div class="modal-content bg-secondary">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5" id="donkey-kong-info">
+                Donkey Kong
+              </h1>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="modal-body">
+              <article>
+                <section class="mb-3">
+                  <h5 class="text-center pixel-font clasicos-modal-title">
+                    Gameplay
+                  </h5>
+                  <div>
+                    <iframe
+                      class="clasicos-iframe"
+                      width="450"
+                      height="315"
+                      src="https://www.youtube.com/embed/UBHJhla8TO4?si=lKzjC9EaX7Hywfcj"
+                      title="YouTube video player"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                      allowfullscreen
+                    ></iframe>
+                  </div>
+                </section>
+                <section class="mb-3">
+                  <h5 class="text-center pixel-font clasicos-modal-title">
+                    Serie
+                  </h5>
+                  <ul>
+                    <li>Donkey Kong (1981)</li>
+                    <li>Donkey Kong Jr. (1982)</li>
+                    <li>Donkey Kong II (1983)</li>
+                    <li>Donkey Kong 3 (1983)</li>
+                    <li>Donkey Kong Jr. Math (1983)</li>
+                    <li>Donkey Kong Circus (1984)</li>
+                    <li>Donkey Kong Hockey (1984)</li>
+                    <li>Donkey Kong (GB) (1994)</li>
+                    <li>Donkey Kong Country (1994)</li>
+                    <li>Donkey Kong Land (1995)</li>
+                    <li>Donkey Kong Country 2: Diddy's Kong Quest (1995)</li>
+                    <li>Donkey Kong Land 2 (1996)</li>
+                    <li>
+                      Donkey Kong Country 3: Dixie Kong's Double Trouble! (1996)
+                    </li>
+                    <li>Donkey Kong Land III (1997)</li>
+                    <li>Diddy Kong Racing (1997)</li>
+                    <li>Donkey Kong 64 (1999)</li>
+                    <li>Donkey Konga (2003)</li>
+                    <li>Donkey Konga 2 (2004)</li>
+                    <li>Donkey Kong Jungle Beat (2004)</li>
+                    <li>DK: King of Swing (2005)</li>
+                    <li>Donkey Konga 3 (2005)</li>
+                    <li>Donkey Kong Barrel Blast (2007)</li>
+                    <li>DK: Jungle Climber (2007)</li>
+                    <li>Donkey Kong Country Returns (2010)</li>
+                    <li>Donkey Kong Country: Tropical Freeze (2014)</li>
+                  </ul>
+                </section>
+              </article>
+            </div>
+            <div class="modal-footer">
+              <button
+                type="button"
+                class="btn btn-dark"
+                data-bs-dismiss="modal"
+              >
+                Cerrar
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- breakout -->
+      <div class="card text-bg-warning clasicos-card">
+        <img
+          src="img/breakout.jpg"
+          class="card-img-top"
+          alt="Logo del juego Breakout"
+        />
+        <div class="card-body">
+          <h5 class="clasicos-card-title">Breakout</h5>
+        </div>
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item text-bg-warning clasicos-lista-borde">
+            Género: acción
+          </li>
+          <li class="list-group-item text-bg-warning clasicos-lista-borde">
+            Desarrollador: Atari
+          </li>
+          <li class="list-group-item text-bg-warning">Lanzamiento: 1976</li>
+        </ul>
+        <div class="card-body">
+          <button
+            type="button"
+            class="btn btn-dark"
+            data-bs-toggle="modal"
+            data-bs-target="#breakout"
+          >
+            Ver más
+          </button>
+        </div>
+      </div>
+      <!-- modal -->
+      <div
+        class="modal fade"
+        id="breakout"
+        tabindex="-1"
+        aria-labelledby="breakout-info"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+          <div class="modal-content bg-secondary">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5" id="breakout-info">Pac-Man</h1>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="modal-body">
+              <article>
+                <section class="mb-3">
+                  <h5 class="text-center pixel-font clasicos-modal-title">
+                    Gameplay
+                  </h5>
+                  <div>
+                    <iframe
+                      class="clasicos-iframe"
+                      width="450"
+                      height="315"
+                      src="https://www.youtube.com/embed/AMUv8KvVt08?si=Yu8__T8UuQkk9V10"
+                      title="YouTube video player"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                      allowfullscreen
+                    ></iframe>
+                  </div>
+                </section>
+                <section class="mb-3">
+                  <h5 class="text-center pixel-font clasicos-modal-title">
+                    Serie
+                  </h5>
+                  <ul>
+                    <li>Breakout (1976)</li>
+                    <li>Super Breakout (1983)</li>
+                  </ul>
+                </section>
+              </article>
+            </div>
+            <div class="modal-footer">
+              <button
+                type="button"
+                class="btn btn-dark"
+                data-bs-dismiss="modal"
+              >
+                Cerrar
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- space invaders -->
+      <div class="card text-bg-warning clasicos-card">
+        <img
+          src="img/space-invaders.jpg"
+          class="card-img-top"
+          alt="Logo del juego Space Invaders"
+        />
+        <div class="card-body">
+          <h5 class="clasicos-card-title">Space Invaders</h5>
+        </div>
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item text-bg-warning clasicos-lista-borde">
+            Género: acción
+          </li>
+          <li class="list-group-item text-bg-warning clasicos-lista-borde">
+            Desarrollador: Taito
+          </li>
+          <li class="list-group-item text-bg-warning">Lanzamiento: 1978</li>
+        </ul>
+        <div class="card-body">
+          <button
+            type="button"
+            class="btn btn-dark"
+            data-bs-toggle="modal"
+            data-bs-target="#space-invaders"
+          >
+            Ver más
+          </button>
+        </div>
+      </div>
+      <!-- modal -->
+      <div
+        class="modal fade"
+        id="space-invaders"
+        tabindex="-1"
+        aria-labelledby="space-invaders-info"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+          <div class="modal-content bg-secondary">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5" id="space-invaders-info">
+                Space Invaders
+              </h1>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="modal-body">
+              <article>
+                <section class="mb-3">
+                  <h5 class="text-center pixel-font clasicos-modal-title">
+                    Gameplay
+                  </h5>
+                  <div>
+                    <iframe
+                      class="clasicos-iframe"
+                      width="450"
+                      height="315"
+                      src="https://www.youtube.com/embed/uGjgxwiemms?si=Yj02PoSdl1QzrrNL"
+                      title="YouTube video player"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                      allowfullscreen
+                    ></iframe>
+                  </div>
+                </section>
+                <section class="mb-3">
+                  <h5 class="text-center pixel-font clasicos-modal-title">
+                    Serie
+                  </h5>
+                  <ul>
+                    <li>Space Invaders (1978)</li>
+                    <li>Space Invaders Part II (1979)</li>
+                    <li>Space Invaders II (1980)</li>
+                    <li>Return of the Invaders (1984)</li>
+                    <li>Super Space Invaders '91 (1990)</li>
+                    <li>Mininvaders (1990)</li>
+                    <li>Space Invaders DX (1993)</li>
+                    <li>Space Invaders '95 (1995)</li>
+                    <li>Space Invaders: The Beat Attacker (2008)</li>
+                    <li>Space Invaders: Frenzy (2017)</li>
+                  </ul>
+                </section>
+              </article>
+            </div>
+            <div class="modal-footer">
+              <button
+                type="button"
+                class="btn btn-dark"
+                data-bs-dismiss="modal"
+              >
+                Cerrar
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- street fighter -->
+      <div class="card text-bg-warning clasicos-card">
+        <img
+          src="img/street-fighter.jpg"
+          class="card-img-top"
+          alt="Logo del juego Street Fighter"
+        />
+        <div class="card-body">
+          <h5 class="clasicos-card-title">Street Fighter</h5>
+        </div>
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item text-bg-warning clasicos-lista-borde">
+            Género: lucha
+          </li>
+          <li class="list-group-item text-bg-warning clasicos-lista-borde">
+            Desarrollador: Capcom
+          </li>
+          <li class="list-group-item text-bg-warning">Lanzamiento: 1987</li>
+        </ul>
+        <div class="card-body">
+          <button
+            type="button"
+            class="btn btn-dark"
+            data-bs-toggle="modal"
+            data-bs-target="#street-fighter"
+          >
+            Ver más
+          </button>
+        </div>
+      </div>
+      <!-- modal -->
+      <div
+        class="modal fade"
+        id="street-fighter"
+        tabindex="-1"
+        aria-labelledby="street-fighter-info"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+          <div class="modal-content bg-secondary">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5" id="street-fighter-info">
+                Street Fighter
+              </h1>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="modal-body">
+              <article>
+                <section class="mb-3">
+                  <h5 class="text-center pixel-font clasicos-modal-title">
+                    Gameplay
+                  </h5>
+                  <div>
+                    <iframe
+                      class="clasicos-iframe"
+                      width="450"
+                      height="315"
+                      src="https://www.youtube.com/embed/xI284D4y1q4?si=8En0jvy_fHd5yFtI"
+                      title="YouTube video player"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                      allowfullscreen
+                    ></iframe>
+                  </div>
+                </section>
+                <section class="mb-3">
+                  <h5 class="text-center pixel-font clasicos-modal-title">
+                    Serie
+                  </h5>
+                  <ul>
+                    <li>Street Fighter (1987)</li>
+                    <li>Street Fighter II (1991)</li>
+                    <li>Street Fighter Alpha (1995)</li>
+                    <li>Street Fighter EX (1996)</li>
+                    <li>Street Fighter III (1997)</li>
+                    <li>Street Fighter IV (2008)</li>
+                    <li>Street Fighter V (2016)</li>
+                    <li>Street Fighter 6 (2023)</li>
+                  </ul>
+                </section>
+              </article>
+            </div>
+            <div class="modal-footer">
+              <button
+                type="button"
+                class="btn btn-dark"
+                data-bs-dismiss="modal"
+              >
+                Cerrar
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- mortal kombat -->
+      <div class="card text-bg-warning clasicos-card">
+        <img
+          src="img/mortal-kombat.jpg"
+          class="card-img-top"
+          alt="Logo del juego Breakout"
+        />
+        <div class="card-body">
+          <h5 class="clasicos-card-title">Mortal Kombat</h5>
+        </div>
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item text-bg-warning clasicos-lista-borde">
+            Género: lucha
+          </li>
+          <li class="list-group-item text-bg-warning clasicos-lista-borde">
+            Desarrollador: Midway
+          </li>
+          <li class="list-group-item text-bg-warning">Lanzamiento: 1976</li>
+        </ul>
+        <div class="card-body">
+          <button
+            type="button"
+            class="btn btn-dark"
+            data-bs-toggle="modal"
+            data-bs-target="#mortal-kombat"
+          >
+            Ver más
+          </button>
+        </div>
+      </div>
+      <!-- modal -->
+      <div
+        class="modal fade"
+        id="mortal-kombat"
+        tabindex="-1"
+        aria-labelledby="mortal-kombat-info"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+          <div class="modal-content bg-secondary">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5" id="mortal-kombat-info">
+                Mortal Kombat
+              </h1>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="modal-body">
+              <article>
+                <section class="mb-3">
+                  <h5 class="text-center pixel-font clasicos-modal-title">
+                    Gameplay
+                  </h5>
+                  <div>
+                    <iframe
+                      class="clasicos-iframe"
+                      width="450"
+                      height="315"
+                      src="https://www.youtube.com/embed/lW7r2w8SsN0?si=IBGNRfHx-PdVuooM"
+                      title="YouTube video player"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                      allowfullscreen
+                    ></iframe>
+                  </div>
+                </section>
+                <section class="mb-3">
+                  <h5 class="text-center pixel-font clasicos-modal-title">
+                    Serie
+                  </h5>
+                  <ul>
+                    <li>Mortal Kombat (1992)</li>
+                    <li>Mortal Kombat II (1993)</li>
+                    <li>Mortal Kombat 3 (1995)</li>
+                    <li>Ultimate Mortal Kombat 3 (1995)</li>
+                    <li>
+                      Mortal Kombat: Arcade Kollection (1992 - 1993 - 1995 -
+                      2011)
+                    </li>
+                    <li>Mortal Kombat Trilogy (1996)</li>
+                    <li>Mortal Kombat Mythologies: Sub-Zero (1997)</li>
+                    <li>Mortal Kombat 4 (1997)</li>
+                    <li>Mortal Kombat Gold (1999)</li>
+                    <li>Mortal Kombat: Special Forces (2000)</li>
+                    <li>Mortal Kombat: Deadly Alliance (2002)</li>
+                    <li>Mortal Kombat: Tournament Edition (2003)</li>
+                    <li>Mortal Kombat: Deception (2004)</li>
+                    <li>Mortal Kombat: Shaolin Monks (2005)</li>
+                    <li>Mortal Kombat: Unchained (2006)</li>
+                    <li>Mortal Kombat: Armageddon (2006 y 2007)</li>
+                    <li>Mortal Kombat: Kollection (2008)</li>
+                    <li>Mortal Kombat vs. DC Universe (2008)</li>
+                    <li>Mortal Kombat (2011)</li>
+                    <li>Mortal Kombat Komplete Edition (2012)</li>
+                    <li>Mortal Kombat X (2015)</li>
+                    <li>Mortal Kombat XL (2016)</li>
+                    <li>Mortal Kombat 11 (2019)</li>
+                    <li>Mortal Kombat 11 Ultimate (2020)</li>
+                    <li>Mortal Kombat 1 (2023)</li>
+                    <li>Mortal Kombat: Onslaught (2023)</li>
+                  </ul>
+                </section>
+              </article>
+            </div>
+            <div class="modal-footer">
+              <button
+                type="button"
+                class="btn btn-dark"
+                data-bs-dismiss="modal"
+              >
+                Cerrar
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- time crisis -->
+      <div class="card text-bg-warning clasicos-card">
+        <img
+          src="img/time-crisis.jpeg"
+          class="card-img-top"
+          alt="Logo del juego Breakout"
+        />
+        <div class="card-body">
+          <h5 class="clasicos-card-title">Time Crisis</h5>
+        </div>
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item text-bg-warning clasicos-lista-borde">
+            Género: disparos
+          </li>
+          <li class="list-group-item text-bg-warning clasicos-lista-borde">
+            Desarrollador: Namco
+          </li>
+          <li class="list-group-item text-bg-warning">Lanzamiento: 1995</li>
+        </ul>
+        <div class="card-body">
+          <button
+            type="button"
+            class="btn btn-dark"
+            data-bs-toggle="modal"
+            data-bs-target="#time-crisis"
+          >
+            Ver más
+          </button>
+        </div>
+      </div>
+      <!-- modal -->
+      <div
+        class="modal fade"
+        id="time-crisis"
+        tabindex="-1"
+        aria-labelledby="time-crisis-info"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+          <div class="modal-content bg-secondary">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5" id="time-crisis-info">
+                Time Crisis
+              </h1>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="modal-body">
+              <article>
+                <section class="mb-3">
+                  <h5 class="text-center pixel-font clasicos-modal-title">
+                    Gameplay
+                  </h5>
+                  <div>
+                    <iframe
+                      class="clasicos-iframe"
+                      width="450"
+                      height="315"
+                      src="https://www.youtube.com/embed/zWnFwJXOnAg?si=ZanEOqbhiTSJOo3R"
+                      title="YouTube video player"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                      allowfullscreen
+                    ></iframe>
+                  </div>
+                </section>
+                <section class="mb-3">
+                  <h5 class="text-center pixel-font clasicos-modal-title">
+                    Serie
+                  </h5>
+                  <ul>
+                    <li>Time Crisis (1995)</li>
+                    <li>Time Crisis II (1998)</li>
+                    <li>Time Crisis 3 (2002)</li>
+                    <li>Time Crisis 4 (2006)</li>
+                    <li>Time Crisis 5 (2015)</li>
+                  </ul>
+                </section>
+              </article>
+            </div>
+            <div class="modal-footer">
+              <button
+                type="button"
+                class="btn btn-dark"
+                data-bs-dismiss="modal"
+              >
+                Cerrar
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- daytona usa -->
+      <div class="card text-bg-warning clasicos-card">
+        <img
+          src="img/daytona-usa.jpg"
+          class="card-img-top"
+          alt="Logo del juego Breakout"
+        />
+        <div class="card-body">
+          <h5 class="clasicos-card-title">Daytona USA</h5>
+        </div>
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item text-bg-warning clasicos-lista-borde">
+            Género: carreras
+          </li>
+          <li class="list-group-item text-bg-warning clasicos-lista-borde">
+            Desarrollador: Sega
+          </li>
+          <li class="list-group-item text-bg-warning">Lanzamiento: 1993</li>
+        </ul>
+        <div class="card-body">
+          <button
+            type="button"
+            class="btn btn-dark"
+            data-bs-toggle="modal"
+            data-bs-target="#daytona-usa"
+          >
+            Ver más
+          </button>
+        </div>
+      </div>
+      <!-- modal -->
+      <div
+        class="modal fade"
+        id="daytona-usa"
+        tabindex="-1"
+        aria-labelledby="daytona-usa-info"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+          <div class="modal-content bg-secondary">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5" id="daytona-usa-info">
+                Daytona USA
+              </h1>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="modal-body">
+              <article>
+                <section class="mb-3">
+                  <h5 class="text-center pixel-font clasicos-modal-title">
+                    Gameplay
+                  </h5>
+                  <div>
+                    <iframe
+                      class="clasicos-iframe"
+                      width="450"
+                      height="315"
+                      src="https://www.youtube.com/embed/X1V_2pvlAiE?si=8EQaqDPB1oZrveB8"
+                      title="YouTube video player"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                      allowfullscreen
+                    ></iframe>
+                  </div>
+                </section>
+                <section class="mb-3">
+                  <h5 class="text-center pixel-font clasicos-modal-title">
+                    Serie
+                  </h5>
+                  <ul>
+                    <li>Daytona USA (1993)</li>
+                    <li>Daytona USA Deluxe (1996)</li>
+                    <li>Daytona USA 2 (1998)</li>
+                  </ul>
+                </section>
+              </article>
+            </div>
+            <div class="modal-footer">
+              <button
+                type="button"
+                class="btn btn-dark"
+                data-bs-dismiss="modal"
+              >
+                Cerrar
+              </button>
             </div>
           </div>
         </div>

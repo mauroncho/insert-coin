@@ -197,24 +197,6 @@ ul {
   font-size: 2.6em;
 }
 
-@media (max-width: 992px) {
-  .index-invaders-text {
-    width: 100%;
-  }
-
-  .index-jugar-img .index-invaders-text h4 {
-    font-size: 2.5em;
-  }
-
-  .multimedia-iframe {
-    max-width: 345px;
-  }
-
-  .jugar-text {
-    min-width: 320px;
-  }
-}
-
 .btn-width {
   width: 30%;
   font-weight: 550;
@@ -355,8 +337,12 @@ footer div p a:hover {
 
 /* CLASICOS */
 /* TODO prueba de color y bordes */
-.clasicos-card-color {
-  background-color: #f8d300;
+.clasicos-card {
+  max-width: 280px;
+}
+
+.clasicos-iframe {
+  max-width: 450px;
 }
 
 .clasicos-card-title {
@@ -369,7 +355,42 @@ footer div p a:hover {
   border-bottom: #00000030 solid 1px;
 }
 
+.clasicos-modal-title {
+  font-size: 3em;
+}
+
+.clasicos-grid {
+  display: grid;
+  justify-items: center;
+  grid-template-columns: repeat(auto-fit, minmax(295px, 1fr));
+  gap: 16px;
+}
+
 /* EXTRAS */
 .extras-img {
   max-width: 400px;
+}
+
+@media (max-width: 992px) {
+  .index-invaders-text {
+    width: 100%;
+  }
+
+  .index-jugar-img .index-invaders-text h4 {
+    font-size: 2.5em;
+  }
+
+  .multimedia-iframe {
+    max-width: 345px;
+  }
+}
+
+@media (max-width: 768px) {
+  .clasicos-iframe {
+    max-width: 360px;
+  }
+
+  .jugar-text {
+    min-width: 250px;
+  }
 }
