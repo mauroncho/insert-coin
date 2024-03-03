@@ -30,13 +30,14 @@
       crossorigin="anonymous"
     ></script>
     <link rel="stylesheet" href="../../assets/estilos.css" />
+    <script src="../../assets/interaccion.js"></script>
   </head>
 
   <body>
     <!-- nav -->
     <nav class="navbar navbar-expand-lg bg-body-tertiary pixel-font nav-size">
       <div class="container-fluid">
-        <a class="navbar-brand" href="#">
+        <a class="navbar-brand" href="../../index.html">
           <img
             class="img-nav"
             src="../../img/icon-coin.png"
@@ -67,7 +68,7 @@
               <span>
                 <img
                   class="img-nav"
-                  src="img/icon-coin.png"
+                  src="../../img/icon-coin.png"
                   alt="Icono Insert Coin"
                 />
               </span>
@@ -110,7 +111,76 @@
         </div>
       </div>
     </nav>
-    <main>CONTACT FORM</main>
+    <main class="container">
+      <header class="my-3 p-2 text-center">
+        <h2 class="pixel-font title-size">Estemos en contacto</h2>
+        <p>
+          Hacé un comentario/sugerencia a través de este formulario.
+          <br />
+          Si te sentís generoso pedí CBU.
+        </p>
+      </header>
+      <article class="my-3 p-2">
+        <form
+          id="contacto-form"
+          class="row g-3 text-black contacto-form mx-auto"
+          action="https://formsubmit.co/576c878b2495f0c2fb38d0b947b0419c"
+          method="POST"
+        >
+          <div class="form-floating">
+            <input
+              type="text"
+              class="form-control"
+              id="username"
+              name="username"
+              placeholder="name@example.com"
+            />
+            <label for="username">Nombre</label>
+          </div>
+          <div class="form-floating">
+            <input
+              type="text"
+              class="form-control"
+              id="userapellido"
+              name="userapellido"
+              placeholder="Password"
+            />
+            <label for="userapellido">Apellido</label>
+          </div>
+          <div class="form-floating">
+            <input
+              type="email"
+              class="form-control"
+              id="usermail"
+              name="usermail"
+              placeholder="name@example.com"
+            />
+            <label for="usermail">Email</label>
+          </div>
+          <div class="form-floating">
+            <textarea
+              class="form-control"
+              placeholder="Leave a comment here"
+              id="floating-textarea"
+              name="floating-textarea"
+              style="height: 100px"
+            ></textarea>
+            <label for="floating-textarea">Comentarios</label>
+          </div>
+          <div class="text-center">
+            <button id="contacto-submit" type="button" class="btn btn-warning">
+              Enviar formulario
+            </button>
+          </div>
+
+          <input
+            type="hidden"
+            name="_next"
+            value="https://insert-coin.netlify.app/pages/contacto/"
+          />
+        </form>
+      </article>
+    </main>
     <!-- footer -->
     <footer
       class="bg-body-tertiary container-fluid py-3 d-flex flex-column flex-md-row gap-5 justify-content-center align-items-center"
