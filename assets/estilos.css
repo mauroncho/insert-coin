@@ -371,6 +371,13 @@ footer div p a:hover {
   max-width: 400px;
 }
 
+/* stickers */
+.sticker-div {
+  max-width: 270px;
+  min-height: 270px;
+  border: solid #f8d300 2px;
+}
+
 /* CONTACTO */
 .contacto-form {
   max-width: 850px;

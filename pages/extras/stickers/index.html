@@ -3,8 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Insert Coin - Inicio</title>
-    <link rel="icon" type="image/x-icon" href="../../img/icon-coin.png" />
+    <title>Insert Coin - Extras - Stickers</title>
+    <link rel="icon" type="image/x-icon" href="../../../img/icon-coin.png" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -29,7 +29,8 @@
       integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
       crossorigin="anonymous"
     ></script>
-    <link rel="stylesheet" href="../../assets/estilos.css" />
+    <link rel="stylesheet" href="../../../assets/estilos.css" />
+    <script src="../../../assets/interaccion.js"></script>
   </head>
 
   <body>
@@ -39,7 +40,7 @@
         <a class="navbar-brand" href="#">
           <img
             class="img-nav"
-            src="../../img/icon-coin.png"
+            src="../../../img/icon-coin.png"
             alt="Icono Insert Coin"
           />
         </a>
@@ -67,7 +68,7 @@
               <span>
                 <img
                   class="img-nav"
-                  src="../../img/icon-coin.png"
+                  src="../../../img/icon-coin.png"
                   alt="Icono Insert Coin"
                 />
               </span>
@@ -82,95 +83,71 @@
           </div>
           <ul class="navbar-nav d-flex gap-3">
             <li class="nav-item">
-              <a class="nav-link" href="../../index.html">Inicio</a>
+              <a class="nav-link" href="../../../index.html">Inicio</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="../historia/index.html">Historia</a>
+              <a class="nav-link" href="../../historia/index.html">Historia</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="../galeria/index.html">Galería</a>
+              <a class="nav-link" href="../../galeria/index.html">Galería</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="../clasicos/index.html">Clásicos</a>
+              <a class="nav-link" href="../../clasicos/index.html">Clásicos</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="../donde-jugar/index.html">
+              <a class="nav-link" href="../../donde-jugar/index.html">
                 ¿Dónde jugar?
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="../space-invaders/index.html">
+              <a class="nav-link" href="../../space-invaders/index.html">
                 Space Invaders
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#">Extras</a>
+              <a
+                class="nav-link active"
+                aria-current="page"
+                href="../index.html"
+              >
+                Extras
+              </a>
             </li>
           </ul>
         </div>
       </div>
     </nav>
-    <!-- galeria -->
-    <section class="container my-5">
-      <header class="my-3 p-2">
-        <h2 class="pixel-font index-galeria-title">Extras</h2>
-        <p class="index-galeria-article text-center mx-auto">
-          En esta sección encontrarás contenidos multimedia acerca del universo
-          fichin. También te vas a poder llevar una colección de stickers!
+    <div class="container">
+      <header class="my-3 p-2 text-center">
+        <h2 class="pixel-font title-size">Stickers</h2>
+        <p>
+          El botón va a hacer aparecer un sticker sorteado al azar.
+          <br />
+          Al hacerle click, te lo vas a poder descargar. ¡Disfrutalo!
         </p>
-        <p class="index-galeria-article text-center mx-auto"></p>
+        <button type="button" id="sortear-sticker" class="btn btn-warning my-2">
+          Quiero mi sticker
+        </button>
       </header>
-      <article class="row my-3 d-flex justify-content-center">
-        <div
-          class="col-12 col-md-6 d-flex flex-column align-items-center m-2 p-1 index-galeria-card"
-        >
-          <h3 class="pixel-font index-galeria-subtitle">Tipos de fichines</h3>
-          <div class="index-galeria-img rounded">
-            <div class="meli-kpa">
-              <a href="tipos-fichin/index.html">Ver galería</a>
-            </div>
-            <div>
-              <img
-                src="img/tipos-finchin-index.webp"
-                alt="Fila de máquinas Pinball"
-              />
-            </div>
-          </div>
-        </div>
-        <div
-          class="col-12 col-md-6 d-flex flex-column align-items-center m-2 p-1 index-galeria-card"
-        >
-          <h3 class="pixel-font index-galeria-subtitle">
-            Contenido multimedia
-          </h3>
-          <div
-            class="index-galeria-img d-flex justify-content-center rounded my-2"
-          >
-            <div class="meli-kpa">
-              <a href="multimedia/index.html">Ver galería</a>
-            </div>
-            <img
-              class="img-cover"
-              src="img/multimedia-index.avif"
-              alt="Arcade de neón"
-            />
-          </div>
-        </div>
-      </article>
-    </section>
+      <div
+        id="stickers"
+        class="sticker-div mx-auto mb-4 rounded-4 d-flex align-items-center overflow-hidden"
+      ></div>
+    </div>
+    <!-- footer -->
     <footer
       class="bg-body-tertiary container-fluid py-3 d-flex flex-column flex-md-row gap-5 justify-content-center align-items-center"
     >
       <div>
-        <img src="../../img/logo-una.png" alt="Logo de la UNA" />
+        <img src="../../../img/logo-una.png" alt="Logo de la UNA" />
       </div>
       <div>
         <p>Informática general - Cátedra Drelichmann</p>
         <p>
-          <a href="../alumno/index.html">Desarrollador - Mauro Giachero</a>
+          <a href="../../alumno/index.html">Desarrollador - Mauro Giachero</a>
         </p>
         <p>
-          <a href="../contacto/index.html">Contacto</a>
+          <a href="../../contacto/index.html">Contacto</a>
         </p>
       </div>
     </footer>
