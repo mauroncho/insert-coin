@@ -36,7 +36,7 @@
     <!-- nav -->
     <nav class="navbar navbar-expand-lg bg-body-tertiary pixel-font nav-size">
       <div class="container-fluid">
-        <a class="navbar-brand" href="#">
+        <a class="navbar-brand coin-icon" href="index.html">
           <img
             class="img-nav"
             src="img/icon-coin.png"
@@ -82,11 +82,6 @@
           </div>
           <ul class="navbar-nav d-flex gap-3">
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="index.html">
-                Inicio
-              </a>
-            </li>
-            <li class="nav-item">
               <a class="nav-link" href="pages/historia/index.html">Historia</a>
             </li>
             <li class="nav-item">
@@ -114,17 +109,20 @@
     </nav>
     <!-- hero -->
     <header class="container-fluid header-hero">
-      <div class="video-hero">
+      <div class="video-hero d-none d-md-block">
         <video src="img/video-hero.mp4" autoplay loop muted></video>
       </div>
       <div class="text-hero">
         <h1 class="title-hero">INSERT COIN</h1>
         <p class="subtext-hero">Data sobre fichines</p>
+        <a href="pages/historia/index.html" class="btn btn-light btn-hero">
+          Conocé su historia
+        </a>
       </div>
     </header>
     <!-- footer -->
     <footer
-      class="bg-body-tertiary container-fluid py-3 d-flex flex-column flex-md-row gap-5 justify-content-center align-items-center"
+      class="bg-body-tertiary container-fluid py-2 d-flex flex-column flex-md-row column-gap-4 row-gap-3 justify-content-center align-items-center"
     >
       <div>
         <img src="img/logo-una.png" alt="Logo de la UNA" />

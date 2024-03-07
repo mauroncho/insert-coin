@@ -3,6 +3,7 @@
 :root {
   --bg-color: rgba(0, 0, 0, 0.911);
   --text-color: white;
+  --accent-color: #d1b200;
   --pixel-font: 'VT323', monospace;
   --w-light: 200;
   --w-bold: 700;
@@ -72,6 +73,14 @@ ul {
   line-height: normal;
 }
 
+.coin-icon {
+  transition-duration: 150ms;
+}
+
+.coin-icon:hover {
+  scale: 1.1;
+}
+
 /* hero section */
 
 .header-hero {
@@ -112,6 +121,16 @@ ul {
   margin-top: -7px;
   font-weight: var(--w-light);
   padding-left: 8px;
+}
+
+.btn-hero {
+  margin-top: 10px;
+  margin-left: 8px;
+  font-weight: 500;
+}
+
+.btn-hero:hover {
+  text-decoration: underline;
 }
 
 /* GALERIA */
@@ -189,6 +208,7 @@ ul {
   opacity: 1;
 }
 
+/* TODO SACAR ESTAS TRES CLASES?*/
 .img-cover {
   object-fit: cover;
 }
@@ -205,7 +225,7 @@ ul {
 /* footer */
 
 footer div img {
-  max-width: 250px;
+  max-width: 220px;
 }
 
 footer div p {
@@ -373,8 +393,8 @@ footer div p a:hover {
 
 /* stickers */
 .sticker-div {
-  max-width: 270px;
-  min-height: 270px;
+  max-width: 400px;
+  min-height: 400px;
   border: solid #f8d300 2px;
 }
 
@@ -401,9 +421,20 @@ footer div p a:hover {
   transition: opacity 0.1s ease-in-out, transform 0.1s ease-in-out;
 }
 
+/* SPACE INVADERS */
+canvas {
+  border: #d1b200 3px solid;
+  margin-block: 18px;
+  /* height: 500px;
+  width: 450px; */
+}
+
 /* MEDIA QUERYS  */
 
 @media (max-width: 992px) {
+  .coin-icon:hover {
+    scale: 0;
+  }
   .index-invaders-text {
     width: 100%;
   }
@@ -417,12 +448,72 @@ footer div p a:hover {
   }
 }
 
+@keyframes parpadeo {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
 @media (max-width: 768px) {
+  .header-hero {
+    position: static;
+    margin: 0;
+    padding: 0;
+  }
+
+  .title-hero {
+    position: static;
+    text-shadow: 0 0 3px var(--accent-color);
+    margin: 0;
+    padding: 0;
+    line-height: 1;
+  }
+
+  .text-hero {
+    position: static;
+    text-align: center;
+    padding: 0;
+    margin: 100px auto;
+  }
+
+  .subtext-hero {
+    font-size: 1.5em;
+    text-shadow: 0 0 6px var(--accent-color);
+    margin-top: -7px;
+    font-weight: var(--w-light);
+    animation-name: parpadeo;
+    animation-duration: 2.2s;
+    animation-timing-function: ease-in;
+    animation-iteration-count: infinite;
+  }
+
+  .btn-hero {
+    margin: 20px 0 0 0;
+  }
+
   .clasicos-iframe {
     max-width: 360px;
   }
 
   .jugar-text {
     min-width: 250px;
+  }
+
+  canvas {
+    width: 95%;
+    min-height: 400px;
+  }
+
+  .tiposf-img:hover {
+    scale: none;
+  }
+
+  .modal-not-active {
+    pointer-events: none;
+    cursor: default;
   }
 }

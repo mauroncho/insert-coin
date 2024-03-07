@@ -30,13 +30,14 @@
       crossorigin="anonymous"
     ></script>
     <link rel="stylesheet" href="../../assets/estilos.css" />
+    <script src="space-invaders.js"></script>
   </head>
 
   <body>
     <!-- nav -->
     <nav class="navbar navbar-expand-lg bg-body-tertiary pixel-font nav-size">
       <div class="container-fluid">
-        <a class="navbar-brand" href="#">
+        <a class="navbar-brand coin-icon" href="../../index.html">
           <img
             class="img-nav"
             src="../../img/icon-coin.png"
@@ -67,7 +68,7 @@
               <span>
                 <img
                   class="img-nav"
-                  src="img/icon-coin.png"
+                  src="../../img/icon-coin.png"
                   alt="Icono Insert Coin"
                 />
               </span>
@@ -81,9 +82,6 @@
             ></button>
           </div>
           <ul class="navbar-nav d-flex gap-3">
-            <li class="nav-item">
-              <a class="nav-link" href="../../index.html">Inicio</a>
-            </li>
             <li class="nav-item">
               <a class="nav-link" href="../historia/index.html">Historia</a>
             </li>
@@ -114,10 +112,14 @@
         </div>
       </div>
     </nav>
-    <main>SPACE INVADERS</main>
+    <div
+      class="container-fluid d-flex justify-content-center align-items-center"
+    >
+      <canvas id="canvas"></canvas>
+    </div>
     <!-- footer -->
     <footer
-      class="bg-body-tertiary container-fluid py-3 d-flex flex-column flex-md-row gap-5 justify-content-center align-items-center"
+      class="bg-body-tertiary container-fluid py-2 d-flex flex-column flex-md-row column-gap-4 row-gap-3 justify-content-center align-items-center"
     >
       <div>
         <img src="../../img/logo-una.png" alt="Logo de la UNA" />
@@ -125,7 +127,7 @@
       <div>
         <p>Informática general - Cátedra Drelichmann</p>
         <p>
-          <a href="#">Desarrollador - Mauro Giachero</a>
+          <a href="../alumno/index.html">Desarrollador - Mauro Giachero</a>
         </p>
         <p>
           <a href="../contacto/index.html">Contacto</a>
