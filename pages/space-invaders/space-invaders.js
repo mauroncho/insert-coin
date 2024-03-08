@@ -3,6 +3,8 @@ document.addEventListener('DOMContentLoaded', function () {
   const canvas = document.querySelector('canvas');
   //usamos el contexto 2d dentro del canvas
   const ctx = canvas.getContext('2d');
+  const gameOverScreen = document.getElementById('game-over');
+  const youWinScreen = document.getElementById('you-win');
   //especificamos un alto y un ancho para el canvas
   canvas.width = 500;
   canvas.height = 500;
@@ -29,8 +31,6 @@ document.addEventListener('DOMContentLoaded', function () {
   //BULLET
   const bulletHeight = 8;
   const bulletWidth = 3;
-  // let bulletX = 350;
-  // let bulletY = canvas.height - playerHeight;
   let bulletSpeed = 7;
   let bulletProyectiles = [];
   //con el eventhandler chequeamos cuando el jugador presiona la barra y
@@ -78,7 +78,7 @@ document.addEventListener('DOMContentLoaded', function () {
   const numCols = 7;
   const invaderSpacing = 15;
   const invaderOffsetTop = 30;
-  let invadersSpeedX = 40;
+  let invadersSpeedX = 2;
   let invadersTroop = [];
 
   // Inicializar los invasores y almacenar sus posiciones en el array
@@ -112,6 +112,10 @@ document.addEventListener('DOMContentLoaded', function () {
         let invaderHeight = currentInvader.height;
         // Dibujar el invasor en la posición y tamaño almacenados en el array
         ctx.fillRect(invaderX, invaderY, invaderWidth, invaderHeight);
+        if (invaderY > 470) {
+          canvas.style.display = 'none';
+          gameOverScreen.style.display = 'flex';
+        }
       }
     }
   }
@@ -120,21 +124,35 @@ document.addEventListener('DOMContentLoaded', function () {
   function invadersMovement() {
     collisionDetector();
     // Encuentra la posición más a la derecha y más a la izquierda de la tropa de invaders
+
+    const invadersTroopUpdated = [
+      invadersTroop[0].filter((invader) => invader.status !== false),
+      invadersTroop[1].filter((invader) => invader.status !== false),
+      invadersTroop[2].filter((invader) => invader.status !== false),
+      invadersTroop[3].filter((invader) => invader.status !== false),
+    ];
+    const isEmpty = (a) => Array.isArray(a) && a.every(isEmpty);
+    if (isEmpty(invadersTroopUpdated)) {
+      canvas.style.display = 'none';
+      youWinScreen.style.display = 'flex';
+    }
     let rightMostInvaderX = 0;
     let leftMostInvaderX = canvas.width;
     let invadersSpeedY = 0;
     for (let row = 0; row < numRows; row++) {
       for (let col = 0; col < numCols; col++) {
-        let currentInvader = invadersTroop[row][col];
-        if (currentInvader.x > rightMostInvaderX) {
-          rightMostInvaderX = currentInvader.x;
-        }
-        if (currentInvader.x < leftMostInvaderX) {
-          leftMostInvaderX = currentInvader.x;
-        }
-        if (leftMostInvaderX <= 6 && moveRight === false) {
-          invadersSpeedY = 16;
-          currentInvader.y += invadersSpeedY;
+        let currentInvader = invadersTroopUpdated[row][col];
+        if (currentInvader) {
+          if (currentInvader.x > rightMostInvaderX) {
+            rightMostInvaderX = currentInvader.x;
+          }
+          if (currentInvader.x < leftMostInvaderX) {
+            leftMostInvaderX = currentInvader.x;
+          }
+          if (leftMostInvaderX <= 6 && moveRight === false) {
+            invadersSpeedY = 16;
+            currentInvader.y += invadersSpeedY;
+          }
         }
       }
     }
@@ -153,8 +171,10 @@ document.addEventListener('DOMContentLoaded', function () {
       // Mover hacia la derecha
       for (let row = 0; row < numRows; row++) {
         for (let col = 0; col < numCols; col++) {
-          let currentInvader = invadersTroop[row][col];
-          currentInvader.x += invadersSpeedX;
+          let currentInvader = invadersTroopUpdated[row][col];
+          if (currentInvader) {
+            currentInvader.x += invadersSpeedX;
+          }
         }
       }
     }
@@ -166,9 +186,10 @@ document.addEventListener('DOMContentLoaded', function () {
       for (let row = 0; row < numRows; row++) {
         for (let col = 0; col < numCols; col++) {
           let currentInvader = invadersTroop[row][col];
-          if (currentInvader.y + invaderHeight === playerY) {
-            console.log('colision');
-          }
+          // console.log(currentInvader.y);
+          // if (currentInvader.y + invaderHeight === canvas.height) {
+          //   console.log('colision');
+          // }
           if (currentInvader.status === false) {
             continue;
           }

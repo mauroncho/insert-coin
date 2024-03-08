@@ -44,6 +44,11 @@ ul {
   padding: 0;
 }
 
+.mobile-nav {
+  text-decoration: none;
+  color: black;
+}
+
 /* INICIO */
 
 .pixel-font {
@@ -454,11 +459,22 @@ footer div p a:hover {
 }
 
 /* SPACE INVADERS */
-canvas {
+
+.game-text-screens {
+  display: none;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  font-family: var(--pixel-font);
+  font-size: 2.5em;
+}
+
+.game {
   border: #d1b200 3px solid;
-  margin-block: 18px;
-  /* height: 500px;
-  width: 450px; */
+  width: 500px;
+  height: 500px;
+  margin-top: 20px;
 }
 
 /* MEDIA QUERYS  */
@@ -552,8 +568,8 @@ canvas {
     align-items: center;
   }
 
-  .multimedia-flex-start {
-  }
+  /* .multimedia-flex-start {
+  } */
 
   canvas {
     width: 95%;
