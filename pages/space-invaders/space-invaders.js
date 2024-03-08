@@ -72,32 +72,21 @@ document.addEventListener('DOMContentLoaded', function () {
   //INVADERS
   let invaderStatus = true;
   const invaderHeight = 16;
-  const bigInvaderWidth = 25;
-  const midInvaderWidth = 23;
-  const smallInvaderWidth = 17;
+  const invaderWidth = 23;
   //dispocision de los invaders
-  const numRows = 5;
-  const numCols = 9;
+  const numRows = 4;
+  const numCols = 7;
   const invaderSpacing = 15;
-  const invaderOffsetTop = 50;
+  const invaderOffsetTop = 30;
+  let invadersSpeedX = 2;
   let invadersTroop = [];
 
   // Inicializar los invasores y almacenar sus posiciones en el array
   for (let row = 0; row < numRows; row++) {
     invadersTroop[row] = [];
     for (let col = 0; col < numCols; col++) {
-      let invaderX = col * (bigInvaderWidth + invaderSpacing);
+      let invaderX = col * (invaderWidth + invaderSpacing);
       let invaderY = row * (invaderHeight + invaderSpacing) + invaderOffsetTop;
-      let invaderWidth;
-
-      if (row === 0) {
-        invaderWidth = smallInvaderWidth;
-      } else if (row < 3) {
-        invaderWidth = midInvaderWidth;
-      } else {
-        invaderWidth = bigInvaderWidth;
-      }
-
       // Agregar la posición y tamaño del invasor al array
       invadersTroop[row][col] = {
         x: invaderX,
@@ -116,51 +105,72 @@ document.addEventListener('DOMContentLoaded', function () {
         if (currentInvader.status === false) {
           continue;
         }
-        let invaderX;
+        let invaderX = currentInvader.x;
         let invaderY = currentInvader.y;
         let invaderWidth = currentInvader.width;
         let invaderHeight = currentInvader.height;
-        if (row === 0) {
-          invaderX = currentInvader.x + 4;
-        } else if (row < 3) {
-          invaderX = currentInvader.x + 1;
-        } else {
-          invaderX = currentInvader.x;
-        }
         // Dibujar el invasor en la posición y tamaño almacenados en el array
         ctx.fillRect(invaderX, invaderY, invaderWidth, invaderHeight);
       }
     }
   }
 
-  /*function collisionDetector() {
+  function invadersMovement() {
+    // Encuentra la posición más a la derecha y más a la izquierda de la tropa de invaders
+    let rightMostInvaderX = 0;
+    let leftMostInvaderX = canvas.width;
+    let moveRight = true;
+
     for (let row = 0; row < numRows; row++) {
       for (let col = 0; col < numCols; col++) {
         let currentInvader = invadersTroop[row][col];
-        if (currentInvader.status === false) {
-          continue;
+        if (currentInvader.x > rightMostInvaderX) {
+          rightMostInvaderX = currentInvader.x;
         }
-        console.log(bulletProyectiles);
-        // const proyectileSameAsInvader =
-        // bulletProyectiles.y === currentInvader.y;
-        if (
-          currentInvader.status === true &&
-          bulletProyectiles.y === currentInvader.y
-        ) {
-          currentInvader.status = false;
-
-          currentInvader.splice(row, 1);
+        if (currentInvader.x < leftMostInvaderX) {
+          leftMostInvaderX = currentInvader.x;
         }
       }
     }
-  }*/
+
+    // Verifica si la tropa de invaders ha alcanzado los bordes del canvas
+    if (
+      rightMostInvaderX + invaderWidth === canvas.width - 30 &&
+      moveRight === true
+    ) {
+      // Cambia la dirección de movimiento
+      moveRight = !moveRight;
+    } else if (leftMostInvaderX <= 0 && moveRight === false) {
+      // Cambia la dirección de movimiento
+      moveRight = !moveRight;
+    }
+
+    // Mueve la tropa de invaders hacia la derecha o izquierda según sea necesario
+    if (rightMostInvaderX + invaderWidth < canvas.width && moveRight === true) {
+      // Mover hacia la derecha
+      for (let row = 0; row < numRows; row++) {
+        for (let col = 0; col < numCols; col++) {
+          let currentInvader = invadersTroop[row][col];
+          currentInvader.x += invadersSpeedX;
+        }
+      }
+    } else {
+      // Mover hacia la izquierda
+      for (let row = 0; row < numRows; row++) {
+        for (let col = 0; col < numCols; col++) {
+          let currentInvader = invadersTroop[row][col];
+          currentInvader.x -= invadersSpeedX;
+        }
+      }
+    }
+  }
 
   function collisionDetector() {
     for (let i = 0; i < bulletProyectiles.length; i++) {
-      const bullet = bulletProyectiles[i];
+      let bullet = bulletProyectiles[i];
       for (let row = 0; row < numRows; row++) {
         for (let col = 0; col < numCols; col++) {
-          const currentInvader = invadersTroop[row][col];
+          let currentInvader = invadersTroop[row][col];
           if (currentInvader.status === false) {
             continue;
           }
@@ -229,13 +239,14 @@ document.addEventListener('DOMContentLoaded', function () {
   function draw() {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
     //dibuja elementos
+    drawInvaders();
     drawPlayer();
-    playerMovement();
     drawBullet();
+    invadersMovement();
+    playerMovement();
     updateBullets();
     shoot();
     collisionDetector();
-    drawInvaders();
     //chequeo colisiones
     //hace que se actualice el canvas ejecutando la función draw, se genera un loop
     window.requestAnimationFrame(draw);
