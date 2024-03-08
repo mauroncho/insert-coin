@@ -133,20 +133,11 @@ document.addEventListener('DOMContentLoaded', function () {
       }
     }
 
-    // Verifica si la tropa de invaders ha alcanzado los bordes del canvas
+    // Mueve la tropa de invaders hacia la derecha o izquierda según sea necesario
     if (
-      rightMostInvaderX + invaderWidth === canvas.width - 30 &&
+      rightMostInvaderX + invaderWidth < canvas.width - 5 &&
       moveRight === true
     ) {
-      // Cambia la dirección de movimiento
-      moveRight = !moveRight;
-    } else if (leftMostInvaderX <= 0 && moveRight === false) {
-      // Cambia la dirección de movimiento
-      moveRight = !moveRight;
-    }
-
-    // Mueve la tropa de invaders hacia la derecha o izquierda según sea necesario
-    if (rightMostInvaderX + invaderWidth < canvas.width && moveRight === true) {
       // Mover hacia la derecha
       for (let row = 0; row < numRows; row++) {
         for (let col = 0; col < numCols; col++) {
@@ -154,7 +145,18 @@ document.addEventListener('DOMContentLoaded', function () {
           currentInvader.x += invadersSpeedX;
         }
       }
-    } else {
+    } else if (
+      rightMostInvaderX + invaderWidth === canvas.width - 5 &&
+      moveRight === true
+    ) {
+      // Cambia la dirección de movimiento
+      moveRight = !moveRight;
+      console.log(moveRight);
+    } else if (
+      leftMostInvaderX + invaderWidth > canvas.width + 5 &&
+      moveRight === false
+    ) {
+      console.log('entre');
       // Mover hacia la izquierda
       for (let row = 0; row < numRows; row++) {
         for (let col = 0; col < numCols; col++) {
@@ -162,7 +164,16 @@ document.addEventListener('DOMContentLoaded', function () {
           currentInvader.x -= invadersSpeedX;
         }
       }
+    } else if (leftMostInvaderX <= 0 && moveRight === false) {
+      // Cambia la dirección de movimiento
+      moveRight = !moveRight;
     }
+
+    // Verifica si la tropa de invaders ha alcanzado los bordes del canvas
+    // if (leftMostInvaderX <= 0 && moveRight === false) {
+    //   // Cambia la dirección de movimiento
+    //   moveRight = !moveRight;
+    // }
   }
 
   function collisionDetector() {
