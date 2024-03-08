@@ -73,7 +73,7 @@ document.addEventListener('DOMContentLoaded', function () {
   let invaderStatus = true;
   const invaderHeight = 16;
   const invaderWidth = 23;
-  //dispocision de los invaders
+  //disposición de los invaders
   const numRows = 4;
   const numCols = 7;
   const invaderSpacing = 15;
@@ -97,6 +97,7 @@ document.addEventListener('DOMContentLoaded', function () {
       };
     }
   }
+
   // Dibujar los invasores en el canvas utilizando las posiciones almacenadas en el array
   function drawInvaders() {
     for (let row = 0; row < numRows; row++) {
@@ -117,6 +118,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
   let moveRight = true;
   function invadersMovement() {
+    collisionDetector();
     // Encuentra la posición más a la derecha y más a la izquierda de la tropa de invaders
     let rightMostInvaderX = 0;
     let leftMostInvaderX = canvas.width;
@@ -132,13 +134,21 @@ document.addEventListener('DOMContentLoaded', function () {
         }
       }
     }
-    console.log(moveRight);
-    console.log(leftMostInvaderX + ' leftMostInvader');
+    // console.log(moveRight);
+    // console.log(leftMostInvaderX + ' leftMostInvader');
     // Mueve la tropa de invaders hacia la derecha o izquierda según sea necesario
     if (
+      (rightMostInvaderX + invaderWidth >= canvas.width - 5 &&
+        moveRight === true) ||
+      (leftMostInvaderX <= 6 && moveRight === false)
+    ) {
+      invadersSpeedX = -invadersSpeedX;
+      moveRight = !moveRight;
+      // console.log('caca');
+    } else if (
       (rightMostInvaderX + invaderWidth < canvas.width - 6 &&
         moveRight === true) ||
-      (leftMostInvaderX <= canvas.width + 5 && moveRight === false)
+      (leftMostInvaderX < canvas.width + 5 && moveRight === false)
     ) {
       // Mover hacia la derecha
       for (let row = 0; row < numRows; row++) {
@@ -147,14 +157,6 @@ document.addEventListener('DOMContentLoaded', function () {
           currentInvader.x += invadersSpeedX;
         }
       }
-    } else if (
-      (rightMostInvaderX + invaderWidth >= canvas.width - 5 &&
-        moveRight === true) ||
-      (leftMostInvaderX <= 6 && moveRight === false)
-    ) {
-      invadersSpeedX = -invadersSpeedX;
-      moveRight = !moveRight;
-      console.log('caca');
     }
   }
 
@@ -178,6 +180,8 @@ document.addEventListener('DOMContentLoaded', function () {
             currentInvader.status = false;
             // Eliminar la bala que colisionó
             bulletProyectiles.splice(i, 1);
+            console.log(currentInvader);
+            // currentInvader.splice(1, 1);
             // Decrementar i para compensar la eliminación del elemento del array
             i--;
             break; // Salir del bucle interno para evitar verificar colisiones con otros invasores
@@ -239,7 +243,7 @@ document.addEventListener('DOMContentLoaded', function () {
     playerMovement();
     updateBullets();
     shoot();
-    collisionDetector();
+    // collisionDetector();
     //chequeo colisiones
     //hace que se actualice el canvas ejecutando la función draw, se genera un loop
     window.requestAnimationFrame(draw);
