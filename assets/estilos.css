@@ -16,6 +16,9 @@ body {
   font-weight: 400;
   background-color: var(--bg-color);
   color: var(--text-color);
+  display: flex;
+  flex-direction: column;
+  min-height: 100dvh;
 }
 
 .montserrat-uniquifier {
@@ -224,6 +227,10 @@ ul {
 
 /* footer */
 
+footer {
+  margin-top: auto;
+}
+
 footer div img {
   max-width: 220px;
 }
@@ -294,6 +301,31 @@ footer div p a:hover {
 .multimedia-img {
   max-width: 560px;
   max-height: 315px;
+}
+
+.multi-div-yellow {
+  border: var(--accent-color) solid 2px;
+  border-radius: 10px;
+  margin-inline: 20px;
+}
+.multimedia-flex-end {
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  text-align: left;
+}
+
+.multi-div-gray {
+  background-color: rgba(80, 80, 80, 0.774);
+  border-radius: 10px;
+  margin-inline: 20px;
+  border: solid rgba(0, 0, 0, 0.87) 2px;
+}
+.multimedia-flex-start {
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  text-align: left;
 }
 
 /* DONDE JUGAR */
@@ -501,6 +533,26 @@ canvas {
 
   .jugar-text {
     min-width: 250px;
+  }
+
+  .multi-div-yellow {
+    border: var(--accent-color) solid 2px;
+    border-radius: 10px;
+    margin-inline: 2px;
+    padding: 5px;
+  }
+
+  .multi-div-gray {
+    border-radius: 10px;
+    margin-inline: 2px;
+    padding: 5px;
+  }
+
+  .multimedia-flex-end {
+    align-items: center;
+  }
+
+  .multimedia-flex-start {
   }
 
   canvas {

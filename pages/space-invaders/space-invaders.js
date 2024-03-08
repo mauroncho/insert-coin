@@ -70,11 +70,10 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 
   //INVADERS
-  const bigInvaderHeight = 16;
+  let invaderStatus = true;
+  const invaderHeight = 16;
   const bigInvaderWidth = 25;
-  const midInvaderHeight = 16;
   const midInvaderWidth = 23;
-  const smallInvaderHeight = 16;
   const smallInvaderWidth = 17;
   //dispocision de los invaders
   const numRows = 5;
@@ -82,36 +81,109 @@ document.addEventListener('DOMContentLoaded', function () {
   const invaderSpacing = 15;
   const invaderOffsetTop = 50;
   let invadersTroop = [];
-  function drawInvaders(e) {
-    // Dibujar filas y columnas de Invaders
-    // console.log(invadersTroop);
+
+  // Inicializar los invasores y almacenar sus posiciones en el array
+  for (let row = 0; row < numRows; row++) {
+    invadersTroop[row] = [];
+    for (let col = 0; col < numCols; col++) {
+      let invaderX = col * (bigInvaderWidth + invaderSpacing);
+      let invaderY = row * (invaderHeight + invaderSpacing) + invaderOffsetTop;
+      let invaderWidth;
+
+      if (row === 0) {
+        invaderWidth = smallInvaderWidth;
+      } else if (row < 3) {
+        invaderWidth = midInvaderWidth;
+      } else {
+        invaderWidth = bigInvaderWidth;
+      }
+
+      // Agregar la posición y tamaño del invasor al array
+      invadersTroop[row][col] = {
+        x: invaderX,
+        y: invaderY,
+        width: invaderWidth,
+        height: invaderHeight,
+        status: invaderStatus,
+      };
+    }
+  }
+  // Dibujar los invasores en el canvas utilizando las posiciones almacenadas en el array
+  function drawInvaders() {
     for (let row = 0; row < numRows; row++) {
       for (let col = 0; col < numCols; col++) {
-        let invaderX = col * (bigInvaderWidth + invaderSpacing);
-        let invaderY =
-          row * (bigInvaderHeight + invaderSpacing) + invaderOffsetTop;
-
-        if (row === 0) {
-          ctx.fillRect(
-            invaderX + 4,
-            invaderY,
-            smallInvaderWidth,
-            smallInvaderHeight
-          );
-        } else if (row < 3) {
-          ctx.fillRect(
-            invaderX + 1,
-            invaderY,
-            midInvaderWidth,
-            midInvaderHeight
-          );
-        } else {
-          ctx.fillRect(invaderX, invaderY, bigInvaderWidth, bigInvaderHeight);
+        let currentInvader = invadersTroop[row][col];
+        if (currentInvader.status === false) {
+          continue;
         }
-        // invadersTroop.push({ x: invaderX, y: invaderY });
+        let invaderX;
+        let invaderY = currentInvader.y;
+        let invaderWidth = currentInvader.width;
+        let invaderHeight = currentInvader.height;
+        if (row === 0) {
+          invaderX = currentInvader.x + 4;
+        } else if (row < 3) {
+          invaderX = currentInvader.x + 1;
+        } else {
+          invaderX = currentInvader.x;
+        }
+        // Dibujar el invasor en la posición y tamaño almacenados en el array
+        ctx.fillRect(invaderX, invaderY, invaderWidth, invaderHeight);
       }
     }
   }
+
+  /*function collisionDetector() {
+    for (let row = 0; row < numRows; row++) {
+      for (let col = 0; col < numCols; col++) {
+        let currentInvader = invadersTroop[row][col];
+        if (currentInvader.status === false) {
+          continue;
+        }
+        console.log(bulletProyectiles);
+        // const proyectileSameAsInvader =
+        // bulletProyectiles.y === currentInvader.y;
+        if (
+          currentInvader.status === true &&
+          bulletProyectiles.y === currentInvader.y
+        ) {
+          currentInvader.status = false;
+
+          currentInvader.splice(row, 1);
+        }
+      }
+    }
+  }*/
+
+  function collisionDetector() {
+    for (let i = 0; i < bulletProyectiles.length; i++) {
+      const bullet = bulletProyectiles[i];
+      for (let row = 0; row < numRows; row++) {
+        for (let col = 0; col < numCols; col++) {
+          const currentInvader = invadersTroop[row][col];
+          if (currentInvader.status === false) {
+            continue;
+          }
+          // Verificar si hay colisión entre la bala y el invasor
+          if (
+            bullet.x > currentInvader.x &&
+            bullet.x < currentInvader.x + currentInvader.width &&
+            bullet.y > currentInvader.y &&
+            bullet.y < currentInvader.y + currentInvader.height
+          ) {
+            // Si hay colisión, marcar al invasor como eliminado
+            currentInvader.status = false;
+            // Eliminar la bala que colisionó
+            bulletProyectiles.splice(i, 1);
+            // Decrementar i para compensar la eliminación del elemento del array
+            i--;
+            break; // Salir del bucle interno para evitar verificar colisiones con otros invasores
+          }
+        }
+      }
+    }
+  }
+
   //EVENTS
   let rightPressed = false;
   let leftPressed = false;
@@ -123,9 +195,7 @@ document.addEventListener('DOMContentLoaded', function () {
     document.addEventListener('keydown', keyDownHandler);
     document.addEventListener('keyup', keyUpHandler);
     function keyDownHandler(e) {
-      // console.log(e);
       const { key } = e;
-      console.log(key);
       if (key === 'ArrowRight' || key === 'Right') {
         rightPressed = true;
       }
@@ -140,7 +210,6 @@ document.addEventListener('DOMContentLoaded', function () {
           canShoot = true;
         }, shootInterval);
       }
-      // console.log(shootPressed);
     }
     function keyUpHandler(e) {
       const { key } = e;
@@ -165,6 +234,7 @@ document.addEventListener('DOMContentLoaded', function () {
     drawBullet();
     updateBullets();
     shoot();
+    collisionDetector();
     drawInvaders();
     //chequeo colisiones
     //hace que se actualice el canvas ejecutando la función draw, se genera un loop
