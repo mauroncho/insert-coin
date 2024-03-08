@@ -78,7 +78,7 @@ document.addEventListener('DOMContentLoaded', function () {
   const numCols = 7;
   const invaderSpacing = 15;
   const invaderOffsetTop = 30;
-  let invadersSpeedX = 2;
+  let invadersSpeedX = 40;
   let invadersTroop = [];
 
   // Inicializar los invasores y almacenar sus posiciones en el array
@@ -122,7 +122,7 @@ document.addEventListener('DOMContentLoaded', function () {
     // Encuentra la posición más a la derecha y más a la izquierda de la tropa de invaders
     let rightMostInvaderX = 0;
     let leftMostInvaderX = canvas.width;
-
+    let invadersSpeedY = 0;
     for (let row = 0; row < numRows; row++) {
       for (let col = 0; col < numCols; col++) {
         let currentInvader = invadersTroop[row][col];
@@ -132,11 +132,12 @@ document.addEventListener('DOMContentLoaded', function () {
         if (currentInvader.x < leftMostInvaderX) {
           leftMostInvaderX = currentInvader.x;
         }
+        if (leftMostInvaderX <= 6 && moveRight === false) {
+          invadersSpeedY = 16;
+          currentInvader.y += invadersSpeedY;
+        }
       }
     }
-    // console.log(moveRight);
-    // console.log(leftMostInvaderX + ' leftMostInvader');
-    // Mueve la tropa de invaders hacia la derecha o izquierda según sea necesario
     if (
       (rightMostInvaderX + invaderWidth >= canvas.width - 5 &&
         moveRight === true) ||
@@ -144,7 +145,6 @@ document.addEventListener('DOMContentLoaded', function () {
     ) {
       invadersSpeedX = -invadersSpeedX;
       moveRight = !moveRight;
-      // console.log('caca');
     } else if (
       (rightMostInvaderX + invaderWidth < canvas.width - 6 &&
         moveRight === true) ||
@@ -166,6 +166,9 @@ document.addEventListener('DOMContentLoaded', function () {
       for (let row = 0; row < numRows; row++) {
         for (let col = 0; col < numCols; col++) {
           let currentInvader = invadersTroop[row][col];
+          if (currentInvader.y + invaderHeight === playerY) {
+            console.log('colision');
+          }
           if (currentInvader.status === false) {
             continue;
           }
@@ -181,7 +184,6 @@ document.addEventListener('DOMContentLoaded', function () {
             // Eliminar la bala que colisionó
             bulletProyectiles.splice(i, 1);
             console.log(currentInvader);
-            // currentInvader.splice(1, 1);
             // Decrementar i para compensar la eliminación del elemento del array
             i--;
             break; // Salir del bucle interno para evitar verificar colisiones con otros invasores
