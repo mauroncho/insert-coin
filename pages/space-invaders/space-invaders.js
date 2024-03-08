@@ -115,11 +115,11 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   }
 
+  let moveRight = true;
   function invadersMovement() {
     // Encuentra la posición más a la derecha y más a la izquierda de la tropa de invaders
     let rightMostInvaderX = 0;
     let leftMostInvaderX = canvas.width;
-    let moveRight = true;
 
     for (let row = 0; row < numRows; row++) {
       for (let col = 0; col < numCols; col++) {
@@ -132,11 +132,13 @@ document.addEventListener('DOMContentLoaded', function () {
         }
       }
     }
-
+    console.log(moveRight);
+    console.log(leftMostInvaderX + ' leftMostInvader');
     // Mueve la tropa de invaders hacia la derecha o izquierda según sea necesario
     if (
-      rightMostInvaderX + invaderWidth < canvas.width - 5 &&
-      moveRight === true
+      (rightMostInvaderX + invaderWidth < canvas.width - 6 &&
+        moveRight === true) ||
+      (leftMostInvaderX <= canvas.width + 5 && moveRight === false)
     ) {
       // Mover hacia la derecha
       for (let row = 0; row < numRows; row++) {
@@ -146,34 +148,14 @@ document.addEventListener('DOMContentLoaded', function () {
         }
       }
     } else if (
-      rightMostInvaderX + invaderWidth === canvas.width - 5 &&
-      moveRight === true
+      (rightMostInvaderX + invaderWidth >= canvas.width - 5 &&
+        moveRight === true) ||
+      (leftMostInvaderX <= 6 && moveRight === false)
     ) {
-      // Cambia la dirección de movimiento
+      invadersSpeedX = -invadersSpeedX;
       moveRight = !moveRight;
-      console.log(moveRight);
-    } else if (
-      leftMostInvaderX + invaderWidth > canvas.width + 5 &&
-      moveRight === false
-    ) {
-      console.log('entre');
-      // Mover hacia la izquierda
-      for (let row = 0; row < numRows; row++) {
-        for (let col = 0; col < numCols; col++) {
-          let currentInvader = invadersTroop[row][col];
-          currentInvader.x -= invadersSpeedX;
-        }
-      }
-    } else if (leftMostInvaderX <= 0 && moveRight === false) {
-      // Cambia la dirección de movimiento
-      moveRight = !moveRight;
+      console.log('caca');
     }
-
-    // Verifica si la tropa de invaders ha alcanzado los bordes del canvas
-    // if (leftMostInvaderX <= 0 && moveRight === false) {
-    //   // Cambia la dirección de movimiento
-    //   moveRight = !moveRight;
-    // }
   }
 
   function collisionDetector() {
