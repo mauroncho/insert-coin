@@ -1,19 +1,17 @@
 document.addEventListener('DOMContentLoaded', function () {
-  //selecciona el elemento con la etiqueta canvas
   const canvas = document.querySelector('canvas');
-  //usamos el contexto 2d dentro del canvas
-  const ctx = canvas.getContext('2d');
   const sprites = document.getElementById('sprites');
   const gameOverScreen = document.getElementById('game-over');
   const youWinScreen = document.getElementById('you-win');
   const startGameButton = document.getElementById('start-game');
   const startScreen = document.getElementById('start-screen');
   const restartGameButton = document.getElementById('restart-game');
+  //usamos el contexto 2d dentro del canvas
+  const ctx = canvas.getContext('2d');
   //especificamos un alto y un ancho para el canvas
   canvas.width = 500;
   canvas.height = 500;
 
-  //GAME
   //PLAYER
   const playerSpeed = 3;
   const playerWidth = 28;
@@ -37,7 +35,7 @@ document.addEventListener('DOMContentLoaded', function () {
   const bulletWidth = 3;
   let bulletSpeed = 7;
   let bulletProyectiles = [];
-  //con el eventhandler chequeamos cuando el jugador presiona la barra y
+  //con el eventhandler chequeamos cuando el jugador presiona la barra
   function shoot() {
     if (shootPressed === true) {
       // Agrega una nueva bala al canvas en la posicion del jugador
@@ -51,14 +49,10 @@ document.addEventListener('DOMContentLoaded', function () {
 
   function drawBullet() {
     // Dibuja todas las balas almacenadas en el array bulletProyectiles
-    // for (let i = 0; i < bulletProyectiles.length; i++) {
-    //   let bullet = bulletProyectiles[i];
-    //   ctx.fillRect(bullet.x, bullet.y, bulletWidth, bulletHeight);
-    // }
-
-    bulletProyectiles.map((bullet) =>
-      ctx.fillRect(bullet.x, bullet.y, bulletWidth, bulletHeight)
-    );
+    for (let i = 0; i < bulletProyectiles.length; i++) {
+      let bullet = bulletProyectiles[i];
+      ctx.fillRect(bullet.x, bullet.y, bulletWidth, bulletHeight);
+    }
   }
 
   function updateBullets() {
@@ -82,10 +76,10 @@ document.addEventListener('DOMContentLoaded', function () {
   const numCols = 7;
   const invaderSpacing = 15;
   const invaderOffsetTop = 30;
-  let invadersSpeedX = 40;
+  let invadersSpeedX = 2;
   let invadersTroop = [];
 
-  // Inicializar los invasores y almacenar sus posiciones en el array
+  // Inicializar los invaders y almacenar sus posiciones en el array
   for (let row = 0; row < numRows; row++) {
     invadersTroop[row] = [];
     for (let col = 0; col < numCols; col++) {
@@ -100,6 +94,20 @@ document.addEventListener('DOMContentLoaded', function () {
         status: invaderStatus,
       };
     }
+  }
+
+  // function isEmpty(a) {
+  //   Array.isArray(a) && a.every(isEmpty);
+  // }
+
+  function endGame() {
+    canvas.style.display = 'none';
+    gameOverScreen.style.display = 'flex';
+  }
+
+  function winGame() {
+    canvas.style.display = 'none';
+    youWinScreen.style.display = 'flex';
   }
 
   // Dibujar los invasores en el canvas utilizando las posiciones almacenadas en el array
@@ -117,18 +125,16 @@ document.addEventListener('DOMContentLoaded', function () {
         // Dibujar el invasor en la posición y tamaño almacenados en el array
         ctx.fillRect(invaderX, invaderY, invaderWidth, invaderHeight);
         if (invaderY > 470) {
-          canvas.style.display = 'none';
-          gameOverScreen.style.display = 'flex';
+          endGame();
         }
       }
     }
   }
 
   let moveRight = true;
+
   function invadersMovement() {
     collisionDetector();
-    // Encuentra la posición más a la derecha y más a la izquierda de la tropa de invaders
-
     const invadersTroopUpdated = [
       invadersTroop[0].filter((invader) => invader.status !== false),
       invadersTroop[1].filter((invader) => invader.status !== false),
@@ -140,6 +146,8 @@ document.addEventListener('DOMContentLoaded', function () {
       canvas.style.display = 'none';
       youWinScreen.style.display = 'flex';
     }
+
+    // Encuentra la posición más a la derecha y más a la izquierda de la tropa de invadersconso
     let rightMostInvaderX = 0;
     let leftMostInvaderX = canvas.width;
     let invadersSpeedY = 0;
@@ -190,10 +198,6 @@ document.addEventListener('DOMContentLoaded', function () {
       for (let row = 0; row < numRows; row++) {
         for (let col = 0; col < numCols; col++) {
           let currentInvader = invadersTroop[row][col];
-          // console.log(currentInvader.y);
-          // if (currentInvader.y + invaderHeight === canvas.height) {
-          //   console.log('colision');
-          // }
           if (currentInvader.status === false) {
             continue;
           }
@@ -208,7 +212,6 @@ document.addEventListener('DOMContentLoaded', function () {
             currentInvader.status = false;
             // Eliminar la bala que colisionó
             bulletProyectiles.splice(i, 1);
-            console.log(currentInvader);
             // Decrementar i para compensar la eliminación del elemento del array
             i--;
             break; // Salir del bucle interno para evitar verificar colisiones con otros invasores

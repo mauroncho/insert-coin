@@ -453,6 +453,9 @@ canvas {
   text-align: center;
 }
 
+kbd {
+}
+
 .game-text-screens {
   display: none;
   width: 100%;
