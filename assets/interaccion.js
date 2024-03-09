@@ -85,21 +85,3 @@ document.addEventListener('DOMContentLoaded', function () {
       </a>`;
   });
 });
-
-// MODAL CLASICOS
-document.addEventListener('DOMContentLoaded', function () {
-  // Seleccionar el elemento utilizando querySelectorAll
-  const boostrapModals = document.querySelectorAll('modal');
-
-  // Iterar sobre cada elemento
-  boostrapModals.forEach(function (modal) {
-    // Convertir la lista de clases a un array para poder usar métodos como includes()
-    const clasesArray = Array.from(modal.classList);
-
-    // Imprimir las clases CSS aplicadas al elemento
-    console.log('Clases CSS aplicadas al elemento:', clasesArray);
-    return clasesArray;
-  });
-  if (clasesArray.some('show')) {
-  }
-});

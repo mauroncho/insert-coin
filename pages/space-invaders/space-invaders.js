@@ -3,8 +3,12 @@ document.addEventListener('DOMContentLoaded', function () {
   const canvas = document.querySelector('canvas');
   //usamos el contexto 2d dentro del canvas
   const ctx = canvas.getContext('2d');
+  const sprites = document.getElementById('sprites');
   const gameOverScreen = document.getElementById('game-over');
   const youWinScreen = document.getElementById('you-win');
+  const startGameButton = document.getElementById('start-game');
+  const startScreen = document.getElementById('start-screen');
+  const restartGameButton = document.getElementById('restart-game');
   //especificamos un alto y un ancho para el canvas
   canvas.width = 500;
   canvas.height = 500;
@@ -78,7 +82,7 @@ document.addEventListener('DOMContentLoaded', function () {
   const numCols = 7;
   const invaderSpacing = 15;
   const invaderOffsetTop = 30;
-  let invadersSpeedX = 2;
+  let invadersSpeedX = 40;
   let invadersTroop = [];
 
   // Inicializar los invasores y almacenar sus posiciones en el array
@@ -271,6 +275,20 @@ document.addEventListener('DOMContentLoaded', function () {
     //hace que se actualice el canvas ejecutando la función draw, se genera un loop
     window.requestAnimationFrame(draw);
   }
-  draw();
-  initEvents();
+
+  function startGame() {
+    canvas.style.display = 'block';
+    draw();
+    initEvents();
+  }
+
+  restartGameButton.addEventListener('click', () => {
+    gameOverScreen.style.display = 'none';
+    startGame();
+  });
+
+  startGameButton.addEventListener('click', () => {
+    startScreen.style.display = 'none';
+    startGame();
+  });
 });

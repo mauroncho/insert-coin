@@ -117,7 +117,28 @@
     <div
       class="container-fluid d-flex justify-content-center align-items-center game"
     >
-      <div class="game-text-screens" id="game-over"><p>GAME OVER</p></div>
+      <div id="start-screen">
+        <h2 class="pixel-font title-size mb-4">Space Invaders</h2>
+        <p>
+          Para moverte, usá las teclas a la
+          <kbd>izquierda</kbd>
+          y
+          <kbd>derecha</kbd>
+        </p>
+        <p>
+          Para disparar presioná la tecla
+          <kbd>s</kbd>
+        </p>
+        <div class="mt-2">
+          <button id="start-game">Jugar</button>
+        </div>
+      </div>
+      <div class="game-text-screens" id="game-over">
+        <p>GAME OVER</p>
+        <div class="mt-2">
+          <button id="restart-game">Volver a jugar</button>
+        </div>
+      </div>
       <div class="game-text-screens" id="you-win"><p>GANASTE</p></div>
       <canvas id="canvas"></canvas>
     </div>
@@ -128,6 +149,12 @@
         Para probarlo tenés que usar una notebook o PC de escritorio.
       </p>
     </div>
+    <img
+      id="sprites"
+      src="img/spaceinvaders-sprites.png"
+      hidden
+      alt="Sprites para el juego Space Invaders"
+    />
     <!-- footer -->
     <footer
       class="bg-body-tertiary container-fluid py-2 d-flex flex-column flex-md-row column-gap-4 row-gap-3 justify-content-center align-items-center"

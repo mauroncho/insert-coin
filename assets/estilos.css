@@ -299,25 +299,13 @@ footer div p a:hover {
   margin-inline: auto;
   max-width: 600px;
 }
-.multimedia-flex-end {
-  display: flex;
-  flex-direction: column;
-  align-items: end;
-  text-align: left;
-}
 
 .multi-div-gray {
   background-color: rgba(80, 80, 80, 0.774);
-  border-radius: 10px;
-  margin-inline: 20px;
   border: solid var(--accent-color) 2px;
+  border-radius: 10px;
+  margin-inline: auto;
   max-width: 600px;
-}
-.multimedia-flex-start {
-  display: flex;
-  flex-direction: column;
-  align-items: end;
-  text-align: left;
 }
 
 /* DONDE JUGAR */
@@ -453,6 +441,17 @@ footer div p a:hover {
 }
 
 /* SPACE INVADERS */
+
+canvas {
+  display: none;
+}
+
+#start-screen {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
 
 .game-text-screens {
   display: none;
