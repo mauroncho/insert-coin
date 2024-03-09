@@ -116,7 +116,7 @@
         <p>
           Hacé un comentario/sugerencia a través de este formulario.
           <br />
-          Si te sentís generoso pedí CBU.
+          Si te sentís generoso, pedí CBU.
         </p>
       </header>
       <article class="my-3 p-2">
@@ -133,6 +133,7 @@
               id="username"
               name="username"
               placeholder="name@example.com"
+              maxlength="12"
             />
             <label for="username">Nombre</label>
           </div>
@@ -143,6 +144,7 @@
               id="userapellido"
               name="userapellido"
               placeholder="Password"
+              maxlength="15"
             />
             <label for="userapellido">Apellido</label>
           </div>
@@ -160,8 +162,8 @@
             <textarea
               class="form-control"
               placeholder="Leave a comment here"
-              id="floating-textarea"
-              name="floating-textarea"
+              id="comentarios"
+              name="comentarios"
               style="height: 100px"
             ></textarea>
             <label for="floating-textarea">Comentarios</label>

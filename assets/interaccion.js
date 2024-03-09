@@ -4,6 +4,7 @@ document.addEventListener('DOMContentLoaded', function () {
   const nombreUsuario = document.getElementById('username');
   const apellidoUsuario = document.getElementById('userapellido');
   const mailUsuario = document.getElementById('usermail');
+  const mensajeUsuario = document.getElementById('comentarios');
   const btnEnviar = document.getElementById('contacto-submit');
 
   if (btnEnviar) {
@@ -34,6 +35,16 @@ document.addEventListener('DOMContentLoaded', function () {
     } else {
       apellidoUsuario.classList.remove('is-invalid');
       apellidoUsuario.classList.add('is-valid');
+    }
+
+    if (mensajeUsuario.value == '') {
+      mensajeUsuario.classList.add('is-invalid');
+      alert('Escribí un mensaje');
+      document.formulario.apellido.focus();
+      return false;
+    } else {
+      mensajeUsuario.classList.remove('is-invalid');
+      mensajeUsuario.classList.add('is-valid');
     }
 
     // Validar email
@@ -67,16 +78,31 @@ document.addEventListener('DOMContentLoaded', function () {
     'stickes-cadillacs.jpg',
   ];
 
-  function regalo() {
+  let botonSortear = document.getElementById('sortear-sticker');
+  botonSortear.addEventListener('click', function () {
     let sorteoS = Math.floor(Math.random() * stickerA.length);
 
     divStickers.innerHTML = `
       <a href="img/${stickerA[sorteoS]}" download="img/${stickerA[sorteoS]}">
       <img src="img/${stickerA[sorteoS]}" alt="Sticker de la página Insert Coin" class="w-100">
       </a>`;
-  }
-  let botonSortear = document.getElementById('sortear-sticker');
-  botonSortear.addEventListener('click', function () {
-    regalo();
   });
+});
+
+// MODAL CLASICOS
+document.addEventListener('DOMContentLoaded', function () {
+  // Seleccionar el elemento utilizando querySelectorAll
+  const boostrapModals = document.querySelectorAll('modal');
+
+  // Iterar sobre cada elemento
+  boostrapModals.forEach(function (modal) {
+    // Convertir la lista de clases a un array para poder usar métodos como includes()
+    const clasesArray = Array.from(modal.classList);
+
+    // Imprimir las clases CSS aplicadas al elemento
+    console.log('Clases CSS aplicadas al elemento:', clasesArray);
+    return clasesArray;
+  });
+  if (clasesArray.some('show')) {
+  }
 });

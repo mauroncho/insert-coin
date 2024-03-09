@@ -16,16 +16,12 @@ body {
   font-weight: 400;
   background-color: var(--bg-color);
   color: var(--text-color);
-  display: flex;
-  flex-direction: column;
-  min-height: 100dvh;
 }
 
-.montserrat-uniquifier {
-  font-family: 'Montserrat', sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 100;
-  font-style: normal;
+.estirar-body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 li {
@@ -183,6 +179,7 @@ ul {
   height: 100%;
 }
 
+/* modificacion a una clase de bootstrap? */
 .navigation-card {
   background-color: #8a750049;
   border-radius: 5px;
@@ -216,23 +213,13 @@ ul {
   opacity: 1;
 }
 
-/* TODO SACAR ESTAS TRES CLASES?*/
-.img-cover {
-  object-fit: cover;
-}
-
 .index-galeria-subtitle {
   font-size: 2.6em;
 }
 
-.btn-width {
-  width: 30%;
-  font-weight: 550;
-}
+/* FOOTER */
 
-/* footer */
-
-footer {
+.estirar-footer {
   margin-top: auto;
 }
 
@@ -245,7 +232,7 @@ footer div p {
   font-size: 1em;
   font-weight: 500;
   text-align: center;
-  padding: 0.09em;
+  padding: 3px;
   margin-block: 0.6em;
 }
 
@@ -281,7 +268,6 @@ footer div p a:hover {
 }
 
 /* GALERIA */
-/* tipos de fichin */
 .tiposf-img {
   max-width: 420px;
   max-height: 350px;
@@ -393,7 +379,6 @@ footer div p a:hover {
 }
 
 /* CLASICOS */
-/* TODO prueba de color y bordes */
 .clasicos-card {
   max-width: 280px;
 }
@@ -440,6 +425,8 @@ footer div p a:hover {
   max-width: 850px;
 }
 
+/* ALUMNO */
+
 /* clase bootstrap modificada */
 .form-floating > label {
   position: absolute;
@@ -474,7 +461,7 @@ footer div p a:hover {
   border: #d1b200 3px solid;
   width: 500px;
   height: 500px;
-  margin-top: 20px;
+  margin-block: auto;
 }
 
 /* MEDIA QUERYS  */
@@ -543,6 +530,10 @@ footer div p a:hover {
     margin: 20px 0 0 0;
   }
 
+  .title-size {
+    font-size: 3.5em;
+  }
+
   .clasicos-iframe {
     max-width: 360px;
   }
@@ -571,10 +562,10 @@ footer div p a:hover {
   /* .multimedia-flex-start {
   } */
 
-  canvas {
+  /* canvas {
     width: 95%;
     min-height: 400px;
-  }
+  } */
 
   .tiposf-img:hover {
     scale: none;
