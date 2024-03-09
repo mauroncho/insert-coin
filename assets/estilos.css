@@ -475,6 +475,8 @@ kbd {
   width: 500px;
   height: 500px;
   margin-block: auto;
+  background-color: #000;
+  box-sizing: content-box;
 }
 
 .mobile-not-available {

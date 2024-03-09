@@ -5,7 +5,6 @@ document.addEventListener('DOMContentLoaded', function () {
   const youWinScreen = document.getElementById('you-win');
   const startGameButton = document.getElementById('start-game');
   const startScreen = document.getElementById('start-screen');
-  const restartGameButton = document.getElementById('restart-game');
   //usamos el contexto 2d dentro del canvas
   const ctx = canvas.getContext('2d');
   //especificamos un alto y un ancho para el canvas
@@ -22,6 +21,18 @@ document.addEventListener('DOMContentLoaded', function () {
   function drawPlayer() {
     ctx.fillRect(playerX, playerY, playerWidth, playerHeight);
     ctx.fillStyle = 'white';
+
+    ctx.drawImage(
+      sprites,
+      349,
+      28,
+      playerWidth,
+      playerHeight,
+      playerX,
+      playerY,
+      playerWidth,
+      playerHeight
+    );
   }
   function playerMovement() {
     if (rightPressed && playerX < canvas.width - playerWidth) {
@@ -126,6 +137,17 @@ document.addEventListener('DOMContentLoaded', function () {
         let invaderHeight = currentInvader.height;
         // Dibujar el invasor en la posición y tamaño almacenados en el array
         ctx.fillRect(invaderX, invaderY, invaderWidth, invaderHeight);
+        ctx.drawImage(
+          sprites,
+          1,
+          19,
+          invaderWidth,
+          invaderHeight,
+          invaderX,
+          invaderY,
+          invaderWidth,
+          invaderHeight
+        );
         if (invaderY > 470) {
           endGame();
         }
@@ -270,9 +292,7 @@ document.addEventListener('DOMContentLoaded', function () {
     playerMovement();
     updateBullets();
     shoot();
-    // collisionDetector();
-    //chequeo colisiones
-    //hace que se actualice el canvas ejecutando la función draw, se genera un loop
+    //actualiza el canvas ejecutando la función draw, se genera un loop
     window.requestAnimationFrame(draw);
   }
 
@@ -282,11 +302,6 @@ document.addEventListener('DOMContentLoaded', function () {
     draw();
     initEvents();
   }
-
-  restartGameButton.addEventListener('click', () => {
-    gameOverScreen.style.display = 'none';
-    startGame();
-  });
 
   startGameButton.addEventListener('click', () => {
     startScreen.style.display = 'none';
