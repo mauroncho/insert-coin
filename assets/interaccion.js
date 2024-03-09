@@ -9,10 +9,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
   if (btnEnviar) {
     btnEnviar.addEventListener('click', validarFormulario);
-  } else {
-    console.error(
-      "El elemento con el id 'contacto-submit' no se encontró en el documento."
-    );
   }
 
   function validarFormulario() {
@@ -79,6 +75,7 @@ document.addEventListener('DOMContentLoaded', function () {
   ];
 
   let botonSortear = document.getElementById('sortear-sticker');
+
   botonSortear.addEventListener('click', function () {
     let sorteoS = Math.floor(Math.random() * stickerA.length);
 

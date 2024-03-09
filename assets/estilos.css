@@ -179,7 +179,6 @@ ul {
   height: 100%;
 }
 
-/* modificacion a una clase de bootstrap? */
 .navigation-card {
   background-color: #8a750049;
   border-radius: 5px;
@@ -285,7 +284,7 @@ footer div p a:hover {
 
 /* MULTIMEDIA */
 .multimedia-p {
-  max-width: 500px;
+  max-width: 520px;
   text-wrap: balance;
 }
 
@@ -297,7 +296,8 @@ footer div p a:hover {
 .multi-div-yellow {
   border: var(--accent-color) solid 2px;
   border-radius: 10px;
-  margin-inline: 20px;
+  margin-inline: auto;
+  max-width: 600px;
 }
 .multimedia-flex-end {
   display: flex;
@@ -310,7 +310,8 @@ footer div p a:hover {
   background-color: rgba(80, 80, 80, 0.774);
   border-radius: 10px;
   margin-inline: 20px;
-  border: solid rgba(0, 0, 0, 0.87) 2px;
+  border: solid var(--accent-color) 2px;
+  max-width: 600px;
 }
 .multimedia-flex-start {
   display: flex;
@@ -385,6 +386,7 @@ footer div p a:hover {
 
 .clasicos-iframe {
   max-width: 450px;
+  margin-block: 8px;
 }
 
 .clasicos-card-title {
@@ -406,6 +408,11 @@ footer div p a:hover {
   justify-items: center;
   grid-template-columns: repeat(auto-fit, minmax(295px, 1fr));
   gap: 16px;
+}
+
+.modal-not-active {
+  pointer-events: none;
+  cursor: default;
 }
 
 /* EXTRAS */
@@ -464,6 +471,34 @@ footer div p a:hover {
   margin-block: auto;
 }
 
+.mobile-not-available {
+  display: none;
+  flex-direction: column;
+  text-align: center;
+  width: 100%;
+  padding: 16px;
+}
+
+@keyframes spaceinvader {
+  0% {
+    left: 15%;
+  }
+
+  100% {
+    left: calc(75% - 120px);
+  }
+}
+
+.space-monster {
+  position: absolute;
+  font-size: 120px;
+  animation: spaceinvader 3s ease-in-out 0s infinite alternate;
+}
+
+.mobile-not-available-text {
+  margin-top: 180px;
+}
+
 /* MEDIA QUERYS  */
 
 @media (max-width: 992px) {
@@ -479,7 +514,7 @@ footer div p a:hover {
   }
 
   .multimedia-iframe {
-    max-width: 345px;
+    max-width: 250px;
   }
 }
 
@@ -535,7 +570,7 @@ footer div p a:hover {
   }
 
   .clasicos-iframe {
-    max-width: 360px;
+    max-width: 320px;
   }
 
   .jugar-text {
@@ -555,17 +590,9 @@ footer div p a:hover {
     padding: 5px;
   }
 
-  .multimedia-flex-end {
-    align-items: center;
+  .multimedia-img-display {
+    display: none;
   }
-
-  /* .multimedia-flex-start {
-  } */
-
-  /* canvas {
-    width: 95%;
-    min-height: 400px;
-  } */
 
   .tiposf-img:hover {
     scale: none;
@@ -574,5 +601,13 @@ footer div p a:hover {
   .modal-not-active {
     pointer-events: none;
     cursor: default;
+  }
+
+  .game {
+    display: none !important;
+  }
+
+  .mobile-not-available {
+    display: flex;
   }
 }
