@@ -454,16 +454,20 @@ canvas {
 }
 
 kbd {
+  background-color: #ddd;
+  color: #000;
+  border-style: outset;
+  font-size: 0.7em;
+  margin-inline: 7px;
 }
 
 .game-text-screens {
   display: none;
   width: 100%;
   height: 100%;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  font-family: var(--pixel-font);
-  font-size: 2.5em;
 }
 
 .game {

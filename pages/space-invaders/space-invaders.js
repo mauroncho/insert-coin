@@ -80,25 +80,27 @@ document.addEventListener('DOMContentLoaded', function () {
   let invadersTroop = [];
 
   // Inicializar los invaders y almacenar sus posiciones en el array
-  for (let row = 0; row < numRows; row++) {
-    invadersTroop[row] = [];
-    for (let col = 0; col < numCols; col++) {
-      let invaderX = col * (invaderWidth + invaderSpacing);
-      let invaderY = row * (invaderHeight + invaderSpacing) + invaderOffsetTop;
-      // Agregar la posición y tamaño del invasor al array
-      invadersTroop[row][col] = {
-        x: invaderX,
-        y: invaderY,
-        width: invaderWidth,
-        height: invaderHeight,
-        status: invaderStatus,
-      };
+  function initInvaders() {
+    invadersTroop = [];
+    for (let row = 0; row < numRows; row++) {
+      invadersTroop[row] = [];
+      for (let col = 0; col < numCols; col++) {
+        let invaderX = col * (invaderWidth + invaderSpacing);
+        let invaderY =
+          row * (invaderHeight + invaderSpacing) + invaderOffsetTop;
+        // Agregar la posición y tamaño del invasor al array
+        invadersTroop[row][col] = {
+          x: invaderX,
+          y: invaderY,
+          width: invaderWidth,
+          height: invaderHeight,
+          status: invaderStatus,
+        };
+      }
     }
   }
 
-  // function isEmpty(a) {
-  //   Array.isArray(a) && a.every(isEmpty);
-  // }
+  const isEmpty = (a) => Array.isArray(a) && a.every(isEmpty);
 
   function endGame() {
     canvas.style.display = 'none';
@@ -134,18 +136,10 @@ document.addEventListener('DOMContentLoaded', function () {
   let moveRight = true;
 
   function invadersMovement() {
-    collisionDetector();
-    const invadersTroopUpdated = [
-      invadersTroop[0].filter((invader) => invader.status !== false),
-      invadersTroop[1].filter((invader) => invader.status !== false),
-      invadersTroop[2].filter((invader) => invader.status !== false),
-      invadersTroop[3].filter((invader) => invader.status !== false),
-    ];
-    const isEmpty = (a) => Array.isArray(a) && a.every(isEmpty);
-    if (isEmpty(invadersTroopUpdated)) {
-      canvas.style.display = 'none';
-      youWinScreen.style.display = 'flex';
-    }
+    const invadersTroopUpdated = invadersTroop.map((troopRow) =>
+      troopRow.filter((invader) => invader.status !== false)
+    );
+    collisionDetector(invadersTroopUpdated);
 
     // Encuentra la posición más a la derecha y más a la izquierda de la tropa de invadersconso
     let rightMostInvaderX = 0;
@@ -192,7 +186,10 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   }
 
-  function collisionDetector() {
+  function collisionDetector(invadersTroopUpdated) {
+    if (isEmpty(invadersTroopUpdated)) {
+      winGame();
+    }
     for (let i = 0; i < bulletProyectiles.length; i++) {
       let bullet = bulletProyectiles[i];
       for (let row = 0; row < numRows; row++) {
@@ -281,6 +278,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
   function startGame() {
     canvas.style.display = 'block';
+    initInvaders();
     draw();
     initEvents();
   }
