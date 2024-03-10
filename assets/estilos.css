@@ -398,7 +398,7 @@ footer div p a:hover {
   gap: 16px;
 }
 
-.modal-not-active {
+.iframe-not-active {
   pointer-events: none;
   cursor: default;
 }
