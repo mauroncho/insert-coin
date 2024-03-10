@@ -558,6 +558,16 @@ kbd {
     margin: 100px auto;
   }
 
+  .estirar-body-movil {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .estirar-margenes-movil {
+    margin-block: auto;
+  }
+
   .subtext-hero {
     font-size: 1.5em;
     text-shadow: 0 0 6px var(--accent-color);
