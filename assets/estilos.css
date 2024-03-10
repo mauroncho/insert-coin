@@ -511,8 +511,13 @@ kbd {
 
 @media (max-width: 992px) {
   .coin-icon:hover {
-    scale: 0;
+    scale: none;
   }
+
+  .coin-icon {
+    transition-duration: none;
+  }
+
   .index-invaders-text {
     width: 100%;
   }
