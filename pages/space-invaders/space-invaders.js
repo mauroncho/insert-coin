@@ -23,15 +23,15 @@ document.addEventListener('DOMContentLoaded', function () {
     ctx.fillStyle = 'white';
 
     ctx.drawImage(
-      sprites,
-      349,
-      28,
-      playerWidth,
-      playerHeight,
-      playerX,
-      playerY,
-      playerWidth,
-      playerHeight
+      sprites, //la imagen que voy a usar
+      349, //coordenada x en la imagen
+      28, //coordenada  y en la imagen
+      playerWidth, //el ancho del recorte dentro de la imagen
+      playerHeight, //el alto del recorte dentro de la imagen
+      playerX, //donde quiero poner el recorte en el eje x del canvas
+      playerY, //donde quiero poner el recorte en el eje y del canvas
+      playerWidth, //el ancho del dibujo en el canvas
+      playerHeight //el alto del dibujo en el canvas
     );
   }
   function playerMovement() {
@@ -51,8 +51,8 @@ document.addEventListener('DOMContentLoaded', function () {
     if (shootPressed === true) {
       // Agrega una nueva bala al canvas en la posicion del jugador
       bulletProyectiles.push({
-        x: playerX + 14,
-        y: canvas.height - playerHeight,
+        x: playerX + 12,
+        y: canvas.height - 20,
       });
       shootPressed = false;
     }
@@ -70,7 +70,6 @@ document.addEventListener('DOMContentLoaded', function () {
     // Actualiza la posición de todas las balas en el array bulletProyectiles
     for (let i = 0; i < bulletProyectiles.length; i++) {
       bulletProyectiles[i].y -= bulletSpeed;
-      // Elimina las balas que estén fuera de la pantalla
       if (bulletProyectiles[i].y < 0) {
         bulletProyectiles.splice(i, 1);
         i--; // Decrementa i para compensar la eliminación del elemento
@@ -90,6 +89,16 @@ document.addEventListener('DOMContentLoaded', function () {
   let invadersSpeedX = 2;
   let invadersTroop = [];
 
+  function endGame() {
+    canvas.style.display = 'none';
+    gameOverScreen.style.display = 'flex';
+  }
+
+  function winGame() {
+    canvas.style.display = 'none';
+    youWinScreen.style.display = 'flex';
+  }
+
   // Inicializar los invaders y almacenar sus posiciones en el array
   function initInvaders() {
     invadersTroop = [];
@@ -97,8 +106,7 @@ document.addEventListener('DOMContentLoaded', function () {
       invadersTroop[row] = [];
       for (let col = 0; col < numCols; col++) {
         let invaderX = col * (invaderWidth + invaderSpacing);
-        let invaderY =
-          row * (invaderHeight + invaderSpacing) + invaderOffsetTop;
+        let invaderY = row * (invaderHeight + invaderSpacing) + invaderOffsetTop;
         // Agregar la posición y tamaño del invasor al array
         invadersTroop[row][col] = {
           x: invaderX,
@@ -109,18 +117,6 @@ document.addEventListener('DOMContentLoaded', function () {
         };
       }
     }
-  }
-
-  const isEmpty = (a) => Array.isArray(a) && a.every(isEmpty);
-
-  function endGame() {
-    canvas.style.display = 'none';
-    gameOverScreen.style.display = 'flex';
-  }
-
-  function winGame() {
-    canvas.style.display = 'none';
-    youWinScreen.style.display = 'flex';
   }
 
   // Dibujar los invasores en el canvas utilizando las posiciones almacenadas en el array
@@ -156,7 +152,6 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 
   let moveRight = true;
-
   function invadersMovement() {
     const invadersTroopUpdated = invadersTroop.map((troopRow) =>
       troopRow.filter((invader) => invader.status !== false)
@@ -208,6 +203,8 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   }
 
+  const isEmpty = (a) => Array.isArray(a) && a.every(isEmpty); //parámetro "a" es el array de invaders. esta función se fija que un array de arrays esté vacío
+
   function collisionDetector(invadersTroopUpdated) {
     if (isEmpty(invadersTroopUpdated)) {
       winGame();
@@ -244,7 +241,7 @@ document.addEventListener('DOMContentLoaded', function () {
   let rightPressed = false;
   let leftPressed = false;
   let shootPressed = false;
-  let spacePressedThisFrame = false; //impide cosas raras al mantener la barra presionada
+  let keyPressedThisFrame = false; //impide manetener apretada la tecla de disparo
   let canShoot = true; //bandera que permite, junto con setTimeout, disparar solo a un determinado intervalo de tiemoi
   const shootInterval = 450;
   function initEvents() {
@@ -258,9 +255,9 @@ document.addEventListener('DOMContentLoaded', function () {
       if (key === 'ArrowLeft' || key === 'Left') {
         leftPressed = true;
       }
-      if (key === 's' && !spacePressedThisFrame && canShoot) {
+      if (key === 's' && !keyPressedThisFrame && canShoot) {
         shootPressed = true;
-        spacePressedThisFrame = true;
+        keyPressedThisFrame = true;
         canShoot = false;
         setTimeout(() => {
           canShoot = true;
@@ -277,7 +274,7 @@ document.addEventListener('DOMContentLoaded', function () {
       }
       if (key === 's') {
         shootPressed = false;
-        spacePressedThisFrame = false; // Resetea el flag para evitar que se presione más de una vez el espacio en el mismo frame.
+        keyPressedThisFrame = false;
       }
     }
   }
