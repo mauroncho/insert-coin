@@ -475,7 +475,6 @@ kbd {
   width: 500px;
   height: 500px;
   margin-block: auto;
-  padding-block: 24px;
   background-color: #000;
   box-sizing: content-box;
 }
